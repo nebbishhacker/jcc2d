@@ -3,4 +3,5 @@ jimmys-castle
 
 Jimmy's Cardboard Castle text adventure
 
-(C) Studio 17, 2012
+(C) Studio 17
+UOIT GDW 2012
