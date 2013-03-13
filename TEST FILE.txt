@@ -14,9 +14,15 @@ Modify this file. Stick something somewhere.
 
 6 Chasin Tail
 
+<<<<<<< HEAD
 7 Hittin Up The Block
 
 8 Smoka A Blunt
+=======
+7 Brandon was here :)
+
+8 BEN WAS HERE
+>>>>>>> 272bcb41f694941c1053d9f42c3e731616f6e1e1
 
 9 Wagwan
 
