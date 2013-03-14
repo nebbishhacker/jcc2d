@@ -86,7 +86,11 @@
     <ClInclude Include="BensTestWorld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="LucasTestWorld.h">
+=======
+    <ClInclude Include="JonathansTestWorld.h">
+>>>>>>> aaeabaa85b5dec9eea1b626591c4a1ffb0b4125c
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
