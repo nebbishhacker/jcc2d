@@ -52,7 +52,7 @@ public:
 		//Paolo's Button
 
 		//Jonathan's Button
-		add(new JonathanStartButton(368, 400, 50, 50, "images/Jonathan'sHam.png")); 
+		add(new JonathanStartButton(368, 400, 100,100, "images/Jonathan'sHam.png")); 
 
 		//Lucas's Button
 		add(new BenStartButton(468, 500, 64, 64, "images/BUTTON_WRIGHT.png"));
