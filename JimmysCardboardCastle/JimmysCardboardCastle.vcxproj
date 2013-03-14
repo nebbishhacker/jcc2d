@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="World.cpp" />
+    <ClInclude Include="..\..\Jimmy%27s Cardboard Castle - 2D\JimmysCardboardCastle\PaolosTestWorld.h" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="BensTestWorld.h" />
     <ClInclude Include="Button.h" />
