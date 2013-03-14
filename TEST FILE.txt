@@ -2,8 +2,8 @@ NUMBERS!!!
 
 Modify this file. Stick something somewhere.
 
-1 Niggas
 
+<<<<<<< HEAD
 2 Twice as many niggas
 
 3 Thrice as many Niggas
@@ -27,3 +27,94 @@ Modify this file. Stick something somewhere.
 9 Wagwan
 
 10 Kill Jonathan with violence, lots and lots of violence
+=======
+1	This is a trial.
+2
+3	I'm making a note here:
+4	HUGE SUCCESS.
+5
+6	It's hard to overstate my satisfaction
+7
+8	GitHub and Tortoise
+9
+10	We use what we must
+11	because
+12	we can
+13
+14	For the good of all of us
+13	Except the ones still in bed
+16
+17	But there's no sense crying over every mistake
+18	You just keep on pushing 'till you run out of cake
+19	And the coding gets done
+20	And you build a neat run
+21	For the people who are
+22	Still Assigned
+23
+24
+25	I'm not even angry.
+26
+27	I'm being
+28	So
+29	Sincere
+30	Right Now
+31
+32	Even though you broke my code and killed it
+33
+34	And tore it to pieces.
+35	And threw every piece
+36	Into
+37	the bun
+38
+39	As they burned it hurt because
+40	I was so happy for you
+41	
+42	Now these points of data make a beautiful line
+43	And we're out of beta we're releasing on time
+44	So I'm glad I got burned
+45	Think of all the things we learned
+46	For the people who are
+47	Still Assigned
+48
+49
+50	Go ahead and leave here
+51
+52	I think I prefer
+53	To stay
+54	Enrolled.
+55
+56	Maybe you'll find something else to use too
+57
+58	Maybe Subversion
+59
+60	THAT WAS A JOKE
+61	HAHA
+62	FAT CHANCE
+63
+64	Anyways this Game is great
+65	It's so ambitious and fun
+66
+67	Look at me still talking when there's coding to do
+68	When I look out there it makes me GLaD I've got you
+69	I've experiments to run
+70	There is testing to be done
+71	With the people who are
+72	Still Assigned.
+73
+74	And believe me I am
+75	Still Assigned
+76
+77	I'm doing coding and I'm
+78	Still Assigned
+79
+80	While you're braindead I'll be
+81	Still Assigned
+82
+83	And when you've left I will be
+84	Still Assigned
+85
+86	Still Assigned
+87
+88	Still Assigned
+89	....wtf?
+>>>>>>> c39117ca3a0df5f19c7b95e6cb9bb8db6a7026c9
