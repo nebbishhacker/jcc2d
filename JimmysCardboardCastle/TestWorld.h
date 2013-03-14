@@ -4,11 +4,8 @@
 #include "entities.h"
 
 #include "BensTestWorld.h"
-<<<<<<< HEAD
 #include "LucasTestWorld.h"
-=======
 #include "JonathansTestWorld.h"
->>>>>>> aaeabaa85b5dec9eea1b626591c4a1ffb0b4125c
 
 
 //Special-purpose buttons
