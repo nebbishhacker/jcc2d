@@ -6,6 +6,7 @@
 #include "BensTestWorld.h"
 #include "LucasTestWorld.h"
 #include "JonathansTestWorld.h"
+#include "BrandonTestWorld.h"
 
 
 //Special-purpose buttons
@@ -19,6 +20,12 @@ public:
 };
 
 //Brandon's Button Class
+class BrandonStartButton : public Button
+{
+public:
+	BrandonStartButton::BrandonStartButton(double x, double y, int sizeX, int sizeY, std::string filename) : Button(x, y, sizeX, sizeY, filename) {}
+	virtual void callback() { if (world) world->game->setNewWorld(new BrandonTestWorld); }
+};
 
 //Paolo's Button Class
 
@@ -48,7 +55,7 @@ public:
 		add(new BenStartButton(368, 500, 64, 64, "images/Ben_Button.png"));
 
 		//Brandon's Button
-
+		add(new BrandonStartButton(100, 400, 64, 32, "images/BrandonsButton.png"));
 		//Paolo's Button
 
 		//Jonathan's Button
