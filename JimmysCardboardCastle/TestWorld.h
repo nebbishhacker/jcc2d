@@ -4,6 +4,7 @@
 #include "entities.h"
 
 #include "BensTestWorld.h"
+#include "JonathansTestWorld.h"
 
 
 //Special-purpose buttons
@@ -21,6 +22,12 @@ public:
 //Paolo's Button Class
 
 //Jonathan's Button Class
+class JonathanStartButton : public Button
+{
+public:
+	JonathanStartButton::JonathanStartButton(double x, double y, int sizeX, int sizeY, std::string filename) : Button(x, y, sizeX, sizeY, filename) {}
+	virtual void callback() { if (world) world->game->setNewWorld(new JonathansTestWorld); }
+};
 
 //Lucas's Button Class
 
@@ -39,6 +46,7 @@ public:
 		//Paolo's Button
 
 		//Jonathan's Button
+		add(new JonathanStartButton(368, 400, 50, 50, "images/Jonathan'sHam.png")); 
 
 		//Lucas's Button
 	}
