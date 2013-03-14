@@ -84,7 +84,11 @@
     <ClInclude Include="Background.h" />
     <ClInclude Include="BensTestWorld.h" />
     <ClInclude Include="Button.h" />
+<<<<<<< HEAD
+    <ClInclude Include="LucasTestWorld.h" />
+=======
     <ClInclude Include="JonathansTestWorld.h" />
+>>>>>>> aaeabaa85b5dec9eea1b626591c4a1ffb0b4125c
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="CollTestBox.h">
       <FileType>CppCode</FileType>
