@@ -9,8 +9,8 @@ public:
 	virtual void initialize()
 	{
 		add(new Player(200, 200));
-		//add(new CollTestBox(0, 0));
-		//add(new CollTestBox(400, 200));
+		add(new CollTestBox(0, 0));
+		add(new CollTestBox(400, 200));
 
 		add(new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25));
 
