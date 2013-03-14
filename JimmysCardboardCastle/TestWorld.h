@@ -3,35 +3,43 @@
 #include "World.h"
 #include "entities.h"
 
+#include "BensTestWorld.h"
+
+
+//Special-purpose buttons
+
+//Ben's Button Class
+class BenStartButton : public Button
+{
+public:
+	BenStartButton::BenStartButton(double x, double y, int sizeX, int sizeY, std::string filename) : Button(x, y, sizeX, sizeY, filename) {}
+	virtual void callback() { if (world) world->game->setNewWorld(new BensTestWorld); }
+};
+
+//Brandon's Button Class
+
+//Paolo's Button Class
+
+//Jonathan's Button Class
+
+//Lucas's Button Class
+
+
+
 class TestWorld : public World
 {
 public:
 	virtual void initialize()
 	{
-		add(new Player(200, 200));
-		add(new CollTestBox(0, 0));
-		add(new CollTestBox(400, 200));
+		//Ben's Button
+		add(new BenStartButton(368, 500, 64, 64, "images/Ben_Button.png"));
 
-		add(new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25));
+		//Brandon's Button
 
-		std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 1, "images/JCC_PlatSPR.png"));
+		//Paolo's Button
 
-		for (int i = 0; i < 50; ++i) {
-			Tile * tempTile = new Tile(i * 32, 0, rand() % 4, tileSheet);
-			groups["ground"].add(tempTile);
-			add(tempTile);
-		}
+		//Jonathan's Button
 
-		for (int i = 1; i <= 50; ++i) {
-			Tile * tempTile = new Tile(0, i * 32, rand() % 4, tileSheet);
-			groups["ground"].add(tempTile);
-			add(tempTile);
-		}
-
-		for (int i = 1; i <= 50; ++i) {
-			Tile * tempTile = new Tile(i / 2 * 32 + 544, 170 + i % 2 * 32, rand() % 4, tileSheet);
-			groups["ground"].add(tempTile);
-			add(tempTile);
-		}
+		//Lucas's Button
 	}
 };

@@ -99,6 +99,7 @@ public:
 	Sprite * moveCollideX(double x, SpriteGroup*);
 	Sprite * moveCollideY(double y, SpriteGroup*);
 	Sprite * moveCollide(double x, double y, SpriteGroup*);
+	bool collidePoint(double pointX, double pointY);
 
 
 	// GROUP STUFF //

@@ -79,8 +79,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="World.cpp" />
     <ClInclude Include="Background.h" />
+    <ClInclude Include="BensTestWorld.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="CollTestBox.h">
       <FileType>CppCode</FileType>

@@ -495,6 +495,7 @@ void Game::mouseMoved(int x, int y)
 			//animatedSprite2->setPosition(input.currentX,input.currentY);
 		}
 	}
+	//std::cout << input.currentX << " " << input.currentY << "\n";
 }
 
 //void Game::centerCamera(double x, double y)
@@ -521,6 +522,7 @@ void Game::setNewWorld(World * world)
 	if (!killWorld && !newWorld) {
 		world->stateInfo = &stateInfo;
 		world->input = &input;
+		world->game = this;
 		newWorld = world;
 	}
 	else delete world;
@@ -536,6 +538,7 @@ void Game::replacingCurrentWorld(World * world)
 	if (!killWorld && !newWorld) {
 		world->stateInfo = &stateInfo;
 		world->input = &input;
+		world->game = this;
 		newWorld = world;
 		killWorld = true;
 	}
