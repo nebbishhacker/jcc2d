@@ -80,7 +80,7 @@ public:
 
 	//	- input struct providing the following data:
 	//		- bool mouseDown;			// is the mouse down?
-	//		- int button;				// which mouse button (can be GLUT_LEFT_BUTTON, GLUT_MIDDLE_BUTTON, or GLUT_RIGHT_BUTTON, I think)
+	//		- int button;				// something?
 	//		- float clickX,clickY;		// where the mouse was clicked
 	//		- float currentX,currentY;	// where the mouse is right now
 	//									// I plan to add more boolean values, for whether the mouse was pressed just now and stuff
@@ -103,6 +103,8 @@ public:
 	//	- Be aware that this is the position of the bottom-left corner, not the center.
 	double cameraX;
 	double cameraY;
+
+	Game *game;
 
 private:
 	void executeHitList();

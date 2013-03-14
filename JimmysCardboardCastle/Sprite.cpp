@@ -116,6 +116,11 @@ Sprite * Sprite::moveCollide(double x, double y, SpriteGroup * group)
 	return returnSprite;
 }
 
+bool Sprite::collidePoint(double pointX, double pointY)
+{
+	return hitbox.collidePoint(pointX - positionX, pointY - positionY);
+};
+
 /* group related stuff */
 bool Sprite::inGroup(SpriteGroup *group)
 {

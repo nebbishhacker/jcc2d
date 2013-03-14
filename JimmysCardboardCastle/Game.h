@@ -52,6 +52,8 @@ typedef struct _InputInfo
 	bool specialsDown[128]; // array of boolean keystates, for tracking whether each special key is down
 	_InputInfo()
 	{
+		mouseDown = false;
+		button = 0;
 		for (int i = 0; i <  128; i++) keysDown[i] = false;
 		for (int i = 0; i <  128; i++) specialsDown[i] = false;
 	}

@@ -42,4 +42,8 @@ struct Hitbox
 	{
 		return yPos - (b.yPos + relY + b.height);
 	}
+	bool collidePoint(double x, double y)
+	{
+		return (x >= xPos && x <= xPos + width && y >= yPos && y <= yPos + height);
+	}
 };
