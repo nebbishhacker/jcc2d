@@ -2,10 +2,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
-//#include <vector>
 #include <cmath>
-//#include <map>
-//#include <string>
 #include <cctype>
 
 #include <GL/gl.h>
@@ -45,14 +42,19 @@ enum {
 typedef struct _InputInfo
 {
 	bool mouseDown; // is the mouse down?
+	bool mousePressed; // was the mouse pressed this frame?
+	bool mouseReleased; // was the mouse released this frame?
 	int button; // which mouse button
-	float clickX,clickY; // where the mouse was clicked
+	float clickX,clickY; // where the mouse was last clicked
 	float currentX,currentY;
 	bool keysDown[128]; // array of boolean keystates, for tracking whether each key is down
+	bool keysPressed[128]; // array of boolean keystates, for tracking whether each key was pressed this frame
+	bool keysReleased[128]; // array of boolean keystates, for tracking whether each key was released this frame
 	bool specialsDown[128]; // array of boolean keystates, for tracking whether each special key is down
 	_InputInfo()
 	{
-		mouseDown = false;
+		mouseDown = mousePressed = mouseReleased = false;
+		clickX = clickY = currentX = currentY = -1;
 		button = 0;
 		for (int i = 0; i <  128; i++) keysDown[i] = false;
 		for (int i = 0; i <  128; i++) specialsDown[i] = false;

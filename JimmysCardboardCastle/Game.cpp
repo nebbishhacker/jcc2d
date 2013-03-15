@@ -237,6 +237,12 @@ void Game::update()
 		currentWorld->updateAnimation();
 	}
 
+	input.mousePressed = false;
+	input.mouseReleased = false;
+
+	for (int i = 0; i <  128; i++) input.keysPressed[i] = false;
+	for (int i = 0; i <  128; i++) input.keysReleased[i] = false;
+
 	//clearHitList(); //World's job
 
 	/* you should probably update all of the sprites in a list just like the drawing */
@@ -370,15 +376,15 @@ void Game::updateAnimation()
 */
 void Game::keyboardDown(unsigned char key, int mouseX, int mouseY)
 {
-	// sets the key as being down
+	// set lowercase version
+	key = std::tolower(key);
+	if (!input.keysDown[key]) input.keysPressed[key] = true; 
 	input.keysDown[key] = true;
 
-	// hack because when shift is pressed while a key is held, the keydown event is the wrong case when the key is released
-	if (std::isalpha(key))
-	{
-		if (std::isupper(key)) input.keysDown[std::tolower(key)] = true;
-		else if (std::islower(key)) input.keysDown[std::toupper(key)] = true;
-	}
+	// set uppercase version
+	key = std::toupper(key);
+	if (!input.keysDown[key]) input.keysPressed[key] = true; 
+	input.keysDown[key] = true;
 
 	switch(key)
 	{
@@ -397,15 +403,15 @@ void Game::keyboardDown(unsigned char key, int mouseX, int mouseY)
 */
 void Game::keyboardUp(unsigned char key, int mouseX, int mouseY)
 {
-	// sets the key as being down
+	// set lowercase version
+	key = std::tolower(key);
+	if (input.keysDown[key]) input.keysReleased[key] = true; 
 	input.keysDown[key] = false;
 
-	// hack because when shift is pressed while a key is held, the keydown event is the wrong case when the key is released
-	if (std::isalpha(key))
-	{
-		if (std::isupper(key)) input.keysDown[std::tolower(key)] = false;
-		else if (std::islower(key)) input.keysDown[std::toupper(key)] = false;
-	}
+	// set uppercase version
+	key = std::toupper(key);
+	if (input.keysDown[key]) input.keysReleased[key] = true; 
+	input.keysDown[key] = false;
 
 	switch(key)
 	{
@@ -450,6 +456,7 @@ void Game::mouseClicked(int button, int state, int x, int y)
 {
 	if(state == GLUT_DOWN) 
 	{
+		if (!input.mouseDown) input.mousePressed = true;
 		input.mouseDown = true;
 		input.clickX = x*stateInfo.ratioWidth;
 		input.clickY = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
@@ -458,7 +465,6 @@ void Game::mouseClicked(int button, int state, int x, int y)
 		switch(button)
 		{
 		case GLUT_LEFT_BUTTON:
-			//animatedSprite2->setPosition(input.clickX,input.clickY);
 			break;
 		case GLUT_RIGHT_BUTTON:
 		
@@ -469,6 +475,7 @@ void Game::mouseClicked(int button, int state, int x, int y)
 	}
 	else
 	{
+		if (input.mouseDown) input.mouseReleased = true;
 		input.mouseDown = false;
 	}
 
@@ -487,14 +494,6 @@ void Game::mouseMoved(int x, int y)
 	/* convert from window to screen pixel coordinates */
 	input.currentX = x*stateInfo.ratioWidth;
 	input.currentY = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
-	
-	if(input.mouseDown)
-	{
-		if(input.button == GLUT_LEFT_BUTTON)
-		{
-			//animatedSprite2->setPosition(input.currentX,input.currentY);
-		}
-	}
 	//std::cout << input.currentX << " " << input.currentY << "\n";
 }
 

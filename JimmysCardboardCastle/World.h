@@ -80,14 +80,18 @@ public:
 
 	//	- input struct providing the following data:
 	//		- bool mouseDown;			// is the mouse down?
-	//		- int button;				// something?
+	//		- bool mousePressed;		// was the mouse pressed this frame?
+	//		- bool mouseReleased;		// was the mouse released this frame?
+	//		- int button;				// which mouse button was last clicked (can be GLUT_LEFT_BUTTON, GLUT_MIDDLE_BUTTON, or GLUT_RIGHT_BUTTON, I think) 
 	//		- float clickX,clickY;		// where the mouse was clicked
 	//		- float currentX,currentY;	// where the mouse is right now
-	//									// I plan to add more boolean values, for whether the mouse was pressed just now and stuff
 	//		- bool keysDown[128];		// array of boolean keystates, for tracking whether each key is down
 	//										usage: if (input->keysDown['a']) /* do something */;
+	//		- bool keysPressed[128];	// array of boolean keystates, for tracking whether each key was pressed this frame
+	//		- bool keysReleased[128];	// array of boolean keystates, for tracking whether each key was released this frame
 	//		- bool specialsDown[128];	// array of boolean keystates, for tracking whether each special key is down
 	//										usage: if (input->specialsDown[GLUT_KEY_UP]) /* do something */;
+	//									If there's any need at all, I can add specialsPressed etc. Or I may integrate keys and specials somehow.
 	InputInfo * input;
 
 	//	- The map of SpriteGroups
