@@ -2,46 +2,34 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Button.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CollTestBox.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TextureSprite.cpp">
+      <Filter>Sprite Classes\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>World Classes\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Background.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BensTestWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CollTestBox.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="entities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -51,35 +39,50 @@
     <ClInclude Include="Hitbox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LucasTestWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="JonathansTestWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Jimmy%27s Cardboard Castle - 2D\JimmysCardboardCastle\PaolosTestWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TestWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureSprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TileSheet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TileSheet.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollTestBox.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureSprite.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BensTestWorld.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestWorld.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BrandonTestWorld.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JonathansTestWorld.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LucasTestWorld.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaolosTestWorld.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="World.h">
-      <Filter>Header Files</Filter>
+      <Filter>World Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -87,9 +90,29 @@
       <UniqueIdentifier>{e72607fd-64f9-4e52-96ee-9e64cf780c0b}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{402cc26e-72f1-41e6-be5a-49e37506194c}</UniqueIdentifier>
+    <Filter Include="Sprite Classes">
+      <UniqueIdentifier>{9dd2b322-9000-4855-bb92-53d25fb8d4bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite Classes\Header Files">
+      <UniqueIdentifier>{11fccb70-179b-4dda-8561-c9af42b81da6}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Sprite Classes\Source Files">
+      <UniqueIdentifier>{45e76b01-1468-4fbd-9724-04a19d1635c8}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="World Classes">
+      <UniqueIdentifier>{036f9c13-4ad8-4012-934d-9ed810b30135}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{611dc40e-078a-4692-b0bf-5ef4bb0cf672}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="World Classes\Header Files">
+      <UniqueIdentifier>{bd2bf05a-6c77-4b38-853e-62084cfd7c2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World Classes\Source Files">
+      <UniqueIdentifier>{86d5aebb-3617-4a48-be9a-48ef77e06d50}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

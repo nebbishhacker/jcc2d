@@ -81,12 +81,13 @@
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="World.cpp" />
-    <ClInclude Include="..\..\Jimmy%27s Cardboard Castle - 2D\JimmysCardboardCastle\PaolosTestWorld.h" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="BensTestWorld.h" />
+    <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="LucasTestWorld.h" />
     <ClInclude Include="JonathansTestWorld.h" />
+    <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="CollTestBox.h">
       <FileType>CppCode</FileType>
