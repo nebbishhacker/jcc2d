@@ -2,32 +2,6 @@ NUMBERS!!!
 
 Modify this file. Stick something somewhere.
 
-
-<<<<<<< HEAD
-2 Twice as many niggas
-
-3 Thrice as many Niggas
-
-4 Robbin Banks
-
-5 Stealin Cars
-
-6 Chasin Tail
-
-<<<<<<< HEAD
-7 Hittin Up The Block
-
-8 Smoka A Blunt
-=======
-7 Brandon was here :)
-
-8 BEN WAS HERE
->>>>>>> 272bcb41f694941c1053d9f42c3e731616f6e1e1
-
-9 Wagwan
-
-10 Kill Jonathan with violence, lots and lots of violence
-=======
 1	This is a trial.
 2
 3	I'm making a note here:
@@ -116,12 +90,7 @@ Modify this file. Stick something somewhere.
 86	Still Assigned
 87
 88	Still Assigned
-<<<<<<< HEAD
-89	....wtf?
->>>>>>> c39117ca3a0df5f19c7b95e6cb9bb8db6a7026c9
-=======
 
 ....wtf?<- so yeah that shit's Jonathans...
 
 Don't mind me, just checking something.
->>>>>>> 3d61de4d1384829731516c49e921b1db54db0bfa
