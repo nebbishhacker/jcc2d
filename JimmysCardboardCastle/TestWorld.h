@@ -12,13 +12,18 @@
 
 //Special-purpose buttons
 
-//Ben's Button Class
-class BenStartButton : public Button
+//Ben's Button Callback
+static void startBensWorld(World * world)
 {
-public:
-	BenStartButton::BenStartButton(double x, double y, int sizeX, int sizeY, std::string filename) : Button(x, y, sizeX, sizeY, filename) {}
-	virtual void callback() { if (world) world->game->setNewWorld(new BensTestWorld); }
-};
+	world->game->setNewWorld(new BensTestWorld());
+}
+
+//class BenStartButton : public Button
+//{
+//public:
+//	BenStartButton::BenStartButton(double x, double y, int sizeX, int sizeY, std::string filename) : Button(x, y, sizeX, sizeY, filename) {}
+//	virtual void callback() { if (world) world->game->setNewWorld(new BensTestWorld); }
+//};
 
 //Brandon's Button Class
 class BrandonStartButton : public Button
@@ -59,7 +64,7 @@ public:
 	virtual void initialize()
 	{
 		//Ben's Button
-		add(new BenStartButton(368, 500, 64, 64, "images/Ben_Button.png"));
+		add(new Button(368, 500, 64, 64, "images/Ben_Button.png", startBensWorld));
 
 		//Brandon's Button
 		add(new BrandonStartButton(100, 400, 64, 32, "images/BrandonsButton.png"));

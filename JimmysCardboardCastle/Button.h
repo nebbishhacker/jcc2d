@@ -5,7 +5,7 @@
 class Button: public TextureSprite
 {
 public:
-	Button(double x, double y, int sizeX, int sizeY, std::string filename) : TextureSprite(filename)
+	Button(double x, double y, int sizeX, int sizeY, std::string filename, void (*callbackFunction)(World *) = NULL) : TextureSprite(filename)
 	{
 		setPosition(x, y);
 		setNumberOfAnimations(1);
@@ -15,7 +15,11 @@ public:
 	}
 	virtual void update();
 
-	virtual void callback(){};
+	virtual void callback()
+	{
+		if (callbackFunction) callbackFunction(world);
+	};
 
-
+private:
+	void (*callbackFunction)(World *);
 };
