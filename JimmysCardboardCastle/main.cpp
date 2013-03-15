@@ -169,6 +169,7 @@ int main(int argc, char **argv)
 	glutReshapeFunc(WindowReshapeCallbackFunction);
 	glutMouseFunc(MouseClickCallbackFunction);
 	glutMotionFunc(MouseMotionCallbackFunction);
+	glutPassiveMotionFunc(MouseMotionCallbackFunction);
 	glutTimerFunc(1,TimerCallbackFunction,0);
 
 	
