@@ -3,6 +3,16 @@
 #include "World.h"
 #include "entities.h"
 
+static void addBG(World* world) {
+	if (world->groups["background"].size() == 0)
+	{
+		Sprite * bg = new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25);
+		world->add(bg);
+		world->groups["background"].add(bg);
+		std::cout << "Background button GO!\n";
+	}
+}
+
 class BensTestWorld : public World
 {
 public:
@@ -12,7 +22,11 @@ public:
 		//add(new CollTestBox(0, 0));
 		//add(new CollTestBox(400, 200));
 
-		add(new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25));
+		//add(new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25));
+		Sprite * t = new Button(500, 400, 64, 64, "images/Ben_Button.png", addBG);
+		t->scrollFactorX = 0.5;
+		t->scrollFactorY = 0.25;
+		add(t);
 
 		std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 1, "images/JCC_PlatSPR.png"));
 
