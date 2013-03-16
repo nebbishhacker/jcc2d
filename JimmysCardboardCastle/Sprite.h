@@ -198,6 +198,8 @@ public:
 	iterator begin() {return sprites.begin();}
 	iterator end() {return sprites.end();}
 
+	unsigned int size() { return sprites.size(); }
+
 	//  - This is just to allow for sorting.
 	template <class Compare>
 	void sort(Compare comp) {sprites.sort(comp);}
