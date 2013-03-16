@@ -14,6 +14,6 @@ Button::Button(double x, double y, int sizeX, int sizeY, std::string filename, v
 void Button::update()
 {
 	if (world)
-		if (world->input->mousePressed && collidePoint(world->input->clickX, world->input->clickY))
+		if (world->input->mousePressed && collidePoint(world->input->clickX + world->cameraX * scrollFactorX, world->input->clickY + world->cameraY * scrollFactorY))
 			callback();
 }
