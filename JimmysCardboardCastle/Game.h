@@ -245,8 +245,8 @@ public:
 	//double cameraY;
 
 private:
-	void setWorldNow();
-	void killWorldNow();
+	bool setWorldNow();
+	bool killWorldNow();
 
 	World * currentWorld;
 	World * newWorld;

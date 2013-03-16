@@ -231,8 +231,7 @@ void Game::update()
 	setWorldNow();
 
 	if (!currentWorld) exit(0);
-
-	if (currentWorld) {
+	else {
 		currentWorld->update();
 		currentWorld->updateAnimation();
 	}
@@ -544,21 +543,25 @@ void Game::replacingCurrentWorld(World * world)
 	else delete world;
 }
 
-void Game::setWorldNow()
+bool Game::setWorldNow()
 {
 	if (newWorld) {
 		newWorld->nextWorldDown = currentWorld;
 		currentWorld = newWorld;
 		newWorld = NULL;
 		currentWorld->initialize();
+		return true;
 	}
+	return false;
 }
 
-void Game::killWorldNow()
+bool Game::killWorldNow()
 {
 	if (killWorld && currentWorld) {
 		World * temp = currentWorld->nextWorldDown;
 		delete currentWorld;
 		currentWorld = temp;
+		return true;
 	}
+	return false;
 }
