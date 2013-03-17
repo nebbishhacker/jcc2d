@@ -9,7 +9,7 @@ static void addBG(World* world) {
 		Sprite * bg = new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25);
 		world->add(bg);
 		world->groups["background"].add(bg);
-		std::cout << "Background button GO!\n";
+		//std::cout << "Background button GO!\n";
 	}
 }
 

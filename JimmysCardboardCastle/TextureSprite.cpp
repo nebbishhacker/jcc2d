@@ -1,6 +1,7 @@
 #include "TextureSprite.h"
 #include "cmath"
 #include "Game.h"
+#include "TextureCache.h"
 
 /* THE SPRITE CLASS DEFINITION */
 TextureSprite::TextureSprite(std::string spriteSheetFilename)
@@ -9,13 +10,19 @@ TextureSprite::TextureSprite(std::string spriteSheetFilename)
 	currentAnimation = 0;
 }
 
-TextureSprite::~TextureSprite(void) {}
+TextureSprite::~TextureSprite(void)
+{
+	while (!animations.empty()) {
+		delete animations.back();
+		animations.pop_back();
+	}
+}
 
 void TextureSprite::loadSpriteSheet(const char *filename)
 {
-	sheet.textureID = ilutGLLoadImage((char*)filename);
-	sheet.width = ilGetInteger(IL_IMAGE_WIDTH);
-	sheet.height = ilGetInteger(IL_IMAGE_HEIGHT);
+	sheet.textureID = textureCache.loadTexture((char*)filename);//ilutGLLoadImage((char*)filename);
+	sheet.width = textureCache.getWidth(sheet.textureID);//ilGetInteger(IL_IMAGE_WIDTH);
+	sheet.height = textureCache.getHeight(sheet.textureID);//ilGetInteger(IL_IMAGE_HEIGHT);
 }
 
 void TextureSprite::setSpriteFrameSize(int width, int height)

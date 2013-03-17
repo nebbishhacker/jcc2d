@@ -44,7 +44,13 @@ public:
 		speed = 1;
 		flipped = false;
 	}
-	~SpriteAnimation(void){}
+	~SpriteAnimation(void)
+	{
+		while (!coords.empty()) {
+			delete coords.back();
+			coords.pop_back();
+		}
+	}
 	
 	void nextFrame()
 	{
