@@ -50,7 +50,7 @@ void Player::update()
 	if (input->keysDown['X']) moveSpeed *= 2;
 	
 	if (!jumping && input->specialsDown[GLUT_KEY_UP] && grounded) {
-		vy = 30;
+		vy = 35;
 		jumping = true;
 		//soundEngine.playSound(jumpSound);
 	}
