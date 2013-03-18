@@ -11,6 +11,7 @@
 #include "Game.h"
 
 #include "TestWorld.h"
+#include "SoundEngine.h"
 
 #pragma comment (lib, "glut32.lib")
 #pragma comment (lib, "ILUT.lib")
@@ -104,6 +105,7 @@ void initImageLibrary()
 void TimerCallbackFunction(int value)
 {
 	theGame->update();		
+	soundEngine.update();
 
 	glutPostRedisplay();
 	glutTimerFunc(FRAME_DELAY_SPRITE,TimerCallbackFunction,0);

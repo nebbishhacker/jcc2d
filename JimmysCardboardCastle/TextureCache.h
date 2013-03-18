@@ -5,7 +5,7 @@
 //#include <string>
 #include <iostream>
 
-static struct textureInfo
+struct textureInfo
 {
 	unsigned int textureID;
 	float width;

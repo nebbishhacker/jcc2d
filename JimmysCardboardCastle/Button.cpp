@@ -1,5 +1,4 @@
 #include "Button.h"
-#include "Game.h"
 
 Button::Button(double x, double y, int sizeX, int sizeY, std::string filename, void (*callbackFunction)(World *)) : TextureSprite(filename)
 	{

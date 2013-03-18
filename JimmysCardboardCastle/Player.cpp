@@ -28,6 +28,8 @@ Player::Player(double x, double y) : TextureSprite("images/SamSheet.png")
 
 	vy = 0;
 	jumping = false;
+
+	//jumpSound = soundEngine.loadSound();
 }
 
 void Player::initialize()
@@ -50,6 +52,7 @@ void Player::update()
 	if (!jumping && input->specialsDown[GLUT_KEY_UP] && grounded) {
 		vy = 30;
 		jumping = true;
+		//soundEngine.playSound(jumpSound);
 	}
 
 	if (input->specialsDown[GLUT_KEY_LEFT] && !input->specialsDown[GLUT_KEY_RIGHT]) {

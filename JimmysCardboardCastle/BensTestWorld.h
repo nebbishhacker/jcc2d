@@ -13,6 +13,11 @@ static void addBG(World* world) {
 	}
 }
 
+static void playTestSound(World* world) {
+	Sound sound = soundEngine.loadSound("sound/test_sfx.wav");
+	soundEngine.playSound(sound);
+}
+
 class BensTestWorld : public World
 {
 public:
@@ -24,6 +29,11 @@ public:
 
 		//add(new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25));
 		Sprite * t = new Button(500, 400, 64, 64, "images/Ben_Button.png", addBG);
+		t->scrollFactorX = 0.5;
+		t->scrollFactorY = 0.25;
+		add(t);
+
+		t = new Button(700, 400, 50, 75, "images/BUTTON_PaoloD.png", playTestSound);
 		t->scrollFactorX = 0.5;
 		t->scrollFactorY = 0.25;
 		add(t);
