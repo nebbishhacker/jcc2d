@@ -8,6 +8,14 @@ class PaolosTestWorld : public World
 public:
 	virtual void initialize()
 	{
+		Sprite * t;
+
+		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/exit_sign.png", killWorld);
+		t->scrollFactorX = 0;
+		t->scrollFactorY = 0;
+		t->layerID = 100;
+		add(t);
+
 		add(new Player(200, 200));
 		//add(new CollTestBox(0, 0));
 		//add(new CollTestBox(400, 200));
