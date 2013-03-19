@@ -199,6 +199,10 @@ public:
 	iterator end() {return sprites.end();}
 
 	unsigned int size() { return sprites.size(); }
+	bool empty() { return sprites.empty(); }
+
+	Sprite * front() { return sprites.front(); }
+	Sprite * back() { return sprites.back(); }
 
 	//  - This is just to allow for sorting.
 	template <class Compare>

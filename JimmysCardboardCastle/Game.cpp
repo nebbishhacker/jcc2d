@@ -550,6 +550,7 @@ bool Game::setWorldNow()
 		currentWorld = newWorld;
 		newWorld = NULL;
 		currentWorld->initialize();
+		newWorld = NULL;
 		return true;
 	}
 	return false;
@@ -561,6 +562,7 @@ bool Game::killWorldNow()
 		World * temp = currentWorld->nextWorldDown;
 		delete currentWorld;
 		currentWorld = temp;
+		killWorld = NULL;
 		return true;
 	}
 	return false;

@@ -11,6 +11,7 @@
 #include "Game.h"
 
 #include "TestWorld.h"
+#include "SoundEngine.h"
 
 #pragma comment (lib, "glut32.lib")
 #pragma comment (lib, "ILUT.lib")
@@ -50,7 +51,7 @@ void DisplayCallbackFunction(void)
  */
 void KeyboardCallbackFunction(unsigned char key, int x, int y)
 {
-	std::cout << "Keycode:"<<(int)key<<std::endl;
+	//std::cout << "Keycode:"<<(int)key<<std::endl;
 	theGame->keyboardDown(key,x,y);
 
 }
@@ -68,7 +69,7 @@ void KeyboardUpCallbackFunction(unsigned char key, int x, int y)
  */
 void SpecialCallbackFunction(int key, int x, int y)
 {
-	std::cout << "Special:"<<key<<std::endl;
+	//std::cout << "Special:"<<key<<std::endl;
 	theGame->specialDown(key, x, y);
 }
 /* function void SpecialCallbackFunction(unsigned char, int,int)
@@ -104,6 +105,7 @@ void initImageLibrary()
 void TimerCallbackFunction(int value)
 {
 	theGame->update();		
+	soundEngine.update();
 
 	glutPostRedisplay();
 	glutTimerFunc(FRAME_DELAY_SPRITE,TimerCallbackFunction,0);
