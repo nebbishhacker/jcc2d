@@ -1,5 +1,6 @@
 #pragma once
 #include "TextureSprite.h"
+#include "SoundEngine.h"
 
 struct _InputInfo; // forward declaration
 typedef _InputInfo InputInfo; // multi-step (why use typedef, anyways?)
@@ -14,4 +15,5 @@ public:
 private:
 	int vy;
 	bool jumping;
+	//Sound * jumpSound;
 };

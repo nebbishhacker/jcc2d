@@ -28,6 +28,12 @@
     <ClCompile Include="World.cpp">
       <Filter>World Classes\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SoundEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entities.h">
@@ -87,6 +93,12 @@
     <ClInclude Include="TextureCache.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SoundEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedButtonCallbacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -100,10 +112,6 @@
       <UniqueIdentifier>{11fccb70-179b-4dda-8561-c9af42b81da6}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Sprite Classes\Source Files">
-      <UniqueIdentifier>{45e76b01-1468-4fbd-9724-04a19d1635c8}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="World Classes">
       <UniqueIdentifier>{036f9c13-4ad8-4012-934d-9ed810b30135}</UniqueIdentifier>
     </Filter>
@@ -116,6 +124,10 @@
     </Filter>
     <Filter Include="World Classes\Source Files">
       <UniqueIdentifier>{86d5aebb-3617-4a48-be9a-48ef77e06d50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite Classes\Source Files">
+      <UniqueIdentifier>{45e76b01-1468-4fbd-9724-04a19d1635c8}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
   </ItemGroup>
 </Project>

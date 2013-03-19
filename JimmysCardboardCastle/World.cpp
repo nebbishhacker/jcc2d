@@ -74,6 +74,7 @@ void World::update()
 		Sprite * s = *it++;
 		s->update();
 	}
+	executeHitList();
 }
 
 void World::updateAnimation()

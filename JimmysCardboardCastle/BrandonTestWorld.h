@@ -14,10 +14,10 @@ public:
 
 		add(new Background(0, -100, 2000, 1600, "images/lavaRoom_bgm.png", -100, 0.5, 0.25));
 
-		std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 5, "images/JCC_LavaRoomPlat.png"));
+		std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 4, "images/JCC_LavaRoomPlat.png"));
 
 		for (int i = 0; i < 50; ++i) {
-			Tile * tempTile = new Tile(i * 32, 0, rand() % 4, tileSheet);
+			Tile * tempTile = new Tile(i * 32, 0, rand() % 4 + 11, tileSheet);
 			groups["ground"].add(tempTile);
 			add(tempTile);
 		}
