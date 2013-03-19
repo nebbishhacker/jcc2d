@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <map>
 #include "fmod.hpp"
 #pragma comment( lib, "fmodex_vc.lib" )
 
@@ -18,6 +19,7 @@ public:
 
 private:
 	FMOD::System * system;
+	std::map<std::string, Sound> soundMap;
 };
 
 extern SoundEngine soundEngine;

@@ -1,4 +1,5 @@
 #include "SoundEngine.h"
+#include <iostream>
 
 SoundEngine::SoundEngine()
 {
@@ -14,7 +15,13 @@ SoundEngine::~SoundEngine()
 Sound SoundEngine::loadSound(std::string fileName)
 {
 	Sound sound;
-	system->createSound(fileName.c_str(), FMOD_2D, 0, &sound);
+	std::map<std::string, Sound>::iterator it = soundMap.find(fileName);
+	if (it == soundMap.end())
+	{
+		FMOD_RESULT result = system->createSound(fileName.c_str(), FMOD_2D, 0, &sound);
+		if (result != FMOD_OK) std::cout << "Loading file \"" << fileName << "\" failed with code " << result << "\n";
+	}
+	else sound = soundMap[fileName];
 	return sound;
 }
 FMOD::Channel * SoundEngine::playSound(Sound sound)

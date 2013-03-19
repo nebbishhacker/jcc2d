@@ -51,7 +51,7 @@ void DisplayCallbackFunction(void)
  */
 void KeyboardCallbackFunction(unsigned char key, int x, int y)
 {
-	std::cout << "Keycode:"<<(int)key<<std::endl;
+	//std::cout << "Keycode:"<<(int)key<<std::endl;
 	theGame->keyboardDown(key,x,y);
 
 }
@@ -69,7 +69,7 @@ void KeyboardUpCallbackFunction(unsigned char key, int x, int y)
  */
 void SpecialCallbackFunction(int key, int x, int y)
 {
-	std::cout << "Special:"<<key<<std::endl;
+	//std::cout << "Special:"<<key<<std::endl;
 	theGame->specialDown(key, x, y);
 }
 /* function void SpecialCallbackFunction(unsigned char, int,int)

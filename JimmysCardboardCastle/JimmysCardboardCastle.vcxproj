@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
+    <ClCompile Include="TextureCache.cpp" />
     <ClCompile Include="World.cpp" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="BensTestWorld.h" />

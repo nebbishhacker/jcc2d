@@ -15,7 +15,7 @@ static void addBG(World* world) {
 	else for(SpriteGroup::iterator it = world->groups["background"].begin(); it != world->groups["background"].end(); ++it)
 	{
 		(*it)->kill();
-		std::cout << "ow!\n";
+		//std::cout << "ow!\n";
 	}
 }
 
