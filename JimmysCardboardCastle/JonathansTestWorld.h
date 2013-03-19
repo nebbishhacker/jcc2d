@@ -12,12 +12,12 @@ public:
 		//add(new CollTestBox(0, 0));
 		//add(new CollTestBox(400, 200));
 
-		add(new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25));
+		add(new Background(0, -100, 1600, 1200, "images/PGBackground.png", -100, 0.5, 0.25));
 
 		std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 1, "images/JCC_PlatSPR.png"));
 
 		for (int i = 0; i < 50; ++i) {
-			Tile * tempTile = new Tile(i * 32, 0, rand() % 4, tileSheet);
+			Tile * tempTile = new Tile(i * 32, -350, rand() % 4, tileSheet);
 			groups["ground"].add(tempTile);
 			add(tempTile);
 		}
