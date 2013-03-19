@@ -89,6 +89,7 @@
     <ClInclude Include="LucasTestWorld.h" />
     <ClInclude Include="JonathansTestWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
+    <ClInclude Include="SharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="CollTestBox.h">
