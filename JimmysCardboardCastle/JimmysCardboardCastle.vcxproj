@@ -87,8 +87,10 @@
     <ClInclude Include="BensTestWorld.h" />
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="HowToPlay.h" />
     <ClInclude Include="LucasTestWorld.h" />
     <ClInclude Include="JonathansTestWorld.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="SharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />
