@@ -4,6 +4,7 @@
 #include "entities.h"
 
 #include "BensTestWorld.h"
+#include "Levels.h"
 #include "LucasTestWorld.h"
 #include "JonathansTestWorld.h"
 #include "BrandonTestWorld.h"
@@ -21,7 +22,7 @@ public:
 	virtual void initialize()
 	{
 		//  Ben's Button, using the templated startWorld callback
-		add(new Button(304, 500, 64, 64, "images/Ben_Button.png", startWorld<BensTestWorld>));
+		add(new Button(304, 500, 64, 64, "images/Ben_Button.png", startWorld<Level1>));
 
 		//Brandon's Button
 		add(new Button(100, 400, 64, 32, "images/BrandonsButton.png", startWorld<BrandonTestWorld>));
