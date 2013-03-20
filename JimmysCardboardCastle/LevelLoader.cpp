@@ -92,7 +92,6 @@ static bool readRows(std::istream &stream, MapData &data)
 bool TileMap::read(std::istream &stream)
 {
 	if (!expectChar('{', stream)) return false;
-	std::cout << "\n";
 	std::string label;
 	while (!expectChar('}', stream)) {
 		if (readLabel(stream, label)) {
@@ -101,7 +100,6 @@ bool TileMap::read(std::istream &stream)
 				if (label == "tilewidth") readInt(stream, tileWidth);
 				if (label == "tileheight") readInt(stream, tileWidth);
 				if (label == "data") readRows(stream, data);
-				std::cout << "\n";
 			}
 		}
 		else stream.get();
@@ -115,7 +113,6 @@ bool readEntityInfo(std::istream &stream, EntityInfo &info)
 	info.xPos = 0;
 	info.yPos = 0;
 	if (!expectChar('{', stream)) return false;
-	std::cout << "\n";
 	std::string label;
 	while (!expectChar('}', stream)) {
 		if (readLabel(stream, label)) {
@@ -123,7 +120,7 @@ bool readEntityInfo(std::istream &stream, EntityInfo &info)
 				if (label == "type") readLabel(stream, info.type);
 				if (label == "xpos") readInt(stream, info.xPos);
 				if (label == "ypos") readInt(stream, info.yPos);
-				std::cout << "\n";
+				std::cout << " ";
 			}
 		}
 		else stream.get();
