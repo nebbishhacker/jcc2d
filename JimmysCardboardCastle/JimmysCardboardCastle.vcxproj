@@ -89,11 +89,13 @@
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="HowToPlay.h" />
     <ClInclude Include="LevelConstructor.h" />
     <ClInclude Include="LevelLoader.h" />
     <ClInclude Include="Levels.h" />
     <ClInclude Include="LucasTestWorld.h" />
     <ClInclude Include="JonathansTestWorld.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="SharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />

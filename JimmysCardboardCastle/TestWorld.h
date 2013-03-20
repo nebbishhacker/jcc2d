@@ -34,7 +34,7 @@ public:
 		add(new Button(368, 400, 100,100, "images/Jonathan'sHam.png", startWorld<JonathansTestWorld>)); 
 
 		//Lucas's Button
-		add(new Button(468, 500, 64, 64, "images/BUTTON_WRIGHT.png", startWorld<LucasTestWorld>));
+		add(new Button(468, 500, 50, 75, "images/BUTTON_WRIGHT.png", startWorld<LucasTestWorld>));
 
 		// Exit sign button
 		add(new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/exit_sign.png", killWorld));

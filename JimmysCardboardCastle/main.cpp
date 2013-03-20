@@ -12,6 +12,7 @@
 
 #include "TestWorld.h"
 #include "SoundEngine.h"
+#include "MainMenu.h"
 
 #pragma comment (lib, "glut32.lib")
 #pragma comment (lib, "ILUT.lib")
@@ -180,6 +181,7 @@ int main(int argc, char **argv)
 
 	/* init the game */
 	theGame = new Game();
+	theGame->setNewWorld(new MainMenu());
 	theGame->setNewWorld(new TestWorld());
 	theGame->setNewWindowSize(WINDOW_WIDTH,WINDOW_HEIGHT);
 	theGame->setScreenSize(WINDOW_SCREEN_WIDTH, WINDOW_SCREEN_HEIGHT);

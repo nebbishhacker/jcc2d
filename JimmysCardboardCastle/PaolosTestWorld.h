@@ -42,8 +42,14 @@ public:
 			add(tempTile);
 		}
 
-		for (int i = 1; i <= 46; i++) {
-			Tile * tempTile = new Tile(1600 + i * 32, -100, rand() % 4, tileSheet);
+		for (int i = 0; i <= 3; ++i) {
+			Tile * tempTile = new Tile(1600, 0 - i * 32, rand() % 4, tileSheet);
+			groups["ground"].add(tempTile);
+			add(tempTile);
+		}
+
+		for (int i = 1; i <= 47; i++) {
+			Tile * tempTile = new Tile(1600 + i * 32, -96, rand() % 4, tileSheet);
 			groups["ground"].add(tempTile);
 			add(tempTile);
 		}
