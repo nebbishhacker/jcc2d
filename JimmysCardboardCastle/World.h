@@ -68,14 +68,13 @@ public:
 	// DATA //
 
 	//	- stateInfo is a struct providing the following data:
-	//		- int gameState						// I have no plans to use this. I may get rid of it.
 	//		- RGBColor bgClearColor				// Background colour, essentially.
 	//			- float red;
 	//			- float green;
 	//			- float blue;
 	//		- int windowWidth, windowHeight;	// Size of the window -- you probably want the screen size, not the window size.
 	//		- int screenWidth, screenHeight;	// Size of the screen -- useful for huds and layouts
-	//		- float ratioWidth,ratioHeight;		// ...I'm not actually sure. Huh.
+	//		- float ratioWidth,ratioHeight;		// ...I'm not actually sure. Huh. (update: has to do with scaling mouse input. don't worry about it.)
 	GameStateInfo * stateInfo;
 
 	//	- input struct providing the following data:
@@ -96,7 +95,7 @@ public:
 
 	//	- The map of SpriteGroups
 	//	- There's a description of how to access this at the bottom of Sprite.h with the SpriteGroup declaration, which I didn't feel like
-	//		copying or moving
+	//		copying or relocating.
 	std::map<std::string, SpriteGroup> groups;
 
 	//	- This points to the next world down in the stack. You can access the pointer (don't depend on it, make sure it's not NULL), but

@@ -23,20 +23,6 @@
 #define M_PI 3.14159265358979323846
 #endif
 
-/* these are enumerated types (just names) of game states
-   that the game can be in at any moment.  These help you
-   manage the flow of the game.  Especially if you want 
-   to do different updates (call different update functions)
-   or have different behaviour for input (i.e. mouse and keyboard
-   functions might have different behaviour in-game (STATE_GAMEPLAY)
-   versus when in the Menu (STATE_MAINMENU)
-*/
-enum {
-	STATE_GAMEPLAY=0, 
-	STATE_MAINMENU, 
-	STATE_CREDITS
-};
-
 // input information related to mouse
 // you could add keyboard info in here too if you need to know if a key is currently pressed down
 typedef struct _InputInfo
@@ -59,9 +45,6 @@ typedef struct _InputInfo
 		for (int i = 0; i <  128; i++) keysDown[i] = false;
 		for (int i = 0; i <  128; i++) specialsDown[i] = false;
 	}
-	//bool shiftDown();
-	//bool ctrlDown();
-	//bool altDown();
 }InputInfo;
 
 // convenience structure to hold rgb values
@@ -75,7 +58,6 @@ typedef struct _RGBColor
 // i.e. what level are we on?, what is the score? etc.
 typedef struct _GameStateInfo
 {
-	int gameState; // the game state, see enum's above
 	RGBColor bgClearColor; // the default clear color of the background
 
 	// window width/height are the actual size of the window
@@ -131,48 +113,18 @@ public:
 		stateInfo.windowHeight = height;
 	}
 
-	/* functions for adding sprites */
-
-	// add a sprite to the game
-	// automatically adds it to the draw list, update list, etc.
-	//void add(Sprite *s);
-
-	// add a sprite to the draw list
-	// only sprites in the draw list will be drawn
-	//void addSpriteToDrawList(Sprite *s);
-
-	// add a sprite to the update list
-	// all sprites in the update list will be updated (for now, at least)
-	//void addSpriteToUpdateList(Sprite *s);
-
-	// add a sprite to the animation list
-	// sprites in the animation list will have their current frame incremented
-	//void addSpriteToAnimationList(Sprite *s);
-
 	/* draw/rendering routines */
 	void draw(); // called from the main
 
 	void PreDraw(); // prior to drawing
 	void DrawGame(); // actual drawing the frame
 	void PostDraw(); // cleanup and prepare for next frame
-	
-	//void drawSprites(); // draw the sprite list
-	//void drawTestPrimitives(); // test function
 
 	/* update routines, the game loop */
 	void update(); // called from main frequently
 
-	// update the sprites in the sprite list
-	//void updateSprites();
-
 	// update the sprites animation (calling nextFrame())
 	void updateAnimation();
-
-	/* slated a sprite for deletion (adds to hitList) */
-	//void remove(Sprite*);
-
-	/* clear the list of sprite slated for destruction, deleting and removing each member */
-	//void clearHitList();
 
 	/* input callback functions */
 	void keyboardDown(unsigned char key, int mouseX, int mouseY);
@@ -181,9 +133,6 @@ public:
 	void mouseMoved(int x, int y);
 	void specialDown(int key, int x, int y);
 	void specialUp(int key, int x, int y);
-
-	/* camera positioning */
-	//void centerCamera(double x = 0, double y = 0);
 
 	// fails whenever killCurrentWorld or setNewWorld has already been called
 	// WARNING! Deletes world pointer on failure, so be careful!
@@ -203,46 +152,11 @@ public:
 	/* game state info */
 	GameStateInfo stateInfo;
 
-	/* individual sprites to manipulate by name */
-	//Sprite *testSprite;
-	//Sprite *animatedSprite;
-	//Sprite *animatedSprite2;
-
-	//std::vector<Sprite*> testPlayerList;
-
-	//// the background scroller
-	//HorizontalScrollingBackground *bg;
-
 	InputInfo input;
-
-	/* sprite list to draw */
-	//SpriteGroup spriteListToDraw;
-
-	/* sprite list to update*/
-	//SpriteGroup spriteUpdateList;
-
-	/* sprite list to update animation*/
-	//SpriteGroup spriteAnimationList;
-	
-	/* you could have more lists of sprite pointers */
-	/* such as spritesToUpdateForPhysics  
-	   or      spritesToUpdateForCollisions 
-	   etc....
-    */
 
 	/* timer's for rendering and animation/physics update */
 	Timer *renderingTimer;
 	Timer *updateTimer; // for physics/collisions etc.
-
-	/* map for holding SpriteGroups that the sprites are using */
-	//std::map<std::string, SpriteGroup> groups;
-
-	/* list of sprites marked for destruction after the current update cycle */
-	//std::vector<Sprite*> hitList;
-
-	/* camera position */
-	//double cameraX;
-	//double cameraY;
 
 private:
 	bool setWorldNow();

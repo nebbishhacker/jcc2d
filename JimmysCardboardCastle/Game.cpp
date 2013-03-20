@@ -1,15 +1,6 @@
 //#include "drawPrimitives.h"
 #include "Game.h"
 
-/* this is called by std::sort to sort the list based on layerID 
- *  for drawing in the proper order 
- */
-//bool spriteSortingFunction(Sprite *s1, Sprite *s2)
-//{
-//	// return true if s1's layerID is less than s2's layerID
-//	return (s1->layerID < s2->layerID);
-//}
-
 /* constructor */
 Game::Game()
 {
@@ -19,7 +10,6 @@ Game::Game()
 	stateInfo.bgClearColor.blue = 1;
 
 	/* init state */
-	stateInfo.gameState = STATE_GAMEPLAY;
 	renderingTimer = new Timer("RENDER");
 	updateTimer = new Timer("UPDATE");
 	//cameraX = 0;
@@ -52,35 +42,6 @@ void Game::initializeGame()
 	killWorldNow();
 	setWorldNow();
 }
-
-//void Game::loadLevel()
-//{
-//	add(new Player(200, 200));
-//	//add(new CollTestBox(0, 0));
-//	//add(new CollTestBox(400, 200));
-//
-//	add(new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25));
-//
-//	std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 1, "images/JCC_PlatSPR.png"));
-//
-//	for (int i = 0; i < 50; ++i) {
-//		Tile * tempTile = new Tile(i * 32, 0, rand() % 4, tileSheet);
-//		groups["ground"].add(tempTile);
-//		add(tempTile);
-//	}
-//
-//	for (int i = 1; i <= 50; ++i) {
-//		Tile * tempTile = new Tile(0, i * 32, rand() % 4, tileSheet);
-//		groups["ground"].add(tempTile);
-//		add(tempTile);
-//	}
-//
-//	for (int i = 1; i <= 50; ++i) {
-//		Tile * tempTile = new Tile(i / 2 * 32 + 544, 170 + i % 2 * 32, rand() % 4, tileSheet);
-//		groups["ground"].add(tempTile);
-//		add(tempTile);
-//	}
-//}
 
 /* draw()
  * - this gets called automatically about 30 times per second
@@ -152,37 +113,6 @@ void Game::PostDraw()
 	// nothing here at the moment
 }
 
-/* drawSprites()
- * - this function is what actually draws the sprites
- *   onto the screen at their appropriate location
- * - it actually loops through a list of active sprites
- *   and then sorts them by their layerID and then draws them
- * - the sorting has to happen so that you draw from back to front
- *   just like a painter and a canvas.
- */
-//void Game::drawSprites()
-//{
-//	/* we could just do the following to draw the three sprites
-//	   but that would be silly since we have a list of sprites to draw
-//	   stored, so all we need to do is go through the list and draw eaach 
-//	   sprite in the list */
-//	/* // silly way 
-//	testSprite->draw();
-//	animatedSprite->draw();
-//	animatedSprite2->draw();
-//	*/
-//	
-//	/* better way */
-//	/* this is better because it doesn't matter how many sprites we have, they will always be drawn */
-//	SpriteGroup::iterator it; 
-//	for(it = spriteListToDraw.begin(); it != spriteListToDraw.end();)
-//	{
-//		Sprite *s = (*it++);
-//		s->draw(cameraX, cameraY);
-//	}
-//
-//}
-
 /* for testing purposes to show you how to use
    the drawing primitives capabilities */
 //void Game::drawTestPrimitives()
@@ -241,39 +171,7 @@ void Game::update()
 
 	for (int i = 0; i <  128; i++) input.keysPressed[i] = false;
 	for (int i = 0; i <  128; i++) input.keysReleased[i] = false;
-
-	//clearHitList(); //World's job
-
-	/* you should probably update all of the sprites in a list just like the drawing */
-	/* maybe two lists, one for physics updates and another for sprite animation frame update */
-	/*testSprite->update();
-	animatedSprite->update();
-	animatedSprite->nextFrame();
-	animatedSprite2->nextFrame();
-	bg->update();
-
-	std::vector<Sprite*>::iterator it; 
-	for(it=testPlayerList.begin(); it != testPlayerList.end();it++)
-	{
-		(*it)->update();
-		(*it)->nextFrame();
-	}
-
-	if (input.keysDown[32]) std::cout << "Space";*/
 }
-
-/* updateSprites()
- * - this function calls the update() function of all the sprites in the update list
- */
-//void Game::updateSprites()
-//{
-//	SpriteGroup::iterator it; 
-//	for(it=spriteUpdateList.begin(); it != spriteUpdateList.end();)
-//	{
-//		Sprite * s = *it++;
-//		s->update();
-//	}
-//}
 
 /* updateAnimation()
  * - this function calls the nectFrame() function of all the sprites in the animation list
@@ -289,81 +187,6 @@ void Game::updateAnimation()
 	if (currentWorld) currentWorld->updateAnimation();
 }
 
-/*
- * add()
- * - adds a sprite to the draw list, the update list, etc.
- * - also sets this as the sprite's game
- * - and calls the sprite's initialize() method
- */
-//void Game::add(Sprite *s)
-//{
-//	addSpriteToDrawList(s);
-//	addSpriteToAnimationList(s);
-//	addSpriteToUpdateList(s);
-//	s->setGame(this);
-//	s->initialize();
-//}
-
-/* 
- * addSpriteToDrawList()
- * - this function simply pushes the sprite to the end of the list
- */
-//void Game::addSpriteToDrawList(Sprite *s)
-//{
-//	if(s)
-//	{
-//		/* push the sprite to the back of the list */
-//		this->spriteListToDraw.add(s);
-//	}
-//}
-
-/* 
- * addSpriteToUpdateList()
- * - this function simply pushes the sprite to the end of the list
- */
-//void Game::addSpriteToUpdateList(Sprite *s)
-//{
-//	if(s)
-//	{
-//		/* push the sprite to the back of the list */
-//		this->spriteUpdateList.add(s);
-//	}
-//}
-
-/* 
- * addSpriteToAnimationList()
- * - this function simply pushes the sprite to the end of the list
- */
-//void Game::addSpriteToAnimationList(Sprite *s)
-//{
-//	if(s)
-//	{
-//		/* push the sprite to the back of the list */
-//		this->spriteAnimationList.add(s);
-//	}
-//}
-
-
-/*
- * removeSprite()
- * - slates a sprite for deletion (adds to hitList)
- */
-//void Game::remove(Sprite * sprite)
-//{
-//	hitList.push_back(sprite);
-//}
-
-/*
- * clearHitList()
- * - this function deletes and removing each member of the list of sprites slated for destruction
- */
-//void Game::clearHitList()
-//{
-//	while (!hitList.empty()) {
-//		delete hitList.back();
-//		hitList.pop_back();
-//	}
-//}
 
 /*************************************************/
 /* INPUT - keyboard/mouse functions below        */
@@ -495,25 +318,6 @@ void Game::mouseMoved(int x, int y)
 	input.currentY = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
 	//std::cout << input.currentX << " " << input.currentY << "\n";
 }
-
-//void Game::centerCamera(double x, double y)
-//{
-//	cameraX = x - stateInfo.screenWidth / 2;
-//	cameraY = y - stateInfo.screenHeight / 2;
-//}
-
-//bool InputInfo::shiftDown()
-//{
-//	return glutGetModifiers() & GLUT_ACTIVE_SHIFT;
-//}
-//bool InputInfo::ctrlDown()
-//{
-//	return glutGetModifiers() & GLUT_ACTIVE_CTRL;
-//}
-//bool InputInfo::altDown()
-//{
-//	return glutGetModifiers() & GLUT_ACTIVE_ALT;
-//}
 
 void Game::setNewWorld(World * world)
 {
