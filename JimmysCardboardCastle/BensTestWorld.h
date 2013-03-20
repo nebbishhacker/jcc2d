@@ -3,6 +3,8 @@
 #include "World.h"
 #include "entities.h"
 #include "SharedButtonCallbacks.h"
+#include "LevelLoader.h"
+#include "LevelConstructor.h"
 
 static void addBG(World* world) {
 	if (world->groups["background"].size() == 0)
@@ -29,6 +31,9 @@ class BensTestWorld : public World
 public:
 	virtual void initialize()
 	{
+		LevelData levelData = loadLevelData("levels/testLevel.txt");
+		ConstructLevel(levelData, this);
+
 		// Temp variable for setting up sprites before adding them
 		Sprite * t;
 
@@ -52,24 +57,24 @@ public:
 
 		add(new Button(710, 512, 50, 75, "images/BUTTON_PaoloD.png", playTestSound));
 
-		std::shared_ptr<TileSheet> tileSheet(new TileSheet(64, 64, 2, 2, "images/JCC_LavaRoomPlat.png"));
+		//std::shared_ptr<TileSheet> tileSheet(new TileSheet(64, 64, 2, 2, "images/JCC_LavaRoomPlat.png"));
 
-		for (int i = 0; i < 50; ++i) {
-			Tile * tempTile = new Tile(i * 64, 0, rand() % 4, tileSheet);
-			groups["ground"].add(tempTile);
-			add(tempTile);
-		}
+		//for (int i = 0; i < 50; ++i) {
+		//	Tile * tempTile = new Tile(i * 64, 0, rand() % 4, tileSheet);
+		//	groups["ground"].add(tempTile);
+		//	add(tempTile);
+		//}
 
-		for (int i = 1; i <= 50; ++i) {
-			Tile * tempTile = new Tile(0, i * 64, rand() % 4, tileSheet);
-			groups["ground"].add(tempTile);
-			add(tempTile);
-		}
+		//for (int i = 1; i <= 50; ++i) {
+		//	Tile * tempTile = new Tile(0, i * 64, rand() % 4, tileSheet);
+		//	groups["ground"].add(tempTile);
+		//	add(tempTile);
+		//}
 
-		for (int i = 1; i <= 25; ++i) {
-			Tile * tempTile = new Tile(i * 192 + 512, 192 + i % 2 * 256, rand() % 4, tileSheet);
-			groups["ground"].add(tempTile);
-			add(tempTile);
-		}
+		//for (int i = 1; i <= 25; ++i) {
+		//	Tile * tempTile = new Tile(i * 192 + 512, 192 + i % 2 * 256, rand() % 4, tileSheet);
+		//	groups["ground"].add(tempTile);
+		//	add(tempTile);
+		//}
 	}
 };

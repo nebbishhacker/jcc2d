@@ -80,6 +80,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
     <ClCompile Include="TextureCache.cpp" />
     <ClCompile Include="World.cpp" />
@@ -87,6 +88,10 @@
     <ClInclude Include="BensTestWorld.h" />
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="LevelConstructor.h" />
+    <ClInclude Include="LevelLoader.h" />
+    <ClInclude Include="Levels.h" />
     <ClInclude Include="LucasTestWorld.h" />
     <ClInclude Include="JonathansTestWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
