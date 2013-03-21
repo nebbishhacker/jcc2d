@@ -25,7 +25,7 @@ public:
 		//add(new CollTestBox(400, 200));
 
 		add(new Background(0, -100, 1600, 1200, "images/PGBackground.png", -100, 0.5, 0.25));
-
+		add(new Background(0, 0, 800, 600, "images/Jonathan'sHud.png", 100, 0, 0));
 		
 		add(new Button(300, 0, 68, 68, "images/FanBase.png", playTestSound2));
 
