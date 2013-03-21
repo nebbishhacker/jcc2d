@@ -15,7 +15,7 @@ public:
 	virtual void initialize()
 	{
 		Sprite * t; 
-		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/exit_sign.png", killWorld);
+		t = new Button(325, /*game->stateInfo.screenHeight - 36*/ 550, 139, 50, "images/MenuButton.png", killWorld);
 		t->scrollFactorX = 0;
 		t->scrollFactorY = 0;
 		t->layerID = 100;
