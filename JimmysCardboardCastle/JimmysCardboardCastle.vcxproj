@@ -99,6 +99,7 @@
     <ClInclude Include="LucasTestWorld.h" />
     <ClInclude Include="JonathansTestWorld.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="OverlayWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="SharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />

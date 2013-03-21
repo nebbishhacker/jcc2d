@@ -1,6 +1,6 @@
 #pragma once
 
-#include "World.h"
+#include "OverlayWorld.h"
 #include "entities.h"
 #include "SharedButtonCallbacks.h"
 #include "LevelLoader.h"
@@ -26,7 +26,7 @@ static void playTestSound(World* world) {
 	soundEngine.playSound(sound);
 }
 
-class BensTestWorld : public World
+class BensTestWorld : public OverlayWorld
 {
 public:
 	virtual void initialize()

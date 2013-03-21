@@ -22,7 +22,7 @@ public:
 	virtual void initialize()
 	{
 		//  Ben's Button, using the templated startWorld callback
-		add(new Button(304, 500, 64, 64, "images/Ben_Button.png", startWorld<Level1>));
+		add(new Button(304, 500, 64, 64, "images/Ben_Button.png", startWorld<BensTestWorld>));
 
 		//Brandon's Button
 		add(new Button(100, 400, 64, 32, "images/BrandonsButton.png", startWorld<BrandonTestWorld>));

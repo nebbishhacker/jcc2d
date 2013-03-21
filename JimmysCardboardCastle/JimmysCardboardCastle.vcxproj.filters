@@ -120,6 +120,9 @@
     <ClInclude Include="HowToPlay.h">
       <Filter>World Classes\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OverlayWorld.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
