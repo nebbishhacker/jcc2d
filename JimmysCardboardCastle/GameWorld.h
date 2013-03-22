@@ -19,8 +19,6 @@ public:
 	{
 		LevelData levelData = loadLevelData(levelFileName);
 		ConstructLevel(levelData, this);
-
-		add(new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25));
 		
 		// Initialize HUD here
 

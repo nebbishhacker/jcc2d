@@ -6,8 +6,13 @@
 #include <vector>
 #include <cctype>
 #include <cstdlib>
+#include <climits>
 
 #include <iostream>
+
+
+const int INVALID_INT = INT_MAX;
+
 
 struct TileInfo {
 	int c, r;
@@ -35,6 +40,21 @@ struct EntityInfo
 	std::string type;
 	int xPos;
 	int yPos;
+	std::string imagePath;
+	int frameSizeX;
+	int frameSizeY;
+	double layerID;
+	double scrollFactorX;
+	double scrollFactorY;
+
+	EntityInfo()
+	{
+		xPos = 0;
+		yPos = 0;
+		layerID = INVALID_INT;
+		scrollFactorX = INVALID_INT;
+		scrollFactorY = INVALID_INT;
+	}
 };
 
 typedef std::vector<EntityInfo> EntityList;

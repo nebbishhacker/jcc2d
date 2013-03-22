@@ -3,13 +3,23 @@
 #include "World.h"
 #include "LevelLoader.h"
 #include "TileSheet.h"
+#include "entities.h"
 
 void ConstructLevel(LevelData levelData, World * world)
 {
 	for (EntityList::iterator it = levelData.entities.begin(); it != levelData.entities.end(); ++it)
 	{
 		EntityInfo &info = *it;
-		if (info.type == "player") world->add(new Player(info.xPos, info.yPos));
+		Sprite * t = NULL;
+		if (info.type == "player") t = new Player(info.xPos, info.yPos);
+		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
+		if (t != NULL)
+		{
+			if (info.layerID != INVALID_INT) t->layerID = info.layerID;
+			if (info.scrollFactorX != INVALID_INT) t->scrollFactorX = info.scrollFactorX;
+			if (info.scrollFactorY != INVALID_INT) t->scrollFactorY = info.scrollFactorY;
+			world->add(t);
+		}
 	}
 
 	for (std::vector<TileMap>::iterator it = levelData.tileMaps.begin(); it != levelData.tileMaps.end(); ++it)

@@ -44,9 +44,22 @@ static bool readInt(std::istream &stream, int &n)
 {
 	std::string buff = "";
 	consumeSpace(stream);
-	if (!std::isdigit(stream.peek())) return false;
+	if (std::isdigit(stream.peek()) || stream.peek() == '+' || stream.peek() == '-') buff += stream.get();
+	else return false;
 	while (std::isdigit(stream.peek())) buff += stream.get();
 	n = std::atoi(buff.c_str());
+	std::cout << n;
+	return true;
+}
+
+static bool readDouble(std::istream &stream, double &n)
+{
+	std::string buff = "";
+	consumeSpace(stream);
+	if (std::isdigit(stream.peek()) || stream.peek() == '.' || stream.peek() == '+' || stream.peek() == '-') buff += stream.get();
+	else return false;
+	while (std::isdigit(stream.peek()) || stream.peek() == '.') buff += stream.get();
+	n = std::atof(buff.c_str());
 	std::cout << n;
 	return true;
 }
@@ -120,6 +133,12 @@ bool readEntityInfo(std::istream &stream, EntityInfo &info)
 				if (label == "type") readLabel(stream, info.type);
 				if (label == "xpos") readInt(stream, info.xPos);
 				if (label == "ypos") readInt(stream, info.yPos);
+				if (label == "imagepath") readString(stream, info.imagePath);
+				if (label == "framesizex") readInt(stream, info.frameSizeX);
+				if (label == "framesizey") readInt(stream, info.frameSizeY);
+				if (label == "layerid") readDouble(stream, info.layerID);
+				if (label == "scrollfactorx") readDouble(stream, info.scrollFactorX);
+				if (label == "scrollfactory") readDouble(stream, info.scrollFactorY);
 				std::cout << " ";
 			}
 		}
