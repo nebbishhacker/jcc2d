@@ -4,8 +4,8 @@
 #include "World.h"
 #include "entities.h"
 #include "SharedButtonCallbacks.h"
-#include "LevelLoader.h"
-#include "LevelConstructor.h"
+#include "levelLoader.h"
+#include "levelConstructor.h"
 
 class GameWorld : public World
 {

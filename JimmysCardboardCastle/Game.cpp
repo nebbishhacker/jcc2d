@@ -72,7 +72,6 @@ void Game::PreDraw()
 				 stateInfo.bgClearColor.blue, 0);
 	glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity(); // clear out the transformation matrix
-	glEnable(GL_TEXTURE_2D); // turn on texturing
 
 	// if we update our timer it will tell us the elapsed time since the previous 
 	// frame that we rendered
@@ -94,7 +93,6 @@ void Game::DrawGame()
 	/* here is where your drawing stuff goes */
 	if (currentWorld) currentWorld->draw();
 
-	glDisable(GL_TEXTURE_2D);
 	//drawTestPrimitives();
 
 	/* this makes it actually show up on the screen */
@@ -354,7 +352,6 @@ bool Game::setWorldNow()
 		currentWorld = newWorld;
 		newWorld = NULL;
 		currentWorld->initialize();
-		newWorld = NULL;
 		return true;
 	}
 	return false;

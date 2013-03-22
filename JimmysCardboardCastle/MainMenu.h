@@ -6,8 +6,8 @@
 #include "TestWorld.h"
 #include "HowToPlay.h"
 #include "Levels.h"
-// SharedButtonCallbacks.h is where I'm putting button callback functions that are useful in more than one world.
-#include "SharedButtonCallbacks.h"
+// sharedButtonCallbacks.h is where I'm putting button callback functions that are useful in more than one world.
+#include "sharedButtonCallbacks.h"
 
 
 
@@ -20,7 +20,6 @@ public:
 
 	{
 		add(new Background(0, 0, 800, 600, "images/MainMenuBGTEST.png", -100, 0.5, 0.25));
-		//  Ben's Button, using the templated startWorld callback
 		add(new Button(60, 300, 139, 27, "images/NewGameButton.png", startWorld<Level1>));
 		add(new Button(66, 275, 139, 22, "images/LoadGameButton.png", startWorld<Level1>));
 		add(new Button(66, 250, 161, 22, "images/HowToPlayButton.png", startWorld<HowToPlay>));

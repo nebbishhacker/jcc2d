@@ -10,8 +10,8 @@
 #include "BrandonTestWorld.h"
 #include "PaolosTestWorld.h"
 
-// SharedButtonCallbacks.h is where I'm putting button callback functions that are useful in more than one world.
-#include "SharedButtonCallbacks.h"
+// sharedButtonCallbacks.h is where I'm putting button callback functions that are useful in more than one world.
+#include "sharedButtonCallbacks.h"
 
 
 

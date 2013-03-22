@@ -1,11 +1,11 @@
 #pragma once
 
 #include "World.h"
-#include "LevelLoader.h"
+#include "levelLoader.h"
 #include "TileSheet.h"
 #include "entities.h"
 
-void ConstructLevel(LevelData levelData, World * world)
+void ConstructLevel(LevelData &levelData, World * world)
 {
 	for (EntityList::iterator it = levelData.entities.begin(); it != levelData.entities.end(); ++it)
 	{

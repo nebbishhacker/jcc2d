@@ -2,6 +2,8 @@
 #include "TextureSprite.h"
 #include <memory>
 
+//	You need to create a tileSheet before you create any tiles.
+//  Also, you need to create it using a std::shared_ptr.
 class TileSheet: public TextureSprite
 {
 public:
