@@ -2,15 +2,18 @@
 
 #include <string>
 #include <istream>
+#include <ostream>
 #include <fstream>
 #include <vector>
 #include <cctype>
 #include <cstdlib>
 #include <climits>
+#include <cfloat>
 
-#include <iostream>
+//#include <iostream>
 
 
+const double INVALID_DOUBLE = DBL_MAX;
 const int INVALID_INT = INT_MAX;
 
 
@@ -19,6 +22,7 @@ struct TileInfo {
 	bool exists;
 
 	bool read(std::istream &stream);
+	void write(std::ostream &stream);
 };
 
 typedef std::vector<TileInfo> MapRow;
@@ -33,6 +37,7 @@ struct TileMap
 	MapData data;
 	
 	bool read(std::istream &stream);
+	void write(std::ostream &stream);
 };
 
 struct EntityInfo
@@ -51,9 +56,11 @@ struct EntityInfo
 	{
 		xPos = 0;
 		yPos = 0;
-		layerID = INVALID_INT;
-		scrollFactorX = INVALID_INT;
-		scrollFactorY = INVALID_INT;
+		frameSizeX = INVALID_INT;
+		frameSizeY = INVALID_INT;
+		layerID = INVALID_DOUBLE;
+		scrollFactorX = INVALID_DOUBLE;
+		scrollFactorY = INVALID_DOUBLE;
 	}
 };
 
@@ -65,6 +72,9 @@ struct LevelData
 	EntityList entities;
 
 	void read(std::istream &stream);
+	void write(std::ostream &stream);
 };
 
 LevelData loadLevelData(std::string fileName);
+
+void saveLevelData(std::string fileName, LevelData &levelData);

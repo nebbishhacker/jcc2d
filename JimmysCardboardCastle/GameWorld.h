@@ -19,11 +19,9 @@ public:
 	{
 		LevelData levelData = loadLevelData(levelFileName);
 		ConstructLevel(levelData, this);
+		// saveLevelData(levelFileName + ".out.txt", levelData); //testing
 		
-		// Initialize HUD here
-
-
-		// Everything below shouldn't really be here.
+		// Initialize HUD here //
 
 		// Temp variable for setting up sprites before adding them
 		Sprite * t;

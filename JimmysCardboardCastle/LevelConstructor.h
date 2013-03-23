@@ -15,9 +15,9 @@ void ConstructLevel(LevelData &levelData, World * world)
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
 		if (t != NULL)
 		{
-			if (info.layerID != INVALID_INT) t->layerID = info.layerID;
-			if (info.scrollFactorX != INVALID_INT) t->scrollFactorX = info.scrollFactorX;
-			if (info.scrollFactorY != INVALID_INT) t->scrollFactorY = info.scrollFactorY;
+			if (info.layerID != INVALID_DOUBLE) t->layerID = info.layerID;
+			if (info.scrollFactorX != INVALID_DOUBLE) t->scrollFactorX = info.scrollFactorX;
+			if (info.scrollFactorY != INVALID_DOUBLE) t->scrollFactorY = info.scrollFactorY;
 			world->add(t);
 		}
 	}
