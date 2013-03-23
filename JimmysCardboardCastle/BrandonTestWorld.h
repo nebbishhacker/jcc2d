@@ -10,7 +10,7 @@ public:
 	{
 
 		Sprite * t; 
-		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/exit_sign.png", killWorld);
+		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/dev/exit_sign.png", killWorld);
 		t->scrollFactorX = 0;
 		t->scrollFactorY = 0;
 		t->layerID = 100;
@@ -20,9 +20,9 @@ public:
 		//add(new CollTestBox(0, 0));
 		//add(new CollTestBox(400, 200));
 
-		add(new Background(0, -100, 2000, 1600, "images/lavaRoom_bgm.png", -100, 0.5, 0.25));
+		add(new Background(0, -100, 2000, 1600, "images/dev/lavaRoom_bgm.png", -100, 0.5, 0.25));
 
-		std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 4, "images/JCC_LavaRoomPlat.png"));
+		std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 4, "images/dev/JCC_LavaRoomPlat.png"));
 
 		for (int i = 0; i < 50; ++i) {
 			Tile * tempTile = new Tile(i * 32, 0, rand() % 4 + 11, tileSheet);

@@ -1,7 +1,7 @@
 #include "CollTestBox.h"
 #include "Game.h"
 
-CollTestBox::CollTestBox(double x, double y) : TextureSprite("images/colltestbox.png")
+CollTestBox::CollTestBox(double x, double y) : TextureSprite("images/dev/colltestbox.png")
 {
 	setNumberOfAnimations(2);
 	setSpriteFrameSize(600,50);

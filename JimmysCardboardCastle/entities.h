@@ -4,3 +4,4 @@
 #include "Background.h"
 #include "TileSheet.h"
 #include "Button.h"
+#include "ScreenFillSprite.h"

@@ -1,6 +1,7 @@
 #pragma once
 #include "TextureSprite.h"
 
+//  A very simple background class. I'll make a better one for repeating backgrounds at some point.
 class Background: public TextureSprite
 {
 public:

@@ -1,7 +1,10 @@
-
 #pragma once
 #include "GL/glut.h"
 #include <string>
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 
 /* - these are simple convenience functions to draw primitives
@@ -19,6 +22,11 @@ void setLineWidth(float width)
 void setColor(float red, float green, float blue)
 {
 	glColor3f(red,green,blue);
+}
+
+void setColor(float red, float green, float blue, float alpha)
+{
+	glColor4f(red,green,blue,alpha);
 }
 
 /* draws a line between two points in screen pixel values (startX,startY) to (endX,endY) */
@@ -115,7 +123,7 @@ void drawText(std::string s, float posX, float posY)
 	glPushMatrix();
 	glRasterPos2f(posX,posY);
 	const char *text = s.c_str();
-	for(int i=0;i<s.length();i++)
+	for(unsigned int i=0; i < s.length(); i++)
 	{
 		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, text[i]);
 	}

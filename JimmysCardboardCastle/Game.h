@@ -134,14 +134,14 @@ public:
 	void specialDown(int key, int x, int y);
 	void specialUp(int key, int x, int y);
 
-	// fails whenever killCurrentWorld or setNewWorld has already been called
+	// Fails whenever killCurrentWorld or setNewWorld has already been called.
 	// WARNING! Deletes world pointer on failure, so be careful!
 	void setNewWorld(World * world);
 
-	// fails whenever setNewWorld has just been called
+	// Fails whenever setNewWorld has just been called.
 	void killCurrentWorld();
 
-	// fails whenever killCurrentWorld or setNewWorld has already been called
+	// Fails whenever killCurrentWorld or setNewWorld has already been called.
 	// WARNING! Deletes world pointer on failure, so be careful!
 	void replacingCurrentWorld(World * world);
 

@@ -107,3 +107,17 @@ void World::centerCamera(double x, double y)
 		cameraY = y - stateInfo->screenHeight / 2;
 	}
 }
+
+void World::killNextWorldDown()
+{
+	World * temp = nextWorldDown;
+	nextWorldDown = nextWorldDown->nextWorldDown;
+	delete temp;
+}
+
+void World::replaceNextWorldDown(World * world)
+{
+	world->nextWorldDown = nextWorldDown->nextWorldDown;
+	delete nextWorldDown;
+	nextWorldDown = world;
+}

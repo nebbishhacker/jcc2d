@@ -90,6 +90,8 @@ void TextureSprite::setAnimationSpeed(int animationNumber, float speed)
  */
 void TextureSprite::draw(double cameraX, double cameraY)
 {
+	glEnable(GL_TEXTURE_2D); // turn on texturing
+
 	/* draw the sprite */
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
@@ -132,4 +134,6 @@ void TextureSprite::draw(double cameraX, double cameraY)
 		glEnd();
 	glPopMatrix();
 	glDisable(GL_BLEND);
+
+	glDisable(GL_TEXTURE_2D);
 }

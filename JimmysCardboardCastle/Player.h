@@ -5,6 +5,7 @@
 struct _InputInfo; // forward declaration
 typedef _InputInfo InputInfo; // multi-step (why use typedef, anyways?)
 
+//  The player class! Rather incomplete, but it works for now.
 class Player: public TextureSprite
 {
 public:
