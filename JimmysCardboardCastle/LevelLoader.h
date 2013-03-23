@@ -21,6 +21,11 @@ struct TileInfo {
 	int c, r;
 	bool exists;
 
+	TileInfo()
+	{
+		c = r = -1;
+		exists = false;
+	}
 	bool read(std::istream &stream);
 	void write(std::ostream &stream);
 };
@@ -62,6 +67,9 @@ struct EntityInfo
 		scrollFactorX = INVALID_DOUBLE;
 		scrollFactorY = INVALID_DOUBLE;
 	}
+
+	bool read(std::istream &stream);
+	void write(std::ostream &stream);
 };
 
 typedef std::vector<EntityInfo> EntityList;

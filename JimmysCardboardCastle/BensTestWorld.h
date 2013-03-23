@@ -9,7 +9,7 @@
 static void addBG(World* world) {
 	if (world->groups["background"].size() == 0)
 	{
-		Sprite * bg = new Background(200, 0, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25);
+		Sprite * bg = new Background(200, 0, 825, 638, "images/dev/ben_background(0.25scale).png", -100, 0.5, 0.25);
 		world->add(bg);
 		world->groups["background"].add(bg);
 		//std::cout << "Background button GO!\n";
@@ -47,7 +47,7 @@ public:
 		//		sets it's scrollfactor to '0' so it doesn't scroll,
 		//		sets it's layer to '100' so it's in front of everything else,
 		//		and adds it to the world.
-		t = new Button(game->stateInfo.screenWidth / 2 - 43, game->stateInfo.screenHeight / 2 - 13, 76, 36, "images/exit_sign.png", doubleKillWorld);
+		t = new Button(game->stateInfo.screenWidth / 2 - 43, game->stateInfo.screenHeight / 2 - 13, 76, 36, "images/dev/exit_sign.png", doubleKillWorld);
 		t->scrollFactorX = 0;
 		t->scrollFactorY = 0;
 		t->layerID = 100;
@@ -56,14 +56,14 @@ public:
 		//// Add da player
 		//add(new Player(200, 200));
 
-		//t = new Button(500, 400, 64, 64, "images/Ben_Button.png", addBG);
+		//t = new Button(500, 400, 64, 64, "images/dev/Ben_Button.png", addBG);
 		//t->scrollFactorX = 0.5;
 		//t->scrollFactorY = 0.25;
 		//add(t);
 
-		//add(new Button(710, 448, 50, 75, "images/BUTTON_PaoloD.png", playTestSound));
+		//add(new Button(710, 448, 50, 75, "images/dev/BUTTON_PaoloD.png", playTestSound));
 
-		//std::shared_ptr<TileSheet> tileSheet(new TileSheet(64, 64, 2, 2, "images/JCC_LavaRoomPlat.png"));
+		//std::shared_ptr<TileSheet> tileSheet(new TileSheet(64, 64, 2, 2, "images/dev/JCC_LavaRoomPlat.png"));
 
 		//for (int i = 0; i < 50; ++i) {
 		//	Tile * tempTile = new Tile(i * 64, 0, rand() % 4, tileSheet);

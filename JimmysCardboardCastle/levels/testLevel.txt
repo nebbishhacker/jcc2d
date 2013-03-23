@@ -10,14 +10,14 @@ entities: [
 		ypos: -100
 		framesizex: 825
 		framesizey: 638
-		imagepath: "images/ben_background(0.25scale).png"
+		imagepath: "images/dev/ben_background(0.25scale).png"
 		layerid: -100
 		scrollfactorx: 0.5
 		scrollfactory: 0.25
 	}
 ]
 tilemap: {
-	tilesheetpath: "images/JCC_LavaRoomPlat.png"
+	tilesheetpath: "images/dev/JCC_LavaRoomPlat.png"
 	tilewidth: 64
 	tileheight: 64
 	data: [

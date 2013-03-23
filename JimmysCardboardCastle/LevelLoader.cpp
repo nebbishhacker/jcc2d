@@ -81,7 +81,7 @@ bool TileInfo::read(std::istream &stream)
 
 void TileInfo::write(std::ostream &stream)
 {
-		if (c >= 0 && r >= 0) stream << c << "," << r;
+		if (exists) stream << c << "," << r;
 		else stream << "-";
 }
 
@@ -157,25 +157,25 @@ void TileMap::write(std::ostream &stream)
 	stream << "}\n";
 }
 
-bool readEntityInfo(std::istream &stream, EntityInfo &info)
+bool EntityInfo::read(std::istream &stream)
 {
-	info.type = "";
-	info.xPos = 0;
-	info.yPos = 0;
+	type = "";
+	xPos = 0;
+	yPos = 0;
 	if (!expectChar('{', stream)) return false;
 	std::string label;
 	while (!expectChar('}', stream)) {
 		if (readLabel(stream, label)) {
 			if (expectChar(':', stream)) {
-				if (label == "type") readLabel(stream, info.type);
-				if (label == "xpos") readInt(stream, info.xPos);
-				if (label == "ypos") readInt(stream, info.yPos);
-				if (label == "imagepath") readString(stream, info.imagePath);
-				if (label == "framesizex") readInt(stream, info.frameSizeX);
-				if (label == "framesizey") readInt(stream, info.frameSizeY);
-				if (label == "layerid") readDouble(stream, info.layerID);
-				if (label == "scrollfactorx") readDouble(stream, info.scrollFactorX);
-				if (label == "scrollfactory") readDouble(stream, info.scrollFactorY);
+				if (label == "type") readLabel(stream, type);
+				if (label == "xpos") readInt(stream, xPos);
+				if (label == "ypos") readInt(stream, yPos);
+				if (label == "imagepath") readString(stream, imagePath);
+				if (label == "framesizex") readInt(stream, frameSizeX);
+				if (label == "framesizey") readInt(stream, frameSizeY);
+				if (label == "layerid") readDouble(stream, layerID);
+				if (label == "scrollfactorx") readDouble(stream, scrollFactorX);
+				if (label == "scrollfactory") readDouble(stream, scrollFactorY);
 				//std::cout << " ";
 			}
 		}
@@ -184,18 +184,18 @@ bool readEntityInfo(std::istream &stream, EntityInfo &info)
 	return true;
 }
 
-void writeEntityInfo(std::ostream &stream, EntityInfo &info)
+void EntityInfo::write(std::ostream &stream)
 {
 	stream << "\t{\n";
-	stream << "\t\t" << "type: " << info.type << "\n";
-	stream << "\t\t" << "xpos: " << info.xPos << "\n";
-	stream << "\t\t" << "ypos: " << info.yPos << "\n";
-	if (info.imagePath != "") stream << "\t\t" << "imagepath: " << '"' << info.imagePath << '"' << "\n";
-	if (info.frameSizeX != INVALID_INT) stream << "\t\t" << "framesizex: " << info.frameSizeX << "\n";
-	if (info.frameSizeY != INVALID_INT) stream << "\t\t" << "framesizey: " << info.frameSizeY << "\n";
-	if (info.layerID != INVALID_DOUBLE) stream << "\t\t" << "layerid: " << info.layerID << "\n";
-	if (info.scrollFactorX != INVALID_DOUBLE) stream << "\t\t" << "scrollfactorx: " << info.scrollFactorX << "\n";
-	if (info.scrollFactorY != INVALID_DOUBLE) stream << "\t\t" << "scrollfactory: " << info.scrollFactorY << "\n";
+	stream << "\t\t" << "type: " << type << "\n";
+	stream << "\t\t" << "xpos: " << xPos << "\n";
+	stream << "\t\t" << "ypos: " << yPos << "\n";
+	if (imagePath != "") stream << "\t\t" << "imagepath: " << '"' << imagePath << '"' << "\n";
+	if (frameSizeX != INVALID_INT) stream << "\t\t" << "framesizex: " << frameSizeX << "\n";
+	if (frameSizeY != INVALID_INT) stream << "\t\t" << "framesizey: " << frameSizeY << "\n";
+	if (layerID != INVALID_DOUBLE) stream << "\t\t" << "layerid: " << layerID << "\n";
+	if (scrollFactorX != INVALID_DOUBLE) stream << "\t\t" << "scrollfactorx: " << scrollFactorX << "\n";
+	if (scrollFactorY != INVALID_DOUBLE) stream << "\t\t" << "scrollfactory: " << scrollFactorY << "\n";
 	stream << "\t}\n";
 }
 
@@ -204,7 +204,7 @@ bool readEntityList(std::istream &stream, EntityList &entities)
 	if (!expectChar('[', stream)) return false;
 	while (!expectChar(']', stream)) {
 		EntityInfo entityInfo;
-		if (readEntityInfo(stream, entityInfo)) entities.push_back(entityInfo);
+		if (entityInfo.read(stream)) entities.push_back(entityInfo);
 		else stream.get();
 	}
 	return true;
@@ -215,7 +215,7 @@ void writeEntityList(std::ostream &stream, EntityList &entities)
 	stream << "[\n";
 	for (EntityList::iterator it = entities.begin(); it != entities.end(); ++it)
 	{
-		writeEntityInfo(stream, *it);
+		it->write(stream);
 	}
 	stream << "]\n";
 }

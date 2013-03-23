@@ -2,7 +2,7 @@
 #include "Game.h"
 #include <iostream>
 
-Player::Player(double x, double y) : TextureSprite("images/SamSheet.png")
+Player::Player(double x, double y) : TextureSprite("images/dev/SamSheet.png")
 {
 	// animations:
 	// 0 - idle
