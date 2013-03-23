@@ -14,7 +14,7 @@ class JonathansTestWorld : public World
 public:
 	virtual void initialize()
 	{
-		Sprite * t; 
+		Sprite * t;
 		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/exit_sign.png", killWorld);
 		t->scrollFactorX = 0;
 		t->scrollFactorY = 0;
