@@ -4,8 +4,8 @@
 #include "World.h"
 #include "entities.h"
 #include "SharedButtonCallbacks.h"
-#include "LevelLoader.h"
-#include "LevelConstructor.h"
+#include "levelLoader.h"
+#include "levelConstructor.h"
 
 class GameWorld : public World
 {
@@ -19,13 +19,9 @@ public:
 	{
 		LevelData levelData = loadLevelData(levelFileName);
 		ConstructLevel(levelData, this);
-
-		add(new Background(0, -100, 825, 638, "images/ben_background(0.25scale).png", -100, 0.5, 0.25));
+		// saveLevelData(levelFileName + ".out.txt", levelData); //testing
 		
-		// Initialize HUD here
-
-
-		// Everything below shouldn't really be here.
+		// Initialize HUD here //
 
 		// Temp variable for setting up sprites before adding them
 		Sprite * t;
@@ -34,7 +30,7 @@ public:
 		//		sets it's scrollfactor to '0' so it doesn't scroll,
 		//		sets it's layer to '100' so it's in front of everything else,
 		//		and adds it to the world.
-		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/exit_sign.png", killWorld);
+		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/dev/exit_sign.png", killWorld);
 		t->scrollFactorX = 0;
 		t->scrollFactorY = 0;
 		t->layerID = 100;

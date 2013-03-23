@@ -2,18 +2,32 @@
 
 #include <string>
 #include <istream>
+#include <ostream>
 #include <fstream>
 #include <vector>
 #include <cctype>
 #include <cstdlib>
+#include <climits>
+#include <cfloat>
 
-#include <iostream>
+//#include <iostream>
+
+
+const double INVALID_DOUBLE = DBL_MAX;
+const int INVALID_INT = INT_MAX;
+
 
 struct TileInfo {
 	int c, r;
 	bool exists;
 
+	TileInfo()
+	{
+		c = r = -1;
+		exists = false;
+	}
 	bool read(std::istream &stream);
+	void write(std::ostream &stream);
 };
 
 typedef std::vector<TileInfo> MapRow;
@@ -28,6 +42,7 @@ struct TileMap
 	MapData data;
 	
 	bool read(std::istream &stream);
+	void write(std::ostream &stream);
 };
 
 struct EntityInfo
@@ -35,6 +50,26 @@ struct EntityInfo
 	std::string type;
 	int xPos;
 	int yPos;
+	std::string imagePath;
+	int frameSizeX;
+	int frameSizeY;
+	double layerID;
+	double scrollFactorX;
+	double scrollFactorY;
+
+	EntityInfo()
+	{
+		xPos = 0;
+		yPos = 0;
+		frameSizeX = INVALID_INT;
+		frameSizeY = INVALID_INT;
+		layerID = INVALID_DOUBLE;
+		scrollFactorX = INVALID_DOUBLE;
+		scrollFactorY = INVALID_DOUBLE;
+	}
+
+	bool read(std::istream &stream);
+	void write(std::ostream &stream);
 };
 
 typedef std::vector<EntityInfo> EntityList;
@@ -45,6 +80,9 @@ struct LevelData
 	EntityList entities;
 
 	void read(std::istream &stream);
+	void write(std::ostream &stream);
 };
 
 LevelData loadLevelData(std::string fileName);
+
+void saveLevelData(std::string fileName, LevelData &levelData);

@@ -70,17 +70,21 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>.\lib</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
-    <ClCompile Include="LevelLoader.cpp" />
+    <ClCompile Include="levelLoader.cpp" />
+    <ClCompile Include="ScreenFillSprite.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
     <ClCompile Include="TextureCache.cpp" />
     <ClCompile Include="World.cpp" />
@@ -88,16 +92,19 @@
     <ClInclude Include="BensTestWorld.h" />
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="drawPrimitives.h" />
     <ClInclude Include="GameWorld.h" />
     <ClInclude Include="HowToPlay.h" />
-    <ClInclude Include="LevelConstructor.h" />
-    <ClInclude Include="LevelLoader.h" />
+    <ClInclude Include="levelConstructor.h" />
+    <ClInclude Include="levelLoader.h" />
     <ClInclude Include="Levels.h" />
     <ClInclude Include="LucasTestWorld.h" />
     <ClInclude Include="JonathansTestWorld.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="OverlayWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
-    <ClInclude Include="SharedButtonCallbacks.h" />
+    <ClInclude Include="ScreenFillSprite.h" />
+    <ClInclude Include="sharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="CollTestBox.h">

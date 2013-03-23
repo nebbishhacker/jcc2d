@@ -65,6 +65,12 @@ public:
 	//	- Centers the camera on the given position. (duh)
 	void centerCamera(double x = 0, double y = 0);
 
+	//  - Deletes the next world down, and amends the nextWorldDown pointer to point to the one below it.
+	void killNextWorldDown();
+
+	//  - Deletes the next world down and replaces it with a new world.
+	void replaceNextWorldDown(World * world);
+
 	// DATA //
 
 	//	- stateInfo is a struct providing the following data:
@@ -101,6 +107,11 @@ public:
 	//	- This points to the next world down in the stack. You can access the pointer (don't depend on it, make sure it's not NULL), but
 	//		please don't try to modify it.
 	World * nextWorldDown;
+
+	////	- This points to the next world up in the stack. You can access the pointer (don't depend on it, make sure it's not NULL), but
+	////		please don't try to modify it. Mostly, if there IS a nestWorldUp, it will be the world doing all the execution, so you should
+	////		really never have reason to use this.
+	//World * nextWorldUp;
 
 	//	- Camera position.
 	//	- Be aware that this is the position of the bottom-left corner, not the center.

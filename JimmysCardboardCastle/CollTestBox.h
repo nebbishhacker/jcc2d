@@ -4,6 +4,8 @@
 struct _InputInfo; // forward declaration
 typedef _InputInfo InputInfo; // multi-step (why use typedef, anyways?)
 
+//  Originally used to make sure collisions work right, then repurposed to an odd looking platform.
+//	It's probably not a good idea to rely on anything with "Test" in the name.
 class CollTestBox: public TextureSprite
 {
 public:

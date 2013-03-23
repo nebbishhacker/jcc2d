@@ -14,8 +14,8 @@ class JonathansTestWorld : public World
 public:
 	virtual void initialize()
 	{
-		Sprite * t;
-		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/exit_sign.png", killWorld);
+		Sprite * t; 
+		t = new Button(325, /*game->stateInfo.screenHeight - 36*/ 550, 139, 50, "images/dev/MenuButton.png", killWorld);
 		t->scrollFactorX = 0;
 		t->scrollFactorY = 0;
 		t->layerID = 100;
@@ -24,13 +24,13 @@ public:
 		//add(new CollTestBox(0, 0));
 		//add(new CollTestBox(400, 200));
 
-		add(new Background(0, -100, 1600, 1200, "images/PGBackground.png", -100, 0.5, 0.25));
-
+		add(new Background(0, -100, 1600, 1200, "images/dev/PGBackground.png", -100, 0.5, 0.25));
+		add(new Background(0, 0, 800, 600, "images/dev/Jonathan'sHud.png", 100, 0, 0));
 		
-		add(new Button(300, 0, 68, 68, "images/FanBase.png", playTestSound2));
+		add(new Button(300, 0, 68, 68, "images/dev/FanBase.png", playTestSound2));
 
 
-		std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 1, "images/JCC_PlatSPR.png"));
+		std::shared_ptr<TileSheet> tileSheet(new TileSheet(32, 32, 4, 1, "images/dev/JCC_PlatSPR.png"));
 
 		for (int i = 0; i < 50; ++i) {
 			Tile * tempTile = new Tile(i * 32, 0, rand() % 4, tileSheet);

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "LevelLoader.h"
+#include "levelLoader.h"
 
 static void consumeSpace(std::istream &stream)
 {
@@ -13,7 +13,7 @@ static bool readLabel(std::istream &stream, std::string &label)
 	consumeSpace(stream);
 	if (!std::isalnum(stream.peek())) return false;
 	while (std::isalnum(stream.peek())) label += stream.get();
-	std::cout << label;
+	//std::cout << label;
 	return true;
 }
 
@@ -23,7 +23,7 @@ static bool expectChar(char c, std::istream &stream)
 	//std::cout << c;
 	if (stream.peek() == c) {
 		stream.get();
-		std::cout << c;
+		//std::cout << c;
 		return true;
 	}
 	return false;
@@ -34,7 +34,7 @@ static bool readString(std::istream &stream, std::string &s)
 	s = "";
 	if (!expectChar('"', stream)) return false;
 	while (!expectChar('"', stream)) {
-		std::cout << (char)stream.peek();
+		//std::cout << (char)stream.peek();
 		s += stream.get();
 	}
 	return true;
@@ -44,10 +44,23 @@ static bool readInt(std::istream &stream, int &n)
 {
 	std::string buff = "";
 	consumeSpace(stream);
-	if (!std::isdigit(stream.peek())) return false;
+	if (std::isdigit(stream.peek()) || stream.peek() == '+' || stream.peek() == '-') buff += stream.get();
+	else return false;
 	while (std::isdigit(stream.peek())) buff += stream.get();
 	n = std::atoi(buff.c_str());
-	std::cout << n;
+	//std::cout << n;
+	return true;
+}
+
+static bool readDouble(std::istream &stream, double &n)
+{
+	std::string buff = "";
+	consumeSpace(stream);
+	if (std::isdigit(stream.peek()) || stream.peek() == '.' || stream.peek() == '+' || stream.peek() == '-') buff += stream.get();
+	else return false;
+	while (std::isdigit(stream.peek()) || stream.peek() == '.') buff += stream.get();
+	n = std::atof(buff.c_str());
+	//std::cout << n;
 	return true;
 }
 
@@ -66,6 +79,12 @@ bool TileInfo::read(std::istream &stream)
 	return true;
 }
 
+void TileInfo::write(std::ostream &stream)
+{
+		if (exists) stream << c << "," << r;
+		else stream << "-";
+}
+
 static bool readRow(std::istream &stream, MapRow &row)
 {
 	if (!expectChar('[', stream)) return false;
@@ -76,6 +95,17 @@ static bool readRow(std::istream &stream, MapRow &row)
 		expectChar(';', stream);
 	}
 	return true;
+}
+
+static void writeRow(std::ostream &stream, MapRow &row)
+{
+	stream << "\t\t[";
+	for (MapRow::iterator it = row.begin(); it != row.end();)
+	{
+		it->write(stream);
+		if (++it != row.end()) stream << ";";
+	}
+	stream << "]\n";
 }
 
 static bool readRows(std::istream &stream, MapData &data)
@@ -89,6 +119,16 @@ static bool readRows(std::istream &stream, MapData &data)
 	return true;
 }
 
+static void writeRows(std::ostream &stream, MapData &data)
+{
+	stream << "\t" << "data: [\n";
+	for (MapData::iterator it = data.begin(); it != data.end(); ++it)
+	{
+		writeRow(stream, *it);
+	}
+	stream << "\t]\n";
+}
+
 bool TileMap::read(std::istream &stream)
 {
 	if (!expectChar('{', stream)) return false;
@@ -98,7 +138,7 @@ bool TileMap::read(std::istream &stream)
 			if (expectChar(':', stream)) {
 				if (label == "tilesheetpath") readString(stream, tileSheetPath);
 				if (label == "tilewidth") readInt(stream, tileWidth);
-				if (label == "tileheight") readInt(stream, tileWidth);
+				if (label == "tileheight") readInt(stream, tileHeight);
 				if (label == "data") readRows(stream, data);
 			}
 		}
@@ -107,20 +147,36 @@ bool TileMap::read(std::istream &stream)
 	return true;
 }
 
-bool readEntityInfo(std::istream &stream, EntityInfo &info)
+void TileMap::write(std::ostream &stream)
 {
-	info.type = "";
-	info.xPos = 0;
-	info.yPos = 0;
+	stream << "tilemap: {\n";
+	stream << "\t" << "tilesheetpath: " << '"' << tileSheetPath << '"' << "\n";
+	stream << "\t" << "tilewidth: " << tileWidth << "\n";
+	stream << "\t" << "tileheight: " << tileHeight << "\n";
+	writeRows(stream, data);
+	stream << "}\n";
+}
+
+bool EntityInfo::read(std::istream &stream)
+{
+	type = "";
+	xPos = 0;
+	yPos = 0;
 	if (!expectChar('{', stream)) return false;
 	std::string label;
 	while (!expectChar('}', stream)) {
 		if (readLabel(stream, label)) {
 			if (expectChar(':', stream)) {
-				if (label == "type") readLabel(stream, info.type);
-				if (label == "xpos") readInt(stream, info.xPos);
-				if (label == "ypos") readInt(stream, info.yPos);
-				std::cout << " ";
+				if (label == "type") readLabel(stream, type);
+				if (label == "xpos") readInt(stream, xPos);
+				if (label == "ypos") readInt(stream, yPos);
+				if (label == "imagepath") readString(stream, imagePath);
+				if (label == "framesizex") readInt(stream, frameSizeX);
+				if (label == "framesizey") readInt(stream, frameSizeY);
+				if (label == "layerid") readDouble(stream, layerID);
+				if (label == "scrollfactorx") readDouble(stream, scrollFactorX);
+				if (label == "scrollfactory") readDouble(stream, scrollFactorY);
+				//std::cout << " ";
 			}
 		}
 		else stream.get();
@@ -128,15 +184,40 @@ bool readEntityInfo(std::istream &stream, EntityInfo &info)
 	return true;
 }
 
+void EntityInfo::write(std::ostream &stream)
+{
+	stream << "\t{\n";
+	stream << "\t\t" << "type: " << type << "\n";
+	stream << "\t\t" << "xpos: " << xPos << "\n";
+	stream << "\t\t" << "ypos: " << yPos << "\n";
+	if (imagePath != "") stream << "\t\t" << "imagepath: " << '"' << imagePath << '"' << "\n";
+	if (frameSizeX != INVALID_INT) stream << "\t\t" << "framesizex: " << frameSizeX << "\n";
+	if (frameSizeY != INVALID_INT) stream << "\t\t" << "framesizey: " << frameSizeY << "\n";
+	if (layerID != INVALID_DOUBLE) stream << "\t\t" << "layerid: " << layerID << "\n";
+	if (scrollFactorX != INVALID_DOUBLE) stream << "\t\t" << "scrollfactorx: " << scrollFactorX << "\n";
+	if (scrollFactorY != INVALID_DOUBLE) stream << "\t\t" << "scrollfactory: " << scrollFactorY << "\n";
+	stream << "\t}\n";
+}
+
 bool readEntityList(std::istream &stream, EntityList &entities)
 {
 	if (!expectChar('[', stream)) return false;
 	while (!expectChar(']', stream)) {
 		EntityInfo entityInfo;
-		if (readEntityInfo(stream, entityInfo)) entities.push_back(entityInfo);
+		if (entityInfo.read(stream)) entities.push_back(entityInfo);
 		else stream.get();
 	}
 	return true;
+}
+
+void writeEntityList(std::ostream &stream, EntityList &entities)
+{
+	stream << "[\n";
+	for (EntityList::iterator it = entities.begin(); it != entities.end(); ++it)
+	{
+		it->write(stream);
+	}
+	stream << "]\n";
 }
 
 void LevelData::read(std::istream &stream)
@@ -155,6 +236,17 @@ void LevelData::read(std::istream &stream)
 	}
 }
 
+void LevelData::write(std::ostream &stream)
+{
+	stream << "entities: ";
+	writeEntityList(stream, entities);
+
+	for (std::vector<TileMap>::iterator it = tileMaps.begin(); it != tileMaps.end(); ++it)
+	{
+		(*it).write(stream);
+	}
+}
+
 LevelData loadLevelData(std::string fileName)
 {
 	LevelData levelData;
@@ -164,4 +256,11 @@ LevelData loadLevelData(std::string fileName)
 	levelData.read(stream);
 
 	return levelData;
+}
+
+void saveLevelData(std::string fileName, LevelData &levelData)
+{
+	std::ofstream stream;
+	stream.open(fileName);
+	levelData.write(stream);
 }
