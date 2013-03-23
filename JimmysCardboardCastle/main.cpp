@@ -105,11 +105,16 @@ void initImageLibrary()
  */
 void TimerCallbackFunction(int value)
 {
+	double delay = FRAME_DELAY_SPRITE * 2 - theGame->updateTimer->getElapsedTimeMS();
+	if (delay < 0) delay = 0;
+	if (delay > FRAME_DELAY_SPRITE) delay = FRAME_DELAY_SPRITE;
+	//std::cout << theGame->updateTimer->getElapsedTimeMS() << ", " << delay << "\n";
+	glutTimerFunc(delay, TimerCallbackFunction,0);
+
 	theGame->update();		
 	soundEngine.update();
 
 	glutPostRedisplay();
-	glutTimerFunc(FRAME_DELAY_SPRITE,TimerCallbackFunction,0);
 }
 
 /* function WindowReshapeCallbackFunction()

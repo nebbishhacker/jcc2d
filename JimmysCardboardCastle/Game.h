@@ -17,7 +17,7 @@
 #include "Timer.h"
 #include "World.h"
 
-#include "entities.h"
+//#include "entities.h"
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
@@ -165,4 +165,6 @@ private:
 	World * currentWorld;
 	World * newWorld;
 	bool killWorld;
+
+	bool fpsCounterOn;
 };

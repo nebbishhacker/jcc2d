@@ -1,5 +1,7 @@
-//#include "drawPrimitives.h"
 #include "Game.h"
+
+#include "drawPrimitives.h"
+#include "convert.h"
 
 /* constructor */
 Game::Game()
@@ -18,6 +20,8 @@ Game::Game()
 
 	currentWorld = newWorld = NULL;
 	killWorld = false;
+
+	fpsCounterOn = false;
 }
 
 /* destructor */
@@ -93,6 +97,11 @@ void Game::DrawGame()
 	/* here is where your drawing stuff goes */
 	if (currentWorld) currentWorld->draw();
 
+	if (fpsCounterOn) {
+		setColor(0, 0, 0);
+		drawText("Update: " + stringify(1000 / updateTimer->getElapsedTimeMS()), 2, 2);
+		drawText("Render: " + stringify(1000 / renderingTimer->getElapsedTimeMS()), 2, 22);
+	}
 	//drawTestPrimitives();
 
 	/* this makes it actually show up on the screen */
@@ -208,6 +217,9 @@ void Game::keyboardDown(unsigned char key, int mouseX, int mouseY)
 
 	switch(key)
 	{
+	case '\t':
+		fpsCounterOn = !fpsCounterOn;
+		break;
 	case 32: // the space bar
 		break;
 	case 27: // the escape key

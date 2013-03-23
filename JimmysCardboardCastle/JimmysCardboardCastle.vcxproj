@@ -83,6 +83,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="drawPrimitives.cpp" />
     <ClCompile Include="levelLoader.cpp" />
     <ClCompile Include="ScreenFillSprite.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
@@ -92,6 +93,7 @@
     <ClInclude Include="BensTestWorld.h" />
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="convert.h" />
     <ClInclude Include="drawPrimitives.h" />
     <ClInclude Include="GameWorld.h" />
     <ClInclude Include="HowToPlay.h" />
