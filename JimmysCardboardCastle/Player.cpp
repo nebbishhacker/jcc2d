@@ -29,7 +29,7 @@ Player::Player(double x, double y) : TextureSprite("images/dev/SamSheet.png")
 	vy = 0;
 	jumping = false;
 
-	//jumpSound = soundEngine.loadSound();
+	jumpSound = soundEngine.loadSound("sound/retrojump.wav");
 }
 
 void Player::initialize()
@@ -52,7 +52,7 @@ void Player::update()
 	if (!jumping && input->specialsDown[GLUT_KEY_UP] && grounded) {
 		vy = 30;
 		jumping = true;
-		//soundEngine.playSound(jumpSound);
+		soundEngine.playSound(jumpSound);
 	}
 
 	if (input->specialsDown[GLUT_KEY_LEFT] && !input->specialsDown[GLUT_KEY_RIGHT]) {

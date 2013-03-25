@@ -16,5 +16,5 @@ public:
 private:
 	int vy;
 	bool jumping;
-	//Sound * jumpSound;
+	Sound jumpSound;
 };
