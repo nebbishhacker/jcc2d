@@ -5,7 +5,7 @@
 class Button: public TextureSprite
 {
 public:
-	Button(double x, double y, int sizeX, int sizeY, std::string filename, void (*callbackFunction)(World *) = NULL);
+	Button(double x, double y, int sizeX, int sizeY, std::string filename, void (*callbackFunction)(World *) = NULL, bool hover = false);
 
 	virtual void update();
 
@@ -13,4 +13,5 @@ public:
 
 private:
 	void (*callbackFunction)(World *);
+	bool hover;
 };

@@ -1,19 +1,28 @@
 #include "Button.h"
 #include "Game.h"
 
-Button::Button(double x, double y, int sizeX, int sizeY, std::string filename, void (*callbackFunction)(World *)) : TextureSprite(filename)
+Button::Button(double x, double y, int sizeX, int sizeY, std::string filename, void (*callbackFunction)(World *), bool hover) : TextureSprite(filename)
 	{
+		this->hover = hover;
 		setPosition(x, y);
-		setNumberOfAnimations(1);
+		int frames = 1;
+		if (hover) {
+			frames = 2;
+		}
+		setNumberOfAnimations(frames);
 		setSpriteFrameSize(sizeX, sizeY);
-		addSpriteAnimFrame(0, 0, 0);
+		for (int i = 0; i < frames; ++i) addSpriteAnimFrame(i, 0, i * sizeY);
 		hitbox = Hitbox(0, 0, sizeX, sizeY);
 		this->callbackFunction = callbackFunction;
 	}
 
 void Button::update()
 {
-	if (world)
-		if (world->input->mousePressed && collidePoint(world->input->clickX + world->cameraX * scrollFactorX, world->input->clickY + world->cameraY * scrollFactorY))
-			callback();
+	if (world) {
+		if (collidePoint(world->input->currentX + world->cameraX * scrollFactorX, world->input->currentY + world->cameraY * scrollFactorY)) {
+			if (world->input->mousePressed) callback();
+			if (hover) setCurrentAnimation(1);
+		}
+		else if (hover) setCurrentAnimation(0);
+	}
 }

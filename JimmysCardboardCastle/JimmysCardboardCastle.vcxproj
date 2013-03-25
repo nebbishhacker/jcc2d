@@ -103,6 +103,7 @@
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="OverlayWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
+    <ClInclude Include="QuitDialog.h" />
     <ClInclude Include="ScreenFillSprite.h" />
     <ClInclude Include="sharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />
