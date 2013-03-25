@@ -2,7 +2,7 @@
 
 #include <string>
 #include <map>
-#include "fmod.hpp"
+#include "FMOD/fmod.hpp"
 #pragma comment( lib, "fmodex_vc.lib" )
 
 typedef FMOD::Sound * Sound;
