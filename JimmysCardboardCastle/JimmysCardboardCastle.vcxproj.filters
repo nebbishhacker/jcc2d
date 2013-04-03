@@ -43,6 +43,9 @@
     <ClCompile Include="drawPrimitives.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TilePlacer.cpp">
+      <Filter>Sprite Classes\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entities.h">
@@ -108,9 +111,6 @@
     <ClInclude Include="GameWorld.h">
       <Filter>World Classes\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Levels.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MainMenu.h">
       <Filter>World Classes\Header Files</Filter>
     </ClInclude>
@@ -139,6 +139,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="QuitDialog.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelEditor.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TilePlacer.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level1.h">
       <Filter>World Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

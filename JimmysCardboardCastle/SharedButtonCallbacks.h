@@ -21,3 +21,10 @@ void startWorld(World * currentWorld)
 {
 	currentWorld->game->setNewWorld(new TWorld());
 }
+
+// Templated callback, specifically for switching to a different world. Things like this should be good if you need a lot of similar callbacks.
+template<class TWorld>
+void switchWorld(World * currentWorld)
+{
+	currentWorld->game->replacingCurrentWorld(new TWorld());
+}

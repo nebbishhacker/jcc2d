@@ -120,12 +120,13 @@ public:
 
 	Game *game;
 
-private:
-	void executeHitList();
-
 	SpriteGroup drawList;
 	SpriteGroup updateList;
 	SpriteGroup animationList;
 
+private:
+	void executeHitList();
+
+	SpriteGroup spriteList;
 	std::vector<Sprite*> hitList;
 };

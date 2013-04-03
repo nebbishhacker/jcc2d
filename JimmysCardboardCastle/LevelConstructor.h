@@ -5,7 +5,7 @@
 #include "TileSheet.h"
 #include "entities.h"
 
-void ConstructLevel(LevelData &levelData, World * world)
+void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = false)
 {
 	for (EntityList::iterator it = levelData.entities.begin(); it != levelData.entities.end(); ++it)
 	{
@@ -19,6 +19,7 @@ void ConstructLevel(LevelData &levelData, World * world)
 			if (info.scrollFactorX != INVALID_DOUBLE) t->scrollFactorX = info.scrollFactorX;
 			if (info.scrollFactorY != INVALID_DOUBLE) t->scrollFactorY = info.scrollFactorY;
 			world->add(t);
+			info.entity = t;
 		}
 	}
 
@@ -27,9 +28,10 @@ void ConstructLevel(LevelData &levelData, World * world)
 		TileMap &tileMap = *it;
 
 		int tileWidth = tileMap.tileWidth;
-		int tileHeight = tileMap.tileWidth;
+		int tileHeight = tileMap.tileHeight;
 
 		std::shared_ptr<TileSheet> tileSheet(new TileSheet(tileWidth, tileHeight, 2, 2, tileMap.tileSheetPath));
+		if (storeReferences) tileMap.tileSheetPointer = tileSheet;
 
 		int y = 0;
 		for (std::vector<MapRow>::iterator it = tileMap.data.begin(); it != tileMap.data.end(); ++it)
@@ -40,13 +42,15 @@ void ConstructLevel(LevelData &levelData, World * world)
 			{
 				TileInfo &info = *it;
 				if (info.exists) {
-					Tile * tempTile = new Tile(x * tileWidth, y * tileHeight, info.c + 2 * info.r, tileSheet);
-					world->groups["ground"].add(tempTile);
-					world->add(tempTile);
+					Tile * t = new Tile(x * tileWidth, y * tileHeight, info.c + 2 * info.r, tileSheet);
+					world->groups["ground"].add(t);
+					world->add(t);
+				if (storeReferences) info.entity = t;
 				}
 				++x;
 			}
 			++y;
 		}
+		tileMap.autoSize();
 	}
 }

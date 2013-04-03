@@ -222,10 +222,10 @@ void Game::keyboardDown(unsigned char key, int mouseX, int mouseY)
 		break;
 	case 32: // the space bar
 		break;
-	case 27: // the escape key
-	case 'q': // the 'q' key
-		exit(1);
-		break;
+	//case 27: // the escape key
+	//case 'q': // the 'q' key
+	//	exit(1);
+	//	break;
 	}
 }
 /* keyboardUp()
@@ -249,10 +249,10 @@ void Game::keyboardUp(unsigned char key, int mouseX, int mouseY)
 	{
 	case 32: // the space bar
 		break;
-	case 27: // the escape key
-	case 'q': // the 'q' key
-		exit(1);
-		break;
+	//case 27: // the escape key
+	//case 'q': // the 'q' key
+	//	exit(1);
+	//	break;
 	}
 }
 
@@ -288,18 +288,22 @@ void Game::mouseClicked(int button, int state, int x, int y)
 {
 	if(state == GLUT_DOWN) 
 	{
-		if (!input.mouseDown) input.mousePressed = true;
-		input.mouseDown = true;
-		input.clickX = x*stateInfo.ratioWidth;
-		input.clickY = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
-		input.button = button;
 
 		switch(button)
 		{
 		case GLUT_LEFT_BUTTON:
+			if (!input.mouseDown) input.mousePressed = true;
+			input.mouseDown = true;
+			input.clickX = x*stateInfo.ratioWidth;
+			input.clickY = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
+			input.button = button;
 			break;
 		case GLUT_RIGHT_BUTTON:
-		
+			if (!input.rightMouseDown) input.rightMousePressed = true;
+			input.rightMouseDown = true;
+			input.rightClickX = x*stateInfo.ratioWidth;
+			input.rightClickY = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
+			input.button = button;
 			break;
 		case GLUT_MIDDLE_BUTTON:
 			break;
@@ -307,8 +311,17 @@ void Game::mouseClicked(int button, int state, int x, int y)
 	}
 	else
 	{
-		if (input.mouseDown) input.mouseReleased = true;
-		input.mouseDown = false;
+		switch(button)
+		{
+		case GLUT_LEFT_BUTTON:
+			if (input.mouseDown) input.mouseReleased = true;
+			input.mouseDown = false;
+			break;
+		case GLUT_RIGHT_BUTTON:
+			if (input.rightMouseDown) input.rightMouseReleased = true;
+			input.rightMouseDown = false;
+			break;
+		}
 	}
 
 }

@@ -129,6 +129,22 @@ static void writeRows(std::ostream &stream, MapData &data)
 	stream << "\t]\n";
 }
 
+void TileMap::autoSize()
+{
+	tilesHigh = data.size();
+	for (int i = 0; i < data.size(); ++i)
+	{
+		if (data[i].size() > tilesWide) tilesWide = data[i].size();
+	}
+}
+
+void TileMap::prepTile(int c, int r)
+{
+	while (r >= data.size()) data.push_back(MapRow());
+	while (c >= data[r].size()) data[r].push_back(TileInfo());
+	autoSize();
+}
+
 bool TileMap::read(std::istream &stream)
 {
 	if (!expectChar('{', stream)) return false;
@@ -139,6 +155,8 @@ bool TileMap::read(std::istream &stream)
 				if (label == "tilesheetpath") readString(stream, tileSheetPath);
 				if (label == "tilewidth") readInt(stream, tileWidth);
 				if (label == "tileheight") readInt(stream, tileHeight);
+				if (label == "sheetwidth") readInt(stream, sheetWidth);
+				if (label == "sheetheight") readInt(stream, sheetHeight);
 				if (label == "data") readRows(stream, data);
 			}
 		}
@@ -151,6 +169,8 @@ void TileMap::write(std::ostream &stream)
 {
 	stream << "tilemap: {\n";
 	stream << "\t" << "tilesheetpath: " << '"' << tileSheetPath << '"' << "\n";
+	stream << "\t" << "sheetwidth: " << sheetWidth << "\n";
+	stream << "\t" << "sheetheight: " << sheetHeight << "\n";
 	stream << "\t" << "tilewidth: " << tileWidth << "\n";
 	stream << "\t" << "tileheight: " << tileHeight << "\n";
 	writeRows(stream, data);

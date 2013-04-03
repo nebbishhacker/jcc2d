@@ -10,6 +10,9 @@
 #include <climits>
 #include <cfloat>
 
+#include "TileSheet.h"
+#include "Sprite.h"
+
 //#include <iostream>
 
 
@@ -20,11 +23,13 @@ const int INVALID_INT = INT_MAX;
 struct TileInfo {
 	int c, r;
 	bool exists;
+	Tile * entity;
 
 	TileInfo()
 	{
 		c = r = -1;
 		exists = false;
+		entity = NULL;
 	}
 	bool read(std::istream &stream);
 	void write(std::ostream &stream);
@@ -37,10 +42,18 @@ typedef std::vector<MapRow> MapData;
 struct TileMap
 {
 	std::string tileSheetPath;
+	int sheetWidth;
+	int sheetHeight;
 	int tileWidth;
 	int tileHeight;
+	int tilesWide;
+	int tilesHigh;
 	MapData data;
+	std::shared_ptr<TileSheet> tileSheetPointer;
 	
+	void autoSize();
+	void prepTile(int r, int c);
+
 	bool read(std::istream &stream);
 	void write(std::ostream &stream);
 };
@@ -56,6 +69,7 @@ struct EntityInfo
 	double layerID;
 	double scrollFactorX;
 	double scrollFactorY;
+	Sprite * entity;
 
 	EntityInfo()
 	{
@@ -66,6 +80,7 @@ struct EntityInfo
 		layerID = INVALID_DOUBLE;
 		scrollFactorX = INVALID_DOUBLE;
 		scrollFactorY = INVALID_DOUBLE;
+		entity = NULL;
 	}
 
 	bool read(std::istream &stream);

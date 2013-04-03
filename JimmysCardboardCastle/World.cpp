@@ -16,10 +16,15 @@ World::World()
 
 World::~World()
 {
+	for (SpriteGroup::iterator it = spriteList.begin(); it != spriteList.end(); ++it)
+		(*it)->kill();
+	executeHitList();
 }
 
 void World::add(Sprite *s)
 {
+	spriteList.add(s);
+
 	addToDrawList(s);
 	addToAnimationList(s);
 	addToUpdateList(s);

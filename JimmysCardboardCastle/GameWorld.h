@@ -7,6 +7,7 @@
 #include "levelLoader.h"
 #include "levelConstructor.h"
 #include "QuitDialog.h"
+#include "LevelEditor.h"
 
 class GameWorld : public World
 {
@@ -31,11 +32,16 @@ public:
 		//		sets it's scrollfactor to '0' so it doesn't scroll,
 		//		sets it's layer to '100' so it's in front of everything else,
 		//		and adds it to the world.
-		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/dev/exit_sign.png", startWorld<QuitDialog>);
+		t = new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/dev/exit_sign.png", switchWorld<QuitDialog>);
 		t->scrollFactorX = 0;
 		t->scrollFactorY = 0;
 		t->layerID = 100;
 		add(t);
+	}
+	virtual void update()
+	{
+		World::update();
+		if (input->keysPressed['~']) game->setNewWorld(new LevelEditor(levelFileName));
 	}
 
 private:
