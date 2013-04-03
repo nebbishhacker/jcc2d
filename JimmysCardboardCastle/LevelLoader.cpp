@@ -154,7 +154,7 @@ bool TileMap::read(std::istream &stream)
 			if (expectChar(':', stream)) {
 				if (label == "tilesheetpath") readString(stream, tileSheetPath);
 				if (label == "tilewidth") readInt(stream, tileWidth);
-				if (label == "tileheight") readInt(stream, tileHeight);
+				if (label == "tileheight")readInt(stream, tileHeight);
 				if (label == "sheetwidth") readInt(stream, sheetWidth);
 				if (label == "sheetheight") readInt(stream, sheetHeight);
 				if (label == "data") readRows(stream, data);

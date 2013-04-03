@@ -50,19 +50,19 @@ void TilePlacer::update()
 			tileMapData->data[tY][tX].exists = false;
 		}
 	}
-	if (world->input->keysPressed['d']) {
+	if (world->input->keysPressed['a']) {
 		tileType.c -= 1;
 		if (tileType.c < 0) tileType.c += tileMapData->sheetWidth;
 	}
-	if (world->input->keysPressed['a']) {
+	if (world->input->keysPressed['d']) {
 		tileType.c += 1;
 		if (tileType.c >= tileMapData->sheetWidth) tileType.c -= tileMapData->sheetWidth;
 	}
-	if (world->input->keysPressed['w']) {
+	if (world->input->keysPressed['s']) {
 		tileType.r -= 1;
 		if (tileType.r < 0) tileType.r += tileMapData->sheetHeight;
 	}
-	if (world->input->keysPressed['s']) {
+	if (world->input->keysPressed['w']) {
 		tileType.r += 1;
 		if (tileType.r >= tileMapData->sheetHeight) tileType.r -= tileMapData->sheetHeight;
 	}

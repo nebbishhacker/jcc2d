@@ -96,6 +96,10 @@
     <ClInclude Include="drawPrimitives.h" />
     <ClInclude Include="GameWorld.h" />
     <ClInclude Include="HowToPlay.h" />
+    <ClInclude Include="Level2.h" />
+    <ClInclude Include="Level3.h" />
+    <ClInclude Include="Level4.h" />
+    <ClInclude Include="Level5.h" />
     <ClInclude Include="levelConstructor.h" />
     <ClInclude Include="LevelEditor.h" />
     <ClInclude Include="levelLoader.h" />

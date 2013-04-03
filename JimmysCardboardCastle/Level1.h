@@ -4,5 +4,5 @@
 
 struct Level1 : GameWorld
 {
-	Level1() : GameWorld("levels/testLevel.txt") {}
+	Level1() : GameWorld("levels/level1.txt") {}
 };

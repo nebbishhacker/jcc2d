@@ -25,12 +25,12 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 
 	for (std::vector<TileMap>::iterator it = levelData.tileMaps.begin(); it != levelData.tileMaps.end(); ++it)
 	{
-		TileMap &tileMap = *it;
+		TileMap &tileMap = (*it);
 
 		int tileWidth = tileMap.tileWidth;
 		int tileHeight = tileMap.tileHeight;
 
-		std::shared_ptr<TileSheet> tileSheet(new TileSheet(tileWidth, tileHeight, 2, 2, tileMap.tileSheetPath));
+		std::shared_ptr<TileSheet> tileSheet(new TileSheet(tileWidth, tileHeight, tileMap.sheetWidth, tileMap.sheetHeight, tileMap.tileSheetPath));
 		if (storeReferences) tileMap.tileSheetPointer = tileSheet;
 
 		int y = 0;

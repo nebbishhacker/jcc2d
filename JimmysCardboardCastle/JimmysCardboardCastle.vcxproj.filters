@@ -102,9 +102,6 @@
     <ClInclude Include="World.h">
       <Filter>World Classes\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TextureCache.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SoundEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -147,7 +144,22 @@
     <ClInclude Include="TilePlacer.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TextureCache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level2.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Level1.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level3.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level4.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level5.h">
       <Filter>World Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
