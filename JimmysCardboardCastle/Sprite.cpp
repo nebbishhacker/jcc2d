@@ -7,8 +7,8 @@ Sprite::Sprite()
 {
 	layerID = 0;
 	theta = 0;
-	centerX = centerY = 0;
-	positionX = positionY = 0;
+	center = Vector2D(0, 0);
+	position = Vector2D(0, 0);
 	scrollFactorX = scrollFactorY = 1;
 	flipped = false;
 	world = NULL;
@@ -25,27 +25,35 @@ void Sprite::kill()
 }
 
 /* hitbox collision */
+bool Sprite::collide(Sprite * sprite, const Vector2D &offset)
+{
+	return hitbox.collide(sprite->hitbox, sprite->position - position - offset);
+}
 bool Sprite::collide(Sprite * sprite, double offsetX, double offsetY)
 {
-	return hitbox.collide(sprite->hitbox, sprite->positionX - positionX - offsetX, sprite->positionY - positionY - offsetY);
+	return collide(sprite, Vector2D(offsetX, offsetY));
 }
 
-Sprite * Sprite::collide(SpriteGroup * group, double offsetX, double offsetY)
+Sprite * Sprite::collide(SpriteGroup * group, const Vector2D &offset)
 {
 	for (SpriteGroup::iterator it = group->begin(); it != group->end(); ++it)
-		if (collide(*it, offsetX, offsetY)) return *it;
+		if (collide(*it, offset)) return *it;
 	return NULL;
+}
+Sprite * Sprite::collide(SpriteGroup * group, double offsetX, double offsetY)
+{
+	return collide(group, Vector2D(offsetX, offsetY));
 }
 
 bool Sprite::moveCollideX(double x, Sprite * sprite)
 {
-	double oldX = positionX;
+	double oldX = position.x;
 	double relX;
-	positionX += x;
+	position.x += x;
 	if (collide(sprite)) {
-		relX = sprite->positionX - positionX;
-		if (x > 0) positionX = max(oldX, positionX + hitbox.distanceToRight(sprite->hitbox, relX));
-		if (x < 0) positionX = min(oldX, positionX - hitbox.distanceToLeft(sprite->hitbox, relX));
+		relX = sprite->position.x - position.x;
+		if (x > 0) position.x = max(oldX, position.x + hitbox.distanceToRight(sprite->hitbox, relX));
+		if (x < 0) position.x = min(oldX, position.x - hitbox.distanceToLeft(sprite->hitbox, relX));
 		return true;
 	}
 	return false;
@@ -53,13 +61,13 @@ bool Sprite::moveCollideX(double x, Sprite * sprite)
 
 bool Sprite::moveCollideY(double y, Sprite * sprite)
 {
-	double oldY = positionY;
+	double oldY = position.y;
 	double relY;
-	positionY += y;
+	position.y += y;
 	if (collide(sprite)) {
-		relY = sprite->positionY - positionY;
-		if (y > 0) positionY = max(oldY, positionY + hitbox.distanceFromTop(sprite->hitbox, relY));
-		if (y < 0) positionY = min(oldY, positionY - hitbox.distanceFromBottom(sprite->hitbox, relY));
+		relY = sprite->position.y - position.y;
+		if (y > 0) position.y = max(oldY, position.y + hitbox.distanceFromTop(sprite->hitbox, relY));
+		if (y < 0) position.y = min(oldY, position.y - hitbox.distanceFromBottom(sprite->hitbox, relY));
 		return true;
 	}
 	return false;
@@ -69,21 +77,25 @@ bool Sprite::moveCollide(double x, double y, Sprite * sprite)
 {
 	return (moveCollideX(x, sprite) || moveCollideY(y, sprite));
 }
+bool Sprite::moveCollide(const Vector2D &v, Sprite * sprite)
+{
+	return moveCollide(v.x, v.y, sprite);
+}
 
 Sprite * Sprite::moveCollideX(double x, SpriteGroup * group)
 {
 	Sprite * returnSprite = NULL;
-	double oldX = positionX;
+	double oldX = position.x;
 	double relX;
-	positionX += x;
+	position.x += x;
 	for (SpriteGroup::iterator it = group->begin(); it != group->end(); ++it) {
 		Sprite * sprite = *it;
 		if (collide(sprite)) {
-			relX = sprite->positionX - positionX;
-			if (x > 0) positionX = max(oldX, positionX + hitbox.distanceToRight(sprite->hitbox, relX));
-			if (x < 0) positionX = min(oldX, positionX - hitbox.distanceToLeft(sprite->hitbox, relX));
+			relX = sprite->position.x - position.x;
+			if (x > 0) position.x = max(oldX, position.x + hitbox.distanceToRight(sprite->hitbox, relX));
+			if (x < 0) position.x = min(oldX, position.x - hitbox.distanceToLeft(sprite->hitbox, relX));
 			returnSprite = sprite;
-			if (positionX == oldX) break;
+			if (position.x == oldX) break;
 		}
 	}
 	return returnSprite;
@@ -92,17 +104,17 @@ Sprite * Sprite::moveCollideX(double x, SpriteGroup * group)
 Sprite * Sprite::moveCollideY(double y, SpriteGroup * group)
 {
 	Sprite * returnSprite = NULL;
-	double oldY = positionY;
+	double oldY = position.y;
 	double relY;
-	positionY += y;
+	position.y += y;
 	for (SpriteGroup::iterator it = group->begin(); it != group->end(); ++it) {
 		Sprite * sprite = *it;
 		if (collide(sprite)) {
-			relY = sprite->positionY - positionY;
-			if (y > 0) positionY = max(oldY, positionY + hitbox.distanceFromTop(sprite->hitbox, relY));
-			if (y < 0) positionY = min(oldY, positionY - hitbox.distanceFromBottom(sprite->hitbox, relY));
+			relY = sprite->position.y - position.y;
+			if (y > 0) position.y = max(oldY, position.y + hitbox.distanceFromTop(sprite->hitbox, relY));
+			if (y < 0) position.y = min(oldY, position.y - hitbox.distanceFromBottom(sprite->hitbox, relY));
 			returnSprite = sprite;
-			if (positionY == oldY) break;
+			if (position.y == oldY) break;
 		}
 	}
 	return returnSprite;
@@ -115,11 +127,20 @@ Sprite * Sprite::moveCollide(double x, double y, SpriteGroup * group)
 	if (Sprite * s = moveCollideY(y, group)) returnSprite = s;
 	return returnSprite;
 }
+Sprite * Sprite::moveCollide(const Vector2D &v, SpriteGroup* group)
+{
+	return moveCollide(v.x, v.y, group);
+}
 
+bool Sprite::collidePoint(Vector2D point)
+{
+	return hitbox.collidePoint(point - position);
+};
 bool Sprite::collidePoint(double pointX, double pointY)
 {
-	return hitbox.collidePoint(pointX - positionX, pointY - positionY);
+	return hitbox.collidePoint(pointX - position.x, pointY - position.y);
 };
+
 
 /* group related stuff */
 bool Sprite::inGroup(SpriteGroup *group)

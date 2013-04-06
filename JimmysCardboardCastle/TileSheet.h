@@ -32,11 +32,11 @@ public:
 		this->tileNum = tileNum;
 		hitbox = Hitbox(0, 0, tileSheet->tileWidth, tileSheet->tileHeight);
 	}
-	void draw(double cameraX, double cameraY)
+	virtual void draw(Vector2D camera)
 	{
 		tileSheet->setFrame(tileNum);
-		tileSheet->setPosition(positionX, positionY);
-		tileSheet->draw(cameraX, cameraY);
+		tileSheet->setPosition(position);
+		tileSheet->draw(camera);
 	}
 	
 	int tileNum;

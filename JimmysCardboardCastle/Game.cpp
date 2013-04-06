@@ -294,15 +294,15 @@ void Game::mouseClicked(int button, int state, int x, int y)
 		case GLUT_LEFT_BUTTON:
 			if (!input.mouseDown) input.mousePressed = true;
 			input.mouseDown = true;
-			input.clickX = x*stateInfo.ratioWidth;
-			input.clickY = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
+			input.click.x = x*stateInfo.ratioWidth;
+			input.click.y = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
 			input.button = button;
 			break;
 		case GLUT_RIGHT_BUTTON:
 			if (!input.rightMouseDown) input.rightMousePressed = true;
 			input.rightMouseDown = true;
-			input.rightClickX = x*stateInfo.ratioWidth;
-			input.rightClickY = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
+			input.rightClick.x = x*stateInfo.ratioWidth;
+			input.rightClick.y = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
 			input.button = button;
 			break;
 		case GLUT_MIDDLE_BUTTON:
@@ -337,8 +337,8 @@ void Game::mouseClicked(int button, int state, int x, int y)
 void Game::mouseMoved(int x, int y)
 {
 	/* convert from window to screen pixel coordinates */
-	input.currentX = x*stateInfo.ratioWidth;
-	input.currentY = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
+	input.current.x = x*stateInfo.ratioWidth;
+	input.current.y = (stateInfo.windowHeight-y)*stateInfo.ratioHeight;
 	//std::cout << input.currentX << " " << input.currentY << "\n";
 }
 

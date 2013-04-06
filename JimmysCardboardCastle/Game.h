@@ -12,6 +12,7 @@
 #include "IL/ilu.h"
 #include "IL/ilut.h"
 
+#include "vectorMath.h"
 #include "Sprite.h"
 //#include "HorizontalScrollingBackground.h"
 #include "Timer.h"
@@ -34,9 +35,9 @@ typedef struct _InputInfo
 	bool rightMousePressed; // was the right mouse button pressed this frame?
 	bool rightMouseReleased; // was the right mouse button released this frame?
 	int button; // which mouse button
-	float clickX,clickY; // where the mouse was last clicked
-	float rightClickX, rightClickY;
-	float currentX,currentY;
+	Vector2D click; // where the mouse was last clicked
+	Vector2D rightClick;
+	Vector2D current;
 	bool keysDown[128]; // array of boolean keystates, for tracking whether each key is down
 	bool keysPressed[128]; // array of boolean keystates, for tracking whether each key was pressed this frame
 	bool keysReleased[128]; // array of boolean keystates, for tracking whether each key was released this frame
@@ -44,7 +45,7 @@ typedef struct _InputInfo
 	_InputInfo()
 	{
 		mouseDown = mousePressed = mouseReleased = rightMouseDown = rightMousePressed = rightMouseReleased = false;
-		clickX = clickY = rightClickX = rightClickY = currentX = currentY = -1;
+		click = rightClick = current = Vector2D(-1, -1);
 		button = 0;
 		for (int i = 0; i < 128; i++) keysDown[i] = false;
 		for (int i = 0; i < 128; i++) specialsDown[i] = false;

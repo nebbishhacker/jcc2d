@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+#include "vectorMath.h"
+
 #include "Sprite.h"
 
 // Forward declarations
@@ -64,6 +66,7 @@ public:
 
 	//	- Centers the camera on the given position. (duh)
 	void centerCamera(double x = 0, double y = 0);
+	void centerCamera(Vector2D v);
 
 	//  - Deletes the next world down, and amends the nextWorldDown pointer to point to the one below it.
 	void killNextWorldDown();
@@ -115,8 +118,9 @@ public:
 
 	//	- Camera position.
 	//	- Be aware that this is the position of the bottom-left corner, not the center.
-	double cameraX;
-	double cameraY;
+	//double cameraX;
+	//double cameraY;
+	Vector2D camera;
 
 	Game *game;
 

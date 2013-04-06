@@ -9,8 +9,8 @@ bool spriteSortingFunction(Sprite *s1, Sprite *s2)
 
 World::World()
 {
-	cameraX = 0;
-	cameraY = 0;
+	camera.x = 0;
+	camera.y = 0;
 	nextWorldDown = NULL;
 }
 
@@ -67,7 +67,7 @@ void World::draw()
 	for(it = drawList.begin(); it != drawList.end();)
 	{
 		Sprite *s = (*it++);
-		s->draw(cameraX, cameraY);
+		s->draw(camera);
 	}
 }
 
@@ -108,9 +108,14 @@ void World::executeHitList()
 void World::centerCamera(double x, double y)
 {
 	if (stateInfo) {
-		cameraX = x - stateInfo->screenWidth / 2;
-		cameraY = y - stateInfo->screenHeight / 2;
+		camera.x = x - stateInfo->screenWidth / 2;
+		camera.y = y - stateInfo->screenHeight / 2;
 	}
+}
+
+void World::centerCamera(Vector2D v)
+{
+	centerCamera(v.x, v.y);
 }
 
 void World::killNextWorldDown()

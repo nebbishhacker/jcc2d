@@ -46,15 +46,15 @@ public:
 	virtual void update()
 	{
 		World::update();
-		if (input->specialsDown[GLUT_KEY_RIGHT]) cameraX += 10;
-		if (input->specialsDown[GLUT_KEY_LEFT]) cameraX -= 10;
-		if (input->specialsDown[GLUT_KEY_UP]) cameraY += 10;
-		if (input->specialsDown[GLUT_KEY_DOWN]) cameraY -= 10;
+		if (input->specialsDown[GLUT_KEY_RIGHT]) camera.x += 10;
+		if (input->specialsDown[GLUT_KEY_LEFT]) camera.x -= 10;
+		if (input->specialsDown[GLUT_KEY_UP]) camera.y += 10;
+		if (input->specialsDown[GLUT_KEY_DOWN]) camera.y -= 10;
 
-		if (input->currentX < 50) cameraX -= 10;
-		if (input->currentX > stateInfo->screenWidth - 50) cameraX += 10;
-		if (input->currentY < 50) cameraY -= 10;
-		if (input->currentY > stateInfo->screenHeight - 50) cameraY += 10;
+		if (input->current.x < 50) camera.x -= 10;
+		if (input->current.x > stateInfo->screenWidth - 50) camera.x += 10;
+		if (input->current.y < 50) camera.y -= 10;
+		if (input->current.y > stateInfo->screenHeight - 50) camera.y += 10;
 
 		if (input->keysPressed[27]) //escape key
 			game->killCurrentWorld();

@@ -14,7 +14,7 @@ public:
 	void update();
 	InputInfo *input;
 private:
-	int vy;
+	Vector2D velocity;
 	bool jumping;
 	Sound jumpSound;
 };

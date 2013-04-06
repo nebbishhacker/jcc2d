@@ -23,7 +23,7 @@ public:
 		tileType.c = 0;
 		tileType.r = 0;
 	}
-	void draw(double cameraX, double cameraY);
+	void draw(Vector2D camera);
 	void update();
 	
 	int levelData;

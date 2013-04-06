@@ -139,7 +139,7 @@ public:
 	void setAnimationSpeed(int animationNumber, float speed);
 
 
-	virtual void draw(double cameraX = 0, double cameraY = 0);
+	virtual void draw(Vector2D camera);
 
 	void setCurrentAnimation(int anim) {
 		currentAnimation = anim;

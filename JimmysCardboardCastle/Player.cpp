@@ -26,7 +26,6 @@ Player::Player(double x, double y) : TextureSprite("images/dev/SamSheet.png")
 	hitbox = Hitbox(42, 3, 44, 120);
 	setLayerID(2);
 
-	vy = 0;
 	jumping = false;
 
 	jumpSound = soundEngine.loadSound("sound/retrojump.wav");
@@ -40,9 +39,9 @@ void Player::initialize()
 
 void Player::update()
 {
-	int dx = 0, dy = 0;
+	Vector2D delta;
 
-	vy -= 1.5;
+	velocity.y -= 1.5;
 
 	bool grounded = (collide(&world->groups["ground"], 0, -2) != NULL);
 	 
@@ -50,30 +49,30 @@ void Player::update()
 	if (input->keysDown['X']) moveSpeed *= 2;
 	
 	if (!jumping && input->specialsDown[GLUT_KEY_UP] && grounded) {
-		vy = 30;
+		velocity.y = 30;
 		jumping = true;
 		soundEngine.playSound(jumpSound);
 	}
 
 	if (input->specialsDown[GLUT_KEY_LEFT] && !input->specialsDown[GLUT_KEY_RIGHT]) {
-		dx -= moveSpeed;
+		delta.x -= moveSpeed;
 		if (grounded) { setCurrentAnimation(1); flipped = true; }
 	}
 	else if (input->specialsDown[GLUT_KEY_RIGHT] && !input->specialsDown[GLUT_KEY_LEFT]) {
-		dx += moveSpeed;
+		delta.x += moveSpeed;
 		if (grounded) { setCurrentAnimation(1); flipped = false; }
 	}
 	else if (grounded) setCurrentAnimation(0);
 	if (!grounded) {
-		if (vy >= 0) setCurrentAnimation(2);
+		if (velocity.y >= 0) setCurrentAnimation(2);
 		else setCurrentAnimation(3);
 	}
 
 	if (jumping && !input->specialsDown[GLUT_KEY_UP]) jumping = false;
 	
-	dy += vy;
-	moveCollideX(dx, &world->groups["ground"]);
-	if (moveCollideY(dy, &world->groups["ground"])) vy = 0;
+	delta += velocity;
+	if (moveCollideX(delta.x, &world->groups["ground"])) velocity.x = 0;
+	if (moveCollideY(delta.y, &world->groups["ground"])) velocity.y = 0;
 
-	world->centerCamera(positionX + centerX, positionY + centerY);
+	world->centerCamera(position + center);
 }

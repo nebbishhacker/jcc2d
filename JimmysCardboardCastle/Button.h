@@ -1,5 +1,6 @@
 #pragma once
 #include "TextureSprite.h"
+#include "vectorMath.h"
 
 //  Create a button, and it'll call it's callbackFunction when you click it!
 class Button: public TextureSprite

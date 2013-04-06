@@ -88,7 +88,7 @@ void TextureSprite::setAnimationSpeed(int animationNumber, float speed)
  * and v is each corner of the sprite rectangle, v' is the transformed corner
  * and RotationMatrix is defined by the sprite's theta value (counter clockwise)
  */
-void TextureSprite::draw(double cameraX, double cameraY)
+void TextureSprite::draw(Vector2D camera)
 {
 	glEnable(GL_TEXTURE_2D); // turn on texturing
 
@@ -98,12 +98,12 @@ void TextureSprite::draw(double cameraX, double cameraY)
 	glPushMatrix();
 
 	/* position the sprite into the particular pixel location */
-	glTranslatef(positionX - cameraX * scrollFactorX, positionY - cameraY * scrollFactorY, 0);
+	glTranslatef(position.x - camera.x * scrollFactorX, position.y - camera.y * scrollFactorY, 0);
 
 	// apply the rotation around the center of the sprite
-	glTranslatef(centerX,centerY,0);
+	glTranslatef(center.x,center.y,0);
 	glRotatef(theta, 0,0,1);
-	glTranslatef(-centerX,-centerY,0);
+	glTranslatef(-center.x,-center.y,0);
 
 	/* get the texture coordinate from the sprite so we know which frame to draw */
 	SpriteAnimation *anim = animations[currentAnimation];

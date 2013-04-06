@@ -19,7 +19,8 @@ Button::Button(double x, double y, int sizeX, int sizeY, std::string filename, v
 void Button::update()
 {
 	if (world) {
-		if (collidePoint(world->input->currentX + world->cameraX * scrollFactorX, world->input->currentY + world->cameraY * scrollFactorY)) {
+		Vector2D cam(world->camera.x * scrollFactorX, world->camera.y * scrollFactorY);
+		if (collidePoint(world->input->current + cam)) {
 			if (world->input->mousePressed) callback();
 			if (hover) setCurrentAnimation(1);
 		}

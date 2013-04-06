@@ -87,6 +87,7 @@
     <ClCompile Include="SoundEngine.cpp" />
     <ClCompile Include="TextureCache.cpp" />
     <ClCompile Include="TilePlacer.cpp" />
+    <ClCompile Include="vectorMath.cpp" />
     <ClCompile Include="World.cpp" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="BensTestWorld.h" />
@@ -130,6 +131,7 @@
     <ClInclude Include="TestWorld.h" />
     <ClInclude Include="TextureCache.h" />
     <ClInclude Include="TilePlacer.h" />
+    <ClInclude Include="vectorMath.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>

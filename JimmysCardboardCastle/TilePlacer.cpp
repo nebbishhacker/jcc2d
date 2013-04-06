@@ -4,17 +4,17 @@
 
 void TilePlacer::update()
 {
-	float currX = world->input->currentX + world->cameraX * scrollFactorX;
-	float currY = world->input->currentY + world->cameraY * scrollFactorY;
+	Vector2D cam(world->camera.x * scrollFactorX, world->camera.y * scrollFactorY);
+	Vector2D curr = world->input->current + cam;
 
-	positionX = currX - tileSheet->tileWidth / 2;
-	positionY = currY - tileSheet->tileHeight / 2;
+	position.x = curr.x - tileSheet->tileWidth / 2;
+	position.y = curr.y - tileSheet->tileHeight / 2;
 
 	if (world->input->mouseDown)
 	{
 		// Add (or replace) a tile
-		int tX = currX / tileSheet->tileWidth;
-		int tY = currY / tileSheet->tileHeight;
+		int tX = curr.x / tileSheet->tileWidth;
+		int tY = curr.y / tileSheet->tileHeight;
 
 		if (tX >= 0 && tY >= 0) {
 			tileMapData->prepTile(tX, tY);
@@ -35,8 +35,8 @@ void TilePlacer::update()
 	else if (world->input->rightMouseDown)
 	{
 		// remove a tile
-		int tX = currX / tileSheet->tileWidth;
-		int tY = currY / tileSheet->tileHeight;
+		int tX = curr.x / tileSheet->tileWidth;
+		int tY = curr.y / tileSheet->tileHeight;
 
 		if (tX >= 0 && tY >= 0) {
 			tileMapData->prepTile(tX, tY);
@@ -67,7 +67,7 @@ void TilePlacer::update()
 		if (tileType.r >= tileMapData->sheetHeight) tileType.r -= tileMapData->sheetHeight;
 	}
 }
-void TilePlacer::draw(double cameraX, double cameraY)
+void TilePlacer::draw(Vector2D camera)
 {
 	if (world->input->keysDown[' '])
 	{
@@ -84,8 +84,8 @@ void TilePlacer::draw(double cameraX, double cameraY)
 			for (int r = 0; r < tileMapData->sheetHeight; ++r)
 			{
 				tileSheet->setFrame(r * tileMapData->sheetWidth + c);
-				tileSheet->setPosition(positionX + (c - tileType.c) * (tileMapData->tileWidth + 3), positionY + (r - tileType.r) * (tileMapData->tileHeight + 3));
-				tileSheet->draw(cameraX, cameraY);
+				tileSheet->setPosition(position.x + (c - tileType.c) * (tileMapData->tileWidth + 3), position.y + (r - tileType.r) * (tileMapData->tileHeight + 3));
+				tileSheet->draw(camera);
 			}
 		}
 	}
@@ -93,7 +93,7 @@ void TilePlacer::draw(double cameraX, double cameraY)
 	{
 		// draw the current tile
 		tileSheet->setFrame(tileType.r * tileMapData->sheetWidth + tileType.c);
-		tileSheet->setPosition(positionX, positionY);
-		tileSheet->draw(cameraX, cameraY);
+		tileSheet->setPosition(position);
+		tileSheet->draw(camera);
 	}
 }

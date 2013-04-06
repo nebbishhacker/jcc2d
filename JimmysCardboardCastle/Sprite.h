@@ -15,6 +15,7 @@
 #include "IL/ilu.h"
 #include "IL/ilut.h"
 
+#include "vectorMath.h"
 #include "Hitbox.h"
 
 // Forward Declarations -- allow me to refererence World and SpriteGroup before they are included.
@@ -44,10 +45,12 @@ public:
 	void setLayerID(float value) { layerID = value; }
 
 	//  - Set the center of rotation, relative to the lower-left corner of the sprite.
-	void setCenter(float x, float y) { centerX = x; centerY = y;}
+	void setCenter(Vector2D v) { center = v; }
+	void setCenter(float x, float y) { setCenter(Vector2D(x, y)); }
 
 	//  - You can also set the positionX and positionY variables directly
-	void setPosition(float x, float y) { positionX = x; positionY = y; }
+	void setPosition(Vector2D v) { position = v; }
+	void setPosition(float x, float y) { setPosition(Vector2D(x, y)); }
 
 	//  - Orientation is in degrees, going counter-clockwise.
 	void setOrientation(float theta) { this->theta = theta; }
@@ -72,7 +75,7 @@ public:
 	//		although there's mostly no reason.
 	//  - TextureSprite will handle it for you, although you can override the method and call TextureSprite::draw() if you
 	//		want to do something fancy while still using the TextureSprite rendering
-	virtual void draw(double cameraX = 0, double cameraY = 0) {}
+	virtual void draw(Vector2D camera) {}
 
 	//	- Override this for any updates or changes to a sprite's state that you want to apply every frame.
 	//		Which is most of them. (i.e. movement, collision, input handling, AI)
@@ -88,18 +91,23 @@ public:
 	//		or NULL if there are no collisions.
 	//  - offsetX and offsetY are used to offset the position of this sprite while checking for collisions,
 	//		in case you want to if this sprite WOULD collide if it were, say, just a few pixels this way.
-	bool collide(Sprite*, double offsetX = 0, double offsetY = 0);
-	Sprite * collide(SpriteGroup*, double offsetX = 0, double offsetY = 0);
+	bool collide(Sprite*, const Vector2D &offset = Vector2D(0, 0));
+	bool collide(Sprite*, double offsetX, double offsetY);
+	Sprite * collide(SpriteGroup*, const Vector2D &offset = Vector2D(0, 0));
+	Sprite * collide(SpriteGroup*, double offsetX, double offsetY);
 
 	//  - The moveCollide functions move the sprite by a certain amount, stopping if it collides,
 	//		and returning the same way the collide() function does.
 	bool moveCollideX(double x, Sprite*);
 	bool moveCollideY(double y, Sprite*);
 	bool moveCollide(double x, double y, Sprite*);
+	bool moveCollide(const Vector2D &v, Sprite*);
 	Sprite * moveCollideX(double x, SpriteGroup*);
 	Sprite * moveCollideY(double y, SpriteGroup*);
 	Sprite * moveCollide(double x, double y, SpriteGroup*);
+	Sprite * moveCollide(const Vector2D &v, SpriteGroup*);
 	bool collidePoint(double pointX, double pointY);
+	bool collidePoint(Vector2D v);
 
 
 	// GROUP STUFF //
@@ -134,8 +142,8 @@ public:
 	World *world;
 
 	//  - hopefully self-explanatory, at least if you read the setter function comments above
-	float positionX,positionY;
-	float centerX,centerY;
+	Vector2D position;
+	Vector2D center;
 	float theta;
 
 	//	- Set this to determine whether the sprite is drawn horizontally mirrored.

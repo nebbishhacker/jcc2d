@@ -9,7 +9,7 @@ ScreenFillSprite::ScreenFillSprite(float red, float green, float blue, float alp
 	this->blue = blue;
 	this->alpha = alpha;
 }
-void ScreenFillSprite::draw(double cameraX, double cameraY)
+void ScreenFillSprite::draw(Vector2D)
 {
 	setColor(red, green, blue, alpha);
 	glEnable(GL_BLEND);
