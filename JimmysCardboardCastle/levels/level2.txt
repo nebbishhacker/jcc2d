@@ -8,9 +8,9 @@ entities: [
 		type: background
 		xpos: 0
 		ypos: -100
-		imagepath: "images/dev/ben_background(0.25scale).png"
-		framesizex: 825
-		framesizey: 638
+		imagepath: "images/dev/lavaRoom_bgm.png"
+		framesizex: 1024
+		framesizey: 1024
 		layerid: -100
 		scrollfactorx: 0.5
 		scrollfactory: 0.25
