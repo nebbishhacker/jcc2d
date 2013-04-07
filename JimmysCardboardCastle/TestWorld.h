@@ -5,6 +5,10 @@
 
 #include "BensTestWorld.h"
 #include "Level1.h"
+#include "Level2.h"
+#include "Level3.h"
+#include "Level4.h"
+#include "Level5.h"
 #include "LucasTestWorld.h"
 #include "JonathansTestWorld.h"
 #include "BrandonTestWorld.h"
@@ -40,9 +44,9 @@ public:
 		add(new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/dev/exit_sign.png", killWorld));
 
 		add(new Button(100, 0, 110, 100, "images/dev/Button_Level1.png", startWorld<Level1>));
-		add(new Button(225, 0, 110, 100, "images/dev/Button_Level2.png", NULL));
-		add(new Button(350, 0, 110, 100, "images/dev/Button_Level3.png", NULL));
-		add(new Button(475, 0, 110, 100, "images/dev/Button_Level4.png", NULL));
-		add(new Button(600, 0, 110, 100, "images/dev/Button_Level5.png", NULL));
+		add(new Button(225, 0, 110, 100, "images/dev/Button_Level2.png", startWorld<Level2>));
+		add(new Button(350, 0, 110, 100, "images/dev/Button_Level3.png", startWorld<Level3>));
+		add(new Button(475, 0, 110, 100, "images/dev/Button_Level4.png", startWorld<Level4>));
+		add(new Button(600, 0, 110, 100, "images/dev/Button_Level5.png", startWorld<Level5>));
 	}
 };
