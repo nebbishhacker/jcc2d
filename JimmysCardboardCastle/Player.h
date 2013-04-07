@@ -13,8 +13,17 @@ public:
 	void initialize();
 	void update();
 	InputInfo *input;
-private:
+	double mass;
+	Vector2D netForce;
+	Vector2D netAcceleration;
 	Vector2D velocity;
-	bool jumping;
+	static const double groundFriction;
+	static const double airDrag;
+	static const Vector2D moveSpeed;
+	static const double airManeuverability;
+	static const double jumpVelocity;
+	static const Vector2D gravity;
+private:
+	bool jumpReady;
 	Sound jumpSound;
 };

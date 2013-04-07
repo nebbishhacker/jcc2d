@@ -25,12 +25,12 @@ Vector2D Vector2D::operator-() { return Vector2D(-x, -y); }
 Vector2D &Vector2D::operator*=(double f) { x *= f; y *= f; return *this; }
 Vector2D &Vector2D::operator/=(double f) { x /= f; y /= f; return *this; }
 
-Vector2D operator+(Vector2D v1, const Vector2D &v2) { return v1 += v2;}
-Vector2D operator-(Vector2D v1, const Vector2D &v2) { return v1 -= v2;}
+Vector2D operator+(Vector2D v1, const Vector2D &v2) { v1 += v2; return v1;}
+Vector2D operator-(Vector2D v1, const Vector2D &v2) { v1 -= v2; return v1;}
 
-Vector2D &operator*(Vector2D v, double f) { return v *= f; }
-Vector2D &operator*(double f, Vector2D v) { return v *= f; }
+Vector2D operator*(Vector2D v, double f) { v *= f; return v;}
+Vector2D operator*(double f, Vector2D v) { v *= f; return v;}
 
-Vector2D &operator/(Vector2D v, double f) { return v /= f; }
+Vector2D operator/(Vector2D v, double f) { v /= f; return v;}
 
 double dot(const Vector2D &v1, const Vector2D &v2) { return v1.x*v2.x + v1.y*v2.y; }
