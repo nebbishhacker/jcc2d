@@ -42,7 +42,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 			{
 				TileInfo &info = *it;
 				if (info.exists) {
-					Tile * t = new Tile(x * tileWidth, y * tileHeight, info.c + 2 * info.r, tileSheet);
+					Tile * t = new Tile(x * tileWidth, y * tileHeight, info.r * tileMap.sheetWidth + info.c, tileSheet);
 					world->groups["ground"].add(t);
 					world->add(t);
 				if (storeReferences) info.entity = t;
