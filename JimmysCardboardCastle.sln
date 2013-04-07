@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JimmysCardboardCastle", "JimmysCardboardCastle\JimmysCardboardCastle.vcxproj", "{D6A522E1-CB23-443F-8372-519D77444A45}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "JimmysCardboardCastle_Installer", "JimmysCardboardCastle_Installer\JimmysCardboardCastle_Installer.vdproj", "{CA88AEC8-1D5C-4A9F-8A51-528BF69CDD29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +15,8 @@ Global
 		{D6A522E1-CB23-443F-8372-519D77444A45}.Debug|Win32.Build.0 = Debug|Win32
 		{D6A522E1-CB23-443F-8372-519D77444A45}.Release|Win32.ActiveCfg = Release|Win32
 		{D6A522E1-CB23-443F-8372-519D77444A45}.Release|Win32.Build.0 = Release|Win32
+		{CA88AEC8-1D5C-4A9F-8A51-528BF69CDD29}.Debug|Win32.ActiveCfg = Debug
+		{CA88AEC8-1D5C-4A9F-8A51-528BF69CDD29}.Release|Win32.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
