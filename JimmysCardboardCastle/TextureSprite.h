@@ -138,6 +138,8 @@ public:
 	//	- 1.0 is the game framerate (40fps) , 2.0 is twice the game framerate (80fps), 0.1 is 1/10 the game framerate (4fps), etc.
 	void setAnimationSpeed(int animationNumber, float speed);
 
+	void setAnimationLoop(int animationNumber, bool doesLoop) {animations[animationNumber]->doesLoop = doesLoop;}
+
 
 	virtual void draw(Vector2D camera);
 

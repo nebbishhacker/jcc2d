@@ -37,7 +37,7 @@ bool Sprite::collide(Sprite * sprite, double offsetX, double offsetY)
 Sprite * Sprite::collide(SpriteGroup * group, const Vector2D &offset)
 {
 	for (SpriteGroup::iterator it = group->begin(); it != group->end(); ++it)
-		if (collide(*it, offset)) return *it;
+		if ((*it) != this && collide(*it, offset)) return *it;
 	return NULL;
 }
 Sprite * Sprite::collide(SpriteGroup * group, double offsetX, double offsetY)
@@ -90,7 +90,7 @@ Sprite * Sprite::moveCollideX(double x, SpriteGroup * group)
 	position.x += x;
 	for (SpriteGroup::iterator it = group->begin(); it != group->end(); ++it) {
 		Sprite * sprite = *it;
-		if (collide(sprite)) {
+		if (sprite != this && collide(sprite)) {
 			relX = sprite->position.x - position.x;
 			if (x > 0) position.x = max(oldX, position.x + hitbox.distanceToRight(sprite->hitbox, relX));
 			if (x < 0) position.x = min(oldX, position.x - hitbox.distanceToLeft(sprite->hitbox, relX));
@@ -109,7 +109,7 @@ Sprite * Sprite::moveCollideY(double y, SpriteGroup * group)
 	position.y += y;
 	for (SpriteGroup::iterator it = group->begin(); it != group->end(); ++it) {
 		Sprite * sprite = *it;
-		if (collide(sprite)) {
+		if (sprite != this && collide(sprite)) {
 			relY = sprite->position.y - position.y;
 			if (y > 0) position.y = max(oldY, position.y + hitbox.distanceFromTop(sprite->hitbox, relY));
 			if (y < 0) position.y = min(oldY, position.y - hitbox.distanceFromBottom(sprite->hitbox, relY));
