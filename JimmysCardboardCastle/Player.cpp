@@ -2,23 +2,11 @@
 #include "Game.h"
 #include <iostream>
 
-template <typename T> int sgn(T val) {
-    return (T(0) < val) - (val < T(0));
-}
-
-
-const double Player::airDrag = 0.1; // coefficient of fluid drag... ir something
-const double Player::groundFriction = 0.75; // coefficient of friction; also, in affect, how fast he accelerates
-const Vector2D Player::moveSpeed = Vector2D(8, 0); // Normal horizontal movement speed
-const double Player::airManeuverability = 0.75; // what fraction of ground friction is still (oddly) in affect in the air
-const double Player::jumpVelocity = 30; // the initial vertical velocity of his jumps
-const Vector2D Player::gravity = Vector2D(0, -1.5); // gravity!	| ^ this way up ^ |
-
-Player::Player(double x, double y) : TextureSprite("images/dev/SamSheet.png")
+Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 {
 	// animations:
 	// 0 - idle
-	// 1 - walk left
+	// 1 - walk right
 	// 2 - jump up
 	// 3 - fall down
 	setNumberOfAnimations(4);
@@ -43,12 +31,19 @@ Player::Player(double x, double y) : TextureSprite("images/dev/SamSheet.png")
 	jumpSound = soundEngine.loadSound("sound/retrojump.wav");
 
 	mass = 50;
+	airDrag = 0.1; // coefficient of fluid drag... ir something
+	groundFriction = 0.75; // coefficient of friction; also, in affect, how fast he accelerates
+	moveSpeed = Vector2D(8, 0); // Normal horizontal movement speed
+	airGroundFriction = 0.5; // what fraction of ground friction is still (oddly) in affect in the air
+	jumpVelocity = 30; // the initial vertical velocity of his jumps
+	//gravity = Vector2D(0, -1.5); // gravity!	| ^ this way up ^ |
 }
 
 void Player::initialize()
 {
 	input = world->input;
 	world->groups["player"].add(this);
+	world->groups["ground"].add(this);
 }
 
 void Player::update()
@@ -65,7 +60,6 @@ void Player::update()
 
 	// Handle input for maneuvering //
 	// contactVelocity is the theoretical speed of the character's feet -- whichever way his feet move, friction makes him move in the opposite direction
-	Vector2D contactVelocity = velocity;
 	if (input->specialsDown[GLUT_KEY_LEFT] && !input->specialsDown[GLUT_KEY_RIGHT]) // moving left
 	{
 		if (grounded) {
@@ -88,16 +82,15 @@ void Player::update()
 
 	// Handles ground friction and acceleration due to foot movement //
 	if (grounded)
-		// Using just gravity instead of the normal force, 'cause I don't really want to freeze under pressure
-		netAcceleration.x -= sgn(contactVelocity.x) * min(groundFriction * abs(gravity.y), abs(contactVelocity.x));
-	if (!grounded) {
-		// There is still ground friction while airborn, but to a lesser degree. This is a game. It is not real.
-		netAcceleration.x -= sgn(contactVelocity.x) * min(groundFriction * airManeuverability * abs(gravity.y), abs(contactVelocity.x));
+		applyGroundFriction();
+	else {
+		// There is still ground friction while airborn, but to a different extent. This is a game. It is not real.
+		applyAirGroundFriction();
 		if (velocity.y >= 0) setCurrentAnimation(2);
 		else setCurrentAnimation(3);
 	}
 	// Handles air drag //
-	if (velocity.length_squared() != 0) netForce -= velocity.normalize() * 1/2 * airDrag * velocity.length_squared();
+	applyAirDrag();
 
 	netForce += gravity * mass;
 
@@ -116,5 +109,5 @@ void Player::update()
 	world->centerCamera(position + center);
 
 	// reset netForce and netAcceleration for the next timestep (so they can be modified externally, if need be)
-	netForce = netAcceleration = Vector2D(0, 0);
+	resetPhysicsVars();
 }

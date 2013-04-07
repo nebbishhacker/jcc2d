@@ -12,6 +12,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 		EntityInfo &info = *it;
 		Sprite * t = NULL;
 		if (info.type == "player") t = new Player(info.xPos, info.yPos);
+		else if (info.type == "boxboy") t = new Player(info.xPos, info.yPos);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
 		if (t != NULL)
 		{
