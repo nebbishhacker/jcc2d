@@ -5,6 +5,11 @@ entities: [
 		ypos: 200
 	}
 	{
+		type: boxboy
+		xpos: 600
+		ypos: 200
+	}
+	{
 		type: background
 		xpos: 0
 		ypos: -100
