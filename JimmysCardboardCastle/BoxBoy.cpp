@@ -53,7 +53,7 @@ void BoxBoy::update()
 		Sprite * s;
 		if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = true;
 		if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
-	
+
 		if (rand() % 200 == 0) {
 			if (walking) {
 				walking = false;
@@ -76,16 +76,11 @@ void BoxBoy::update()
 		else contactVelocity.x -= 1.5;
 	}
 
-	// Handles ground friction and acceleration due to foot movement //
+	// Handles ground friction and acceleration due to movement //
 	if (grounded) {
 		applyGroundFriction();
 	}
-	//if (!grounded) {
-	//	// There is still ground friction while airborn, but to a different extent. This is a game. It is not real.
-	//	applyAirGroundFriction();
-	//	if (velocity.y >= 0) setCurrentAnimation(2);
-	//	else setCurrentAnimation(3);
-	//}
+
 	// Handles air drag //
 	applyAirDrag();
 
@@ -98,7 +93,11 @@ void BoxBoy::update()
 	Vector2D delta = velocity + netAcceleration * 0.5;
 
 	Sprite * player;
-	if (player = moveCollideX(delta.x, &world->groups["player"])) player->moveCollideX(delta.x, &world->groups["ground"]);
+	if (player = moveCollideX(delta.x, &world->groups["player"])) {
+		double oldPPosX = player->position.x;
+		player->moveCollideX(delta.x, &world->groups["ground"]);
+		if (oldPPosX == player->position.x && rand() % 200 == 0) flipped = !flipped;
+	}
 
 	if (moveCollideX(delta.x, &world->groups["ground"])) velocity.x = 0;
 	if (moveCollideY(delta.y, &world->groups["ground"])) velocity.y = 0;
