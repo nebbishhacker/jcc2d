@@ -14,6 +14,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 		if (info.type == "player") t = new Player(info.xPos, info.yPos);
 		else if (info.type == "boxboy") t = new BoxBoy(info.xPos, info.yPos);
 		else if (info.type == "dragonboy") t = new DragonBoy(info.xPos, info.yPos);
+		else if (info.type == "cookie") t = new Cookie(info.xPos, info.yPos);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
 		if (t != NULL)
 		{
