@@ -23,7 +23,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 
 	setCenter(50, 50);
 
-	hitbox = Hitbox(42, 3, 44, 120);
+	hitbox = Hitbox(42, 3, 44, 110);
 	setLayerID(2);
 
 	jumpReady = false;
