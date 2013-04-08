@@ -24,7 +24,7 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 	setAnimationSpeed(1, 0.25);
 
 	addSpriteAnimRow(2, 0, 128, 128, 0, 7); // attacking animation - 2
-	setAnimationSpeed(2, 0.1);
+	setAnimationSpeed(2, 0.25);
 	setAnimationLoop(2, false);
 
 	addSpriteAnimRow(3, 0, 0, 128, 0, 1); // hit animation - 3
@@ -39,7 +39,7 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 	groundFriction = 0.75;
 	// (airGroundFriction and gravity are left to defaults)
 
-	hitbox = Hitbox(40, 1, 50, 117);
+	hitbox = Hitbox(40, 0, 50, 117);
 
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = true;
@@ -65,8 +65,8 @@ void DragonBoy::update()
 	{
 		// check if a member of 'ground' who IS NOT thje player is beside me, and if so, turn away
 		Sprite * s;
-		if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = true;
-		if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
+		if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = true;
+		if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
 
 		// 1/200th of a chance each frame to:
 		if (rand() % 200 == 0) {
