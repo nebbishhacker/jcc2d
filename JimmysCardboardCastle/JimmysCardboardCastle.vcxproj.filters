@@ -55,7 +55,7 @@
     <ClCompile Include="DragonBoy.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Jimmy%27s Cardboard Castle - 2D\JimmysCardboardCastle\Cookie.cpp">
+    <ClCompile Include="Cookie.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
   </ItemGroup>

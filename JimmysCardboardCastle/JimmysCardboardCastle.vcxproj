@@ -80,9 +80,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Jimmy%27s Cardboard Castle - 2D\JimmysCardboardCastle\Cookie.cpp" />
     <ClCompile Include="BoxBoy.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Cookie.cpp" />
     <ClCompile Include="DragonBoy.cpp" />
     <ClCompile Include="drawPrimitives.cpp" />
     <ClCompile Include="levelLoader.cpp" />
