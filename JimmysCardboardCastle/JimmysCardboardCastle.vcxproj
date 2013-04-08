@@ -82,6 +82,7 @@
   <ItemGroup>
     <ClCompile Include="BoxBoy.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Cookie.cpp" />
     <ClCompile Include="DragonBoy.cpp" />
     <ClCompile Include="drawPrimitives.cpp" />
     <ClCompile Include="levelLoader.cpp" />
@@ -97,6 +98,7 @@
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="convert.h" />
+    <ClInclude Include="Cookie.h" />
     <ClInclude Include="DragonBoy.h" />
     <ClInclude Include="drawPrimitives.h" />
     <ClInclude Include="GameWorld.h" />

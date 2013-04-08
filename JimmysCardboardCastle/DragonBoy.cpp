@@ -40,6 +40,7 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 	// (airGroundFriction and gravity are left to defaults)
 
 	hitbox = Hitbox(40, 0, 50, 117);
+	setCenter(65, 58);
 
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = true;

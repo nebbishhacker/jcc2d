@@ -102,6 +102,7 @@ void TextureSprite::draw(Vector2D camera)
 
 	// apply the rotation around the center of the sprite
 	glTranslatef(center.x,center.y,0);
+	if (flipped) glScalef(-1, 1, 1);
 	glRotatef(theta, 0,0,1);
 	glTranslatef(-center.x,-center.y,0);
 
@@ -111,7 +112,6 @@ void TextureSprite::draw(Vector2D camera)
 	float u,v;
 	u = anim->coords[currentFrame]->u;
 	v = anim->coords[currentFrame]->v;
-	bool f = anim->flipped != this->flipped;
 
 	glColor3f(1,1,1);
 		/* bind the appropriate texture frame */
@@ -120,16 +120,16 @@ void TextureSprite::draw(Vector2D camera)
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 		/* draw the image as a quad the size of the first loaded image */
 		glBegin(GL_QUADS);
-		    glTexCoord2f(u+sz.normalizedWidth*f,v);
+		    glTexCoord2f(u,v);
 			glVertex3f(0,0,0);
 			
-			glTexCoord2f(u+sz.normalizedWidth*f,v+sz.normalizedHeight);
+			glTexCoord2f(u,v+sz.normalizedHeight);
 			glVertex3f(0,sz.height,0);
 			
-			glTexCoord2f(u+sz.normalizedWidth*!f,v+sz.normalizedHeight);
+			glTexCoord2f(u+sz.normalizedWidth,v+sz.normalizedHeight);
 			glVertex3f(sz.width,sz.height,0);
 			
-			glTexCoord2f(u+sz.normalizedWidth*!f,v);
+			glTexCoord2f(u+sz.normalizedWidth,v);
 			glVertex3f(sz.width,0,0);
 		glEnd();
 	glPopMatrix();

@@ -33,7 +33,9 @@ BoxBoy::BoxBoy(double x, double y) : PhysicsSprite("images/spr_enemy2.png")
 	groundFriction = 0.75;
 	// (airGroundFriction and gravity are left to defaults)
 
-	hitbox = Hitbox(17, 1, 94, 59);
+	hitbox = Hitbox(7, 1, 94, 59);
+
+	setCenter(54, 30);
 
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = true;
