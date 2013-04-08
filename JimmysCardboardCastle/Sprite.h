@@ -96,6 +96,13 @@ public:
 	Sprite * collide(SpriteGroup*, const Vector2D &offset = Vector2D(0, 0));
 	Sprite * collide(SpriteGroup*, double offsetX, double offsetY);
 
+	//	- These functions use the provided hitbox instead of the sprite's default one
+	//	- hitbox position is still relative to the sprite
+	bool relBoxCollide(Sprite*, const Hitbox &hitbox, const Vector2D &offset = Vector2D(0, 0));
+	bool relBoxCollide(Sprite*, const Hitbox &hitbox, double offsetX, double offsetY);
+	Sprite * relBoxCollide(SpriteGroup*, const Hitbox &hitbox, const Vector2D &offset = Vector2D(0, 0));
+	Sprite * relBoxCollide(SpriteGroup*, const Hitbox &hitbox, double offsetX, double offsetY);
+
 	//  - The moveCollide functions move the sprite by a certain amount, stopping if it collides,
 	//		and returning the same way the collide() function does.
 	bool moveCollideX(double x, Sprite*);

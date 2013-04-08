@@ -19,7 +19,7 @@ struct Hitbox
 		size = Vector2D(width, height);
 	}
 
-	bool collide(Hitbox &b, const Vector2D &rel)
+	bool collide(const Hitbox &b, const Vector2D &rel) const
 	{
 		return !(position.x + size.x <= b.position.x + rel.x ||
 			position.y + size.y <= b.position.y + rel.y ||
@@ -27,31 +27,31 @@ struct Hitbox
 			position.y >= b.position.y + b.size.y + rel.y
 			);
 	}
-	bool collide(Hitbox &b, double relX, double relY)
+	bool collide(const Hitbox &b, double relX, double relY) const
 	{
 		return collide(b, Vector2D(relX, relY));
 	}
-	double distanceToRight(Hitbox &b, double relX)
+	double distanceToRight(const Hitbox &b, double relX) const
 	{
 		return (b.position.x + relX) - (position.x + size.x);
 	}
-	double distanceToLeft(Hitbox &b, double relX)
+	double distanceToLeft(const Hitbox &b, double relX) const
 	{
 		return position.x - (b.position.x + relX + b.size.x);
 	}
-	double distanceFromTop(Hitbox &b, double relY)
+	double distanceFromTop(const Hitbox &b, double relY) const
 	{
 		return (b.position.y + relY) - (position.y + size.y);
 	}
-	double distanceFromBottom(Hitbox &b, double relY)
+	double distanceFromBottom(const Hitbox &b, double relY) const
 	{
 		return position.y - (b.position.y + relY + b.size.y);
 	}
-	bool collidePoint(double x, double y)
+	bool collidePoint(double x, double y) const
 	{
 		return (x >= position.x && x <= position.x + size.x && y >= position.y && y <= position.y + size.y);
 	}
-	bool collidePoint(Vector2D point)
+	bool collidePoint(Vector2D point) const
 	{
 		return (point.x >= position.x && point.x <= position.x + size.x && point.y >= position.y && point.y <= position.y + size.y);
 	}
