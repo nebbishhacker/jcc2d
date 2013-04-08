@@ -21,9 +21,9 @@ Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 		
 	setPosition(x,y);
 
-	setCenter(50, 50);
+	setCenter(62, 64);
 
-	hitbox = Hitbox(42, 3, 44, 110);
+	hitbox = Hitbox(38, 3, 44, 110);
 	setLayerID(2);
 
 	jumpReady = false;
@@ -35,7 +35,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 	groundFriction = 0.75; // coefficient of friction; also, in affect, how fast he accelerates
 	moveSpeed = Vector2D(8, 0); // Normal horizontal movement speed
 	airGroundFriction = 0.5; // what fraction of ground friction is still (oddly) in affect in the air
-	jumpVelocity = 30; // the initial vertical velocity of his jumps
+	jumpVelocity = 25; // the initial vertical velocity of his jumps
 	//gravity = Vector2D(0, -1.5); // gravity!	| ^ this way up ^ |
 }
 
@@ -48,6 +48,12 @@ void Player::initialize()
 
 void Player::update()
 {
+	if (input->keysPressed['z']) {
+		if (jumpVelocity == 25) jumpVelocity = 30;
+		else jumpVelocity = 25;
+	}
+
+
 	// Handle jumping (and resultant instantaneous changes in velocity) //
 	bool grounded = (collide(&world->groups["ground"], 0, -2) != NULL); // Is the character on the ground?
 	if (jumpReady && input->specialsDown[GLUT_KEY_UP] && grounded) // JUMP!

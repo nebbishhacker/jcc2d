@@ -7,3 +7,4 @@
 #include "ScreenFillSprite.h"
 #include "BoxBoy.h"
 #include "DragonBoy.h"
+#include "Cookie.h"
