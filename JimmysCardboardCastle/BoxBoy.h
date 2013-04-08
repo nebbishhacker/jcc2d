@@ -7,5 +7,6 @@ public:
 	void initialize();
 	void update();
 
+	// state variables
 	bool walking;
 };
