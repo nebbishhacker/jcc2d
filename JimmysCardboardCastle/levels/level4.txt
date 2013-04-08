@@ -5,13 +5,13 @@ entities: [
 		ypos: 190
 	}
 	{
-		type: boxboy
+		type: tracks
 		xpos: 400
 		ypos: 65
 	}
 	{
 		type: boxboy
-		xpos: 1900
+		xpos: 600
 		ypos: 64
 	}
 	{

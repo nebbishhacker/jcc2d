@@ -86,10 +86,12 @@
     <ClCompile Include="DragonBoy.cpp" />
     <ClCompile Include="drawPrimitives.cpp" />
     <ClCompile Include="levelLoader.cpp" />
+    <ClCompile Include="RobertsFriends.cpp" />
     <ClCompile Include="ScreenFillSprite.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
     <ClCompile Include="TextureCache.cpp" />
     <ClCompile Include="TilePlacer.cpp" />
+    <ClCompile Include="Tracks.cpp" />
     <ClCompile Include="vectorMath.cpp" />
     <ClCompile Include="World.cpp" />
     <ClInclude Include="Background.h" />
@@ -118,6 +120,7 @@
     <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="PhysicsSprite.h" />
     <ClInclude Include="QuitDialog.h" />
+    <ClInclude Include="RobertsFriends.h" />
     <ClInclude Include="ScreenFillSprite.h" />
     <ClInclude Include="sharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />
@@ -138,6 +141,7 @@
     <ClInclude Include="TestWorld.h" />
     <ClInclude Include="TextureCache.h" />
     <ClInclude Include="TilePlacer.h" />
+    <ClInclude Include="Tracks.h" />
     <ClInclude Include="vectorMath.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
