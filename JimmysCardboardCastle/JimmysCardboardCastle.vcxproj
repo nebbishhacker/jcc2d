@@ -92,13 +92,13 @@
     <ClCompile Include="TilePlacer.cpp" />
     <ClCompile Include="vectorMath.cpp" />
     <ClCompile Include="World.cpp" />
-    <ClInclude Include="..\..\Jimmy%27s Cardboard Castle - 2D\JimmysCardboardCastle\Cookie.h" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="BensTestWorld.h" />
     <ClInclude Include="BoxBoy.h" />
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="convert.h" />
+    <ClInclude Include="Cookie.h" />
     <ClInclude Include="DragonBoy.h" />
     <ClInclude Include="drawPrimitives.h" />
     <ClInclude Include="GameWorld.h" />

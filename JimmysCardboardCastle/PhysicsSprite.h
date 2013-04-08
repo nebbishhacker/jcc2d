@@ -6,8 +6,6 @@ template <typename T> int sgn(T val) {
     return (T(0) < val) - (val < T(0));
 }
 
-//  Originally used to make sure collisions work right, then repurposed to an odd looking platform.
-//	It's probably not a good idea to rely on anything with "Test" in the name.
 class PhysicsSprite: public TextureSprite
 {
 public:
