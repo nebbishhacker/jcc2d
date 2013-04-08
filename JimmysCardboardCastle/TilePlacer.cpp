@@ -102,5 +102,5 @@ void TilePlacer::draw(Vector2D camera)
 	drawRectangle(true, world->stateInfo->screenWidth - 160, 0, world->stateInfo->screenWidth, 25, 0);
 
 	setColor(0, 0, 0);
-	drawText(stringify(world->input->current.x - world->camera.x) + ", " + stringify(world->input->current.y - world->camera.y), world->stateInfo->screenWidth - 150, 5);
+	drawText(stringify(world->input->current.x + world->camera.x) + ", " + stringify(world->input->current.y + world->camera.y), world->stateInfo->screenWidth - 150, 5);
 }
