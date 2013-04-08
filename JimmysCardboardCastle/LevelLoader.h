@@ -69,6 +69,7 @@ struct EntityInfo
 	double layerID;
 	double scrollFactorX;
 	double scrollFactorY;
+	int moonBoots; // pretend it's a bool
 	Sprite * entity;
 
 	EntityInfo()
@@ -80,6 +81,7 @@ struct EntityInfo
 		layerID = INVALID_DOUBLE;
 		scrollFactorX = INVALID_DOUBLE;
 		scrollFactorY = INVALID_DOUBLE;
+		moonBoots = 0;
 		entity = NULL;
 	}
 

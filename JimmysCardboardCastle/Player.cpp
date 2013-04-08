@@ -36,7 +36,10 @@ Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 	moveSpeed = Vector2D(8, 0); // Normal horizontal movement speed
 	airGroundFriction = 0.5; // what fraction of ground friction is still (oddly) in affect in the air
 	jumpVelocity = 25; // the initial vertical velocity of his jumps
+	bootJumpVelocity = 30; // the initial vertical velocity of his moonboot jumps
 	//gravity = Vector2D(0, -1.5); // gravity!	| ^ this way up ^ |
+
+	hasBoots = false;
 }
 
 void Player::initialize()
@@ -49,8 +52,7 @@ void Player::initialize()
 void Player::update()
 {
 	if (input->keysPressed['z']) {
-		if (jumpVelocity == 25) jumpVelocity = 30;
-		else jumpVelocity = 25;
+		hasBoots = !hasBoots;
 	}
 
 
@@ -58,7 +60,7 @@ void Player::update()
 	bool grounded = (collide(&world->groups["ground"], 0, -2) != NULL); // Is the character on the ground?
 	if (jumpReady && input->specialsDown[GLUT_KEY_UP] && grounded) // JUMP!
 	{
-		velocity.y = jumpVelocity; // Directly set velocity, 'cause it's simpler and more reliable than forces in this case
+		velocity.y = hasBoots ? bootJumpVelocity : jumpVelocity; // Directly set velocity, 'cause it's simpler and more reliable than forces in this case
 		jumpReady = false; // only wanna jump once
 		soundEngine.playSound(jumpSound); // boing
 	}

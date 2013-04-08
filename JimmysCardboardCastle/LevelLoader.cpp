@@ -196,6 +196,7 @@ bool EntityInfo::read(std::istream &stream)
 				if (label == "layerid") readDouble(stream, layerID);
 				if (label == "scrollfactorx") readDouble(stream, scrollFactorX);
 				if (label == "scrollfactory") readDouble(stream, scrollFactorY);
+				if (label == "moonboots") readInt(stream, moonBoots);
 				//std::cout << " ";
 			}
 		}

@@ -15,6 +15,8 @@ public:
 	InputInfo *input;
 	Vector2D moveSpeed;
 	double jumpVelocity;
+	double bootJumpVelocity;
+	bool hasBoots;
 private:
 	bool jumpReady;
 	Sound jumpSound;
