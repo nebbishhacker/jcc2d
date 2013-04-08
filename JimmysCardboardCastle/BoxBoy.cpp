@@ -57,7 +57,7 @@ void BoxBoy::update()
 	}
 	else // If not:
 	{
-		// check if a member of 'ground' who IS NOT thje player is beside me, and if so, turn away
+		// check if a member of 'ground' who IS NOT the player is beside me, and if so, turn away
 		Sprite * s;
 		if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = true;
 		if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
@@ -76,7 +76,7 @@ void BoxBoy::update()
 		if (!walking && rand() % 200 == 0) // If standing still, 1/200th chance of
 		{
 			// sneaking a peak at the world
-			setCurrentAnimation(1)
+			setCurrentAnimation(1);
 			setFrame(0); // set animation to the start, as it doesn't loop
 		}
 	}

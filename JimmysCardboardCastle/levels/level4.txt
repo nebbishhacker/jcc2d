@@ -5,12 +5,49 @@ entities: [
 		ypos: 200
 	}
 	{
+		type: boxboy
+		xpos: 600
+		ypos: 100
+	}
+	{
+		type: boxboy
+		xpos: 1900
+		ypos: 100
+	}
+	{
+		type: boxboy
+		xpos: 1300
+		ypos: 100
+	}
+	{
 		type: background
 		xpos: 0
 		ypos: -100
-		imagepath: "images/dev/ben_background(0.25scale).png"
-		framesizex: 825
-		framesizey: 638
+		imagepath: "images/dev/background_fourthlevel.png"
+		framesizex: 1625
+		framesizey: 1238
+		layerid: -100
+		scrollfactorx: 0.5
+		scrollfactory: 0.25
+	}
+	{
+		type: background
+		xpos: 1600
+		ypos: -100
+		imagepath: "images/dev/background_fourthlevel.png"
+		framesizex: 1625
+		framesizey: 1238
+		layerid: -100
+		scrollfactorx: 0.5
+		scrollfactory: 0.25
+	}
+	{
+		type: background
+		xpos: 3200
+		ypos: -100
+		imagepath: "images/dev/background_fourthlevel.png"
+		framesizex: 1625
+		framesizey: 1238
 		layerid: -100
 		scrollfactorx: 0.5
 		scrollfactory: 0.25
