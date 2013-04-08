@@ -42,7 +42,6 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 
 	hitbox = Hitbox(40, 0, 50, 117);
 	setCenter(65, 58);
-	flipped = true;
 
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = false;
@@ -52,8 +51,8 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 
 void DragonBoy::initialize() // use initialize for anything involving world (like groups)
 {
-	// adds this sprite to ground, so that player can't move through it
-	//world->groups["ground"].add(this);
+	// adds this sprite to DBoy, so that the box can collide with it
+	world->groups["dboy"].add(this);
 }
 
 void DragonBoy::update()
@@ -61,45 +60,45 @@ void DragonBoy::update()
 	// Is the character on the ground?
 	bool grounded = (collide(&world->groups["ground"], 0, -2) != NULL);
 
-	if (collide(&world->groups["player"], 0, 2)) // If the player is on top of me,
-	{
-		//walking = false; // stop
-		//setCurrentAnimation(0); // and hide.
-	}
-	else // If not:
-	{
-		// check if a member of 'ground' who IS NOT thje player is beside me, and if so, turn away
-		Sprite * s;
-		if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = true;
-		if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
+	// check if a member of 'ground' who IS NOT the player is beside me, and if so, turn away
+	Sprite * s;
+	if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = true;
+	if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
 
-		// 1/200th of a chance each frame to:
-		if (rand() % 200 == 0) {
-			if (walking) {
-				walking = false; // stop walking
-				setCurrentAnimation(0); // and hide animation
-			}
-			else {
-				walking = true; // or start walking
-				setCurrentAnimation(1); // and crawl animation
-			}
+	// 1/200th of a chance each frame to:
+	if (rand() % 200 == 0) {
+		if (walking) {
+			walking = false; // stop walking
+			setCurrentAnimation(0); // and hide animation
 		}
-		if (!walking && rand() % 10 == 0) // If standing still, 1/200th chance of
-		{
-			// sneaking a peak at the world
-			setCurrentAnimation(2);
-			setFrame(0); // set animation to the start, as it doesn't loop
-			Sprite * t = new DBoy_proj(position.x+65, position.y+58, flipped);
-			world->add(t);
+		else {
+			walking = true; // or start walking
+			setCurrentAnimation(1); // and crawl animation
 		}
 	}
-
-	if (walking) // If we are walking:
+	if (rand() % 200 == 0) // 1/200th chance of attacking
 	{
-		if (flipped)	// and facing left (the image faces right)
-			contactVelocity.x += 2.5; // move feet right (thus pushing self left);
-		else			// and facing right
-			contactVelocity.x -= 2.5; // move feet left (thus pushing self right);
+		// Stops it from walking if it already is
+		if (walking)
+			walking = false;
+		setCurrentAnimation(2);
+		setFrame(0); // set animation to the start, as it doesn't loop
+
+		// Create the box projectile
+		Sprite * t;
+		if (!flipped)
+			t = new DBoy_proj(position.x+65, position.y+58, flipped);
+		else
+			t = new DBoy_proj(position.x-65, position.y+58, flipped);
+		world->add(t);
+	}
+
+	if (walking) // If we are walking
+	{
+		if (flipped)
+			contactVelocity.x += 2.5;
+		else
+			contactVelocity.x -= 2.5;
 	}
 
 	// Handles ground friction and acceleration due to movement //
@@ -118,14 +117,6 @@ void DragonBoy::update()
 
 	// Move the sprite, checking for collisions //
 	Vector2D delta = velocity + netAcceleration * 0.5;
-
-	// Push the player if moving into him
-	/*Sprite * player = moveCollideX(delta.x, &world->groups["player"]);
-	if (player) {
-		double oldPPosX = player->position.x;
-		player->moveCollideX(delta.x, &world->groups["ground"]);
-		if (oldPPosX == player->position.x && rand() % 200 == 0) flipped = !flipped;
-	}*/
 
 	// Move, stopping upon collision with ground. Set velocity to zero when colliding.
 	if (moveCollideX(delta.x, &world->groups["ground"])) velocity.x = 0;
