@@ -48,7 +48,7 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 void DragonBoy::initialize() // use initialize for anything involving world (like groups)
 {
 	// adds this sprite to ground, so that player can't move through it
-	world->groups["ground"].add(this);
+	//world->groups["ground"].add(this);
 }
 
 void DragonBoy::update()
