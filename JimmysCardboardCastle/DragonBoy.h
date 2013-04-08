@@ -8,7 +8,6 @@ public:
 	void update();
 
 	// state variables
-	bool standing;
 	bool walking;
 	bool attacking;
 	bool gotHit;

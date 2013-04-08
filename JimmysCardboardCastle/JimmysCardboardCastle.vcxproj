@@ -99,6 +99,7 @@
     <ClInclude Include="Button.h" />
     <ClInclude Include="convert.h" />
     <ClInclude Include="Cookie.h" />
+    <ClInclude Include="DBoyProjectile.h" />
     <ClInclude Include="DragonBoy.h" />
     <ClInclude Include="drawPrimitives.h" />
     <ClInclude Include="GameWorld.h" />

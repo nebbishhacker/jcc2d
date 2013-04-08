@@ -8,3 +8,4 @@
 #include "BoxBoy.h"
 #include "DragonBoy.h"
 #include "Cookie.h"
+#include "DBoyProjectile.h"

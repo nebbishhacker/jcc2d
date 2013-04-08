@@ -1,5 +1,6 @@
 #include "DragonBoy.h"
 #include "Game.h"
+#include "DBoyProjectile.h"
 
 #include <random>
 
@@ -41,9 +42,12 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 
 	hitbox = Hitbox(40, 0, 50, 117);
 	setCenter(65, 58);
+	flipped = true;
 
 	// BEHAVIORAL STATE VARIABLE(S) //
-	walking = true;
+	walking = false;
+	attacking = false;
+	gotHit = false;
 }
 
 void DragonBoy::initialize() // use initialize for anything involving world (like groups)
@@ -59,8 +63,8 @@ void DragonBoy::update()
 
 	if (collide(&world->groups["player"], 0, 2)) // If the player is on top of me,
 	{
-		walking = false; // stop
-		setCurrentAnimation(0); // and hide.
+		//walking = false; // stop
+		//setCurrentAnimation(0); // and hide.
 	}
 	else // If not:
 	{
@@ -80,20 +84,22 @@ void DragonBoy::update()
 				setCurrentAnimation(1); // and crawl animation
 			}
 		}
-		if (!walking && rand() % 200 == 0) // If standing still, 1/200th chance of
+		if (!walking && rand() % 10 == 0) // If standing still, 1/200th chance of
 		{
 			// sneaking a peak at the world
 			setCurrentAnimation(2);
 			setFrame(0); // set animation to the start, as it doesn't loop
+			Sprite * t = new DBoy_proj(position.x+65, position.y+58, flipped);
+			world->add(t);
 		}
 	}
 
 	if (walking) // If we are walking:
 	{
 		if (flipped)	// and facing left (the image faces right)
-			contactVelocity.x += 1.5; // move feet right (thus pushing self left);
+			contactVelocity.x += 2.5; // move feet right (thus pushing self left);
 		else			// and facing right
-			contactVelocity.x -= 1.5; // move feet left (thus pushing self right);
+			contactVelocity.x -= 2.5; // move feet left (thus pushing self right);
 	}
 
 	// Handles ground friction and acceleration due to movement //
@@ -114,12 +120,12 @@ void DragonBoy::update()
 	Vector2D delta = velocity + netAcceleration * 0.5;
 
 	// Push the player if moving into him
-	Sprite * player = moveCollideX(delta.x, &world->groups["player"]);
+	/*Sprite * player = moveCollideX(delta.x, &world->groups["player"]);
 	if (player) {
 		double oldPPosX = player->position.x;
 		player->moveCollideX(delta.x, &world->groups["ground"]);
 		if (oldPPosX == player->position.x && rand() % 200 == 0) flipped = !flipped;
-	}
+	}*/
 
 	// Move, stopping upon collision with ground. Set velocity to zero when colliding.
 	if (moveCollideX(delta.x, &world->groups["ground"])) velocity.x = 0;
