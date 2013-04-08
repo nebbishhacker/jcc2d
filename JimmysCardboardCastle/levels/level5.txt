@@ -3,6 +3,7 @@ entities: [
 		type: player
 		xpos: 200
 		ypos: 100
+		moonboots: 1
 	}
 	{
 		type: background

@@ -33,7 +33,6 @@ bool Sprite::collide(Sprite * sprite, double offsetX, double offsetY)
 {
 	return collide(sprite, Vector2D(offsetX, offsetY));
 }
-
 Sprite * Sprite::collide(SpriteGroup * group, const Vector2D &offset)
 {
 	for (SpriteGroup::iterator it = group->begin(); it != group->end(); ++it)
@@ -43,6 +42,25 @@ Sprite * Sprite::collide(SpriteGroup * group, const Vector2D &offset)
 Sprite * Sprite::collide(SpriteGroup * group, double offsetX, double offsetY)
 {
 	return collide(group, Vector2D(offsetX, offsetY));
+}
+
+bool Sprite::relBoxCollide(Sprite * sprite, const Hitbox &hitbox, const Vector2D &offset)
+{
+	return hitbox.collide(sprite->hitbox, sprite->position - position - offset);
+}
+bool Sprite::relBoxCollide(Sprite * sprite, const Hitbox &hitbox, double offsetX, double offsetY)
+{
+	return relBoxCollide(sprite, hitbox, Vector2D(offsetX, offsetY));
+}
+Sprite * Sprite::relBoxCollide(SpriteGroup * group, const Hitbox &hitbox, const Vector2D &offset)
+{
+	for (SpriteGroup::iterator it = group->begin(); it != group->end(); ++it)
+		if ((*it) != this && collide(*it, offset)) return *it;
+	return NULL;
+}
+Sprite * Sprite::relBoxCollide(SpriteGroup * group, const Hitbox &hitbox, double offsetX, double offsetY)
+{
+	return relBoxCollide(group, hitbox, Vector2D(offsetX, offsetY));
 }
 
 bool Sprite::moveCollideX(double x, Sprite * sprite)
