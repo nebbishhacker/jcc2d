@@ -23,7 +23,7 @@ const int INVALID_INT = INT_MAX;
 struct TileInfo {
 	int c, r;
 	bool exists;
-	Tile * entity;
+	Sprite * entity;
 
 	TileInfo()
 	{
