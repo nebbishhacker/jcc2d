@@ -6,6 +6,7 @@
 #include "Button.h"
 #include "ScreenFillSprite.h"
 #include "BoxBoy.h"
+#include "BoxBot.h"
 #include "Tracks.h"
 #include "DragonBoy.h"
 #include "RobertsFriends.h"

@@ -80,6 +80,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BoxBot.cpp" />
     <ClCompile Include="BoxBoy.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Cookie.cpp" />
@@ -96,6 +97,7 @@
     <ClCompile Include="World.cpp" />
     <ClInclude Include="Background.h" />
     <ClInclude Include="BensTestWorld.h" />
+    <ClInclude Include="BoxBot.h" />
     <ClInclude Include="BoxBoy.h" />
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
