@@ -13,7 +13,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 		Sprite * t = NULL;
 		if (info.type == "player") {
 			Player * p = new Player(info.xPos, info.yPos);
-			p->hasBoots = (bool)info.moonBoots;
+			p->hasBoots = info.moonBoots != 0;
 			t = p;
 		}
 		else if (info.type == "boxboy") t = new BoxBoy(info.xPos, info.yPos);
@@ -22,6 +22,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 		else if (info.type == "dragonboy") t = new DragonBoy(info.xPos, info.yPos);
 		else if (info.type == "robertsfriends") t = new RobertsFriends(info.xPos, info.yPos);
 		else if (info.type == "cookie") t = new Cookie(info.xPos, info.yPos);
+		else if (info.type == "bmarble") t = new Marble(info.xPos, info.yPos, 3);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
 		if (t != NULL)
 		{

@@ -9,5 +9,8 @@
 #include "BoxBot.h"
 #include "Tracks.h"
 #include "DragonBoy.h"
+#include "Cookie.h"
+#include "DBoyProjectile.h"
 #include "RobertsFriends.h"
 #include "Cookie.h"
+#include "Marble.h"

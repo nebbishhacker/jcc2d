@@ -192,16 +192,22 @@
     <ClInclude Include="BoxBoy.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DragonBoy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Cookie.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBoyProjectile.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragonBoy.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RobertsFriends.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Tracks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Marble.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BoxBot.h">

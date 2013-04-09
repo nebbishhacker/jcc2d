@@ -136,6 +136,8 @@ public:
 	iterator begin() {return groups.begin();}
 	iterator end() {return groups.end();}
 
+	Matrix2x2 getScrollMatrix();
+
 
 	// DATA //
 
