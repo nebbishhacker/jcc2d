@@ -79,6 +79,9 @@
     <ClCompile Include="levelConstructor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BlackPaperBoy.cpp">
+      <Filter>Sprite Classes\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entities.h">
@@ -236,6 +239,9 @@
     </ClInclude>
     <ClInclude Include="levelList.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackPaperBoy.h">
+      <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
