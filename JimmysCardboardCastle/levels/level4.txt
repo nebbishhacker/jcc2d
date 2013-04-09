@@ -5,15 +5,11 @@ entities: [
 		ypos: 190
 	}
 	{
-		type: tracks
+		type: boxbot
 		xpos: 400
 		ypos: 65
 	}
-	{
-		type: boxboy
-		xpos: 600
-		ypos: 64
-	}
+	
 	{
 		type: boxboy
 		xpos: 1300
