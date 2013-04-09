@@ -113,7 +113,7 @@ void BigBoxBoy::update()
 	if (player) {
 		static_cast<Player*>(player)->damage(1);
 		double oldPPosX = player->position.x;
-		player->moveCollideX(delta.x*10, &world->groups["ground"]);
+		player->moveCollideX(delta.x, &world->groups["ground"]);
 		if (oldPPosX == player->position.x && rand() % 200 == 0) flipped = !flipped;
 	}
 

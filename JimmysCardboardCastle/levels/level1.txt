@@ -1,8 +1,8 @@
 entities: [
 	{
 		type: player
-		xpos: 6000
-		ypos: 200
+		xpos: 256
+		ypos: 64
 	}
 	{
 		type: bigboxboy
@@ -32,7 +32,7 @@ entities: [
 	{
 		type: boxboy
 		xpos: 3521
-		ypos: 145
+		ypos: 128
 	}
 	{
 		type: boxboy
