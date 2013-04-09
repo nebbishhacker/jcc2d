@@ -55,11 +55,18 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 			for (std::vector<TileInfo>::iterator it = mapRow.begin(); it != mapRow.end(); ++it)
 			{
 				TileInfo &info = *it;
+				Sprite * t;
 				if (info.exists) {
-					Tile * t = new Tile(x * tileWidth, y * tileHeight, info.r * tileMap.sheetWidth + info.c, tileSheet);
-					world->groups["ground"].add(t);
-					if (info.r == 5) world->groups["lava"].add(t);
-					world->add(t);
+					if (info.r == 0 && info.c == 3) {
+						t = new Cookie(x * tileWidth + 16, y * tileHeight + 16);
+						world->add(t);
+					}
+					else {
+						t = new Tile(x * tileWidth, y * tileHeight, info.r * tileMap.sheetWidth + info.c, tileSheet);
+						world->groups["ground"].add(t);
+						if (info.r == 5) world->groups["lava"].add(t);
+						world->add(t);
+					}
 				if (storeReferences) info.entity = t;
 				}
 				++x;
