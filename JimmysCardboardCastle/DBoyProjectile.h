@@ -23,7 +23,7 @@ public:
 		mass = 1;
 		airDrag = 0.1;
 		groundFriction = 0.45;
-		gravity.y = 2;
+		gravity.y = 3;
 		// (airGroundFriction and gravity are left to defaults)
 
 		hitbox = Hitbox(2, 10, 44, 35);
