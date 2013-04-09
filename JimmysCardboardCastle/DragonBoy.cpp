@@ -76,7 +76,7 @@ void DragonBoy::update()
 			setCurrentAnimation(1); // and crawl animation
 		}
 	}
-	if (rand() % 200 == 0) // 1/200th chance of attacking
+	if (rand() % 200 == 0) // 1/100th chance of attacking
 	{
 		// Stops it from walking if it already is
 		if (walking)
