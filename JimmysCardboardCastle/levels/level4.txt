@@ -28,7 +28,7 @@ entities: [
 		type: background
 		xpos: 0
 		ypos: -100
-		imagepath: "images/dev/background_fourthlevel.png"
+		imagepath: "images/background_fourthlevel.png"
 		framesizex: 1600
 		framesizey: 1200
 		layerid: -100
@@ -50,7 +50,7 @@ entities: [
 		type: background
 		xpos: 1600
 		ypos: -100
-		imagepath: "images/dev/background_fourthlevel.png"
+		imagepath: "images/background_fourthlevel.png"
 		framesizex: 1600
 		framesizey: 1200
 		layerid: -100
@@ -61,7 +61,7 @@ entities: [
 		type: background
 		xpos: 3200
 		ypos: -100
-		imagepath: "images/dev/background_fourthlevel.png"
+		imagepath: "images/background_fourthlevel.png"
 		framesizex: 1600
 		framesizey: 1200
 		layerid: -100
