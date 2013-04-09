@@ -10,6 +10,11 @@ entities: [
 		ypos: 200
 	}
 	{
+		type: asianboy
+		xpos: 900
+		ypos: 200
+	}
+	{
 		type: background
 		xpos: 0
 		ypos: -100

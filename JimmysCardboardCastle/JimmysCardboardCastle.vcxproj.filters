@@ -70,6 +70,9 @@
     <ClCompile Include="BigBoxBoy.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AsianPaperBoy.cpp">
+      <Filter>Sprite Classes\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entities.h">
@@ -217,6 +220,12 @@
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BigBoxBoy.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AsianPaperBoy.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaperAirplane.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
