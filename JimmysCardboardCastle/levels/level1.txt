@@ -46,14 +46,36 @@ entities: [
 	}
 	{
 		type: background
-		xpos: 0
-		ypos: -100
-		imagepath: "images/dev/ben_background(0.25scale).png"
-		framesizex: 825
-		framesizey: 638
+		xpos: -512
+		ypos: 0
+		imagepath: "images/bgm_backyard3.png"
+		framesizex: 8192
+		framesizey: 512
 		layerid: -100
 		scrollfactorx: 0.5
 		scrollfactory: 0.25
+	}
+	{
+		type: background
+		xpos: -512
+		ypos: -512
+		imagepath: "images/bgm_backyard2.png"
+		framesizex: 8192
+		framesizey: 512
+		layerid: -100
+		scrollfactorx: 1
+		scrollfactory: 1
+	}
+	{
+		type: background
+		xpos: -512
+		ypos: 64
+		imagepath: "images/bgm_backyard1.png"
+		framesizex: 8192
+		framesizey: 256
+		layerid: -90
+		scrollfactorx: 1
+		scrollfactory: 1
 	}
 ]
 tilemap: {
