@@ -1,5 +1,6 @@
 #include "BigBoxBoy.h"
 #include "Game.h"
+#include "Player.h"
 
 #include <random>
 
@@ -50,38 +51,37 @@ void BigBoxBoy::update()
 
 	if (active)
 	{
-		
-			// check if a member of 'ground' who IS NOT the player is beside me, and if so, turn away
-			Sprite * s;
-			if ((s = collide(&world->groups["ground"], -5, 0)) && !s->inGroup(&world->groups["player"]) && !flipped)
-			{
-				flipped = true;
-				walking = false;
-				setCurrentAnimation(0);
-			}
-			if ((s = collide(&world->groups["ground"], 5, 0)) && !s->inGroup(&world->groups["player"]) && flipped)
-			{
-				flipped = false;
-				walking = false;
-				setCurrentAnimation(0);
-			}
-
-			// 1/200th of a chance each frame to:
-			if (!walking)
-				if (rand() % 1 == 0) { {
-					walking = true; // stop walking
-					setCurrentAnimation(1); // and hide animation
-				}
-			}
-		}
-
-		if (walking) // If we are walking:
+		// check if a member of 'ground' who IS NOT the player is beside me, and if so, turn away
+		Sprite * s;
+		if ((s = collide(&world->groups["ground"], -5, 0)) && !s->inGroup(&world->groups["player"]) && !flipped)
 		{
-			if (!flipped)	// and facing left (the image faces right)
-				contactVelocity.x += 5; // move feet right (thus pushing self left);
-			else			// and facing right
-				contactVelocity.x -= 5; // move feet left (thus pushing self right);
+			flipped = true;
+			walking = false;
+			setCurrentAnimation(0);
 		}
+		if ((s = collide(&world->groups["ground"], 5, 0)) && !s->inGroup(&world->groups["player"]) && flipped)
+		{
+			flipped = false;
+			walking = false;
+			setCurrentAnimation(0);
+		}
+
+		// 1/200th of a chance each frame to:
+		if (!walking)
+			if (rand() % 1 == 0) { {
+				walking = true; // stop walking
+				setCurrentAnimation(1); // and hide animation
+			}
+		}
+	}
+
+	if (walking) // If we are walking:
+	{
+		if (!flipped)	// and facing left (the image faces right)
+			contactVelocity.x += 5; // move feet right (thus pushing self left);
+		else			// and facing right
+			contactVelocity.x -= 5; // move feet left (thus pushing self right);
+	}
 
 	if (!active)
 	{
@@ -111,6 +111,7 @@ void BigBoxBoy::update()
 	// Push the player if moving into him
 	Sprite * player = moveCollideX(delta.x, &world->groups["player"]);
 	if (player) {
+		static_cast<Player*>(player)->damage(1);
 		double oldPPosX = player->position.x;
 		player->moveCollideX(delta.x, &world->groups["ground"]);
 		if (oldPPosX == player->position.x && rand() % 200 == 0) flipped = !flipped;
