@@ -50,6 +50,7 @@ public:
 			health = p->health;
 		}
 		if (input->keysPressed['~']) game->replacingCurrentWorld(new LevelEditor(levelFileName));
+		if (input->keysPressed['+']) game->replacingCurrentWorld(levelList.constructNextLevel());
 	}
 	virtual void draw()
 	{
