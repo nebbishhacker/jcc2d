@@ -41,6 +41,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 
 	hasBoots = false;
 	score = 0;
+	cookies = 0;
 	health = 3;
 }
 

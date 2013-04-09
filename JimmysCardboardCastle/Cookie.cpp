@@ -33,8 +33,7 @@ void Cookie::update()
 	Sprite * s = collide(&world->groups["player"]);
 	if (s != NULL)
 	{
-		Player * p = static_cast<Player*>(s);
-		p->scoreUp(1);
+		static_cast<Player*>(s)->cookiesUp(1);
 		this->kill();
 	}
 }

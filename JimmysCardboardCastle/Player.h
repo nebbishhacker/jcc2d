@@ -15,6 +15,7 @@ public:
 
 	void damage(double damage) { health -= damage; }
 	void scoreUp(double points) { score += points; }
+	void cookiesUp(double cookies) { this->cookies += cookies; }
 
 	InputInfo *input;
 
@@ -24,6 +25,7 @@ public:
 
 	bool hasBoots;
 	double score;
+	double cookies;
 	double health;
 
 private:

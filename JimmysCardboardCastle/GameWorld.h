@@ -46,6 +46,7 @@ public:
 		if (!groups["player"].empty()) {
 			Player * p = static_cast<Player*> (groups["player"].back());
 			score = p->score;
+			cookies = p->cookies;
 			health = p->health;
 		}
 		if (input->keysPressed['~']) game->replacingCurrentWorld(new LevelEditor(levelFileName));
@@ -57,10 +58,12 @@ public:
 		// Draw the current score to the screen
 		setColor(0, 0, 0);
 		drawText(stringify(score), 10, stateInfo->screenHeight - 30);
-		drawText("Health:" + stringify(health), 150, stateInfo->screenHeight - 30);
+		drawText("Cookies:" + stringify(cookies), 70, stateInfo->screenHeight - 30);
+		drawText("Health:" + stringify(health), 200, stateInfo->screenHeight - 30);
 	}
 
 	double score;
+	double cookies;
 	double health;
 
 private:
