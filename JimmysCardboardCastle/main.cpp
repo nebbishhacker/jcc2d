@@ -166,7 +166,7 @@ int main(int argc, char **argv)
 	glutInit(&argc,argv);
 	glutInitWindowSize(WINDOW_WIDTH,WINDOW_HEIGHT);
 	glutInitDisplayMode(GLUT_RGBA|GLUT_DOUBLE);
-	glutCreateWindow("Jimmy's Cardboard Castle ALPHA BUILD");
+	glutCreateWindow("Jimmy's Cardboard Castle BETA BUILD");
 
 	/* set up our function callbacks */
 	glutDisplayFunc(DisplayCallbackFunction);
