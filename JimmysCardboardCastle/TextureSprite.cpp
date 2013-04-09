@@ -97,14 +97,19 @@ void TextureSprite::draw(Vector2D camera)
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 	glPushMatrix();
 
-	/* position the sprite into the particular pixel location */
-	glTranslatef(position.x - camera.x * scrollFactorX, position.y - camera.y * scrollFactorY, 0);
+	/* create the drawing tranformation matrix */
+	Matrix2x2 matrix(1, 0, 0, 1); // identity matrix
+	if (flipped) matrix *= Matrix2x2(-1, 0, 0, 1); // if the image is flipped, multiply by a horizontal reflection matrix
+	matrix *= Matrix2x2(cos(theta), sin(theta), -sin(theta), cos(theta)); // multiply by a rotation matrix
+	
+	/* find pixel location */
+	Vector2D screenPos = position + center - getScrollMatrix() * camera; // scrollMatrix is used for parallax scrolling
 
-	// apply the rotation around the center of the sprite
-	glTranslatef(center.x,center.y,0);
-	if (flipped) glScalef(-1, 1, 1);
-	glRotatef(theta, 0,0,1);
-	glTranslatef(-center.x,-center.y,0);
+	/* find the corner points of the image */
+	Vector2D p00 = (matrix * Vector2D(-center.x, -center.y)) + screenPos;
+	Vector2D p01 = (matrix * Vector2D(-center.x, sz.height - center.y)) + screenPos;
+	Vector2D p10 = (matrix * Vector2D(sz.width - center.x, sz.height - center.y)) + screenPos;
+	Vector2D p11 = (matrix * Vector2D(sz.width - center.x, -center.y)) + screenPos;
 
 	/* get the texture coordinate from the sprite so we know which frame to draw */
 	SpriteAnimation *anim = animations[currentAnimation];
@@ -121,16 +126,16 @@ void TextureSprite::draw(Vector2D camera)
 		/* draw the image as a quad the size of the first loaded image */
 		glBegin(GL_QUADS);
 		    glTexCoord2f(u,v);
-			glVertex3f(0,0,0);
+			glVertex3f(p00.x,p00.y,0);
 			
 			glTexCoord2f(u,v+sz.normalizedHeight);
-			glVertex3f(0,sz.height,0);
+			glVertex3f(p01.x,p01.y,0);
 			
 			glTexCoord2f(u+sz.normalizedWidth,v+sz.normalizedHeight);
-			glVertex3f(sz.width,sz.height,0);
+			glVertex3f(p10.x,p10.y,0);
 			
 			glTexCoord2f(u+sz.normalizedWidth,v);
-			glVertex3f(sz.width,0,0);
+			glVertex3f(p11.x,p11.y,0);
 		glEnd();
 	glPopMatrix();
 	glDisable(GL_BLEND);

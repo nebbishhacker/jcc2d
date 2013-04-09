@@ -45,7 +45,7 @@ public:
 			velocity.x = -10;
 		}
 
-		theta += 5;
+		theta += 0.09;
 
 		// Increase how much the gravity effects the projectile //
 		gravity.y -= 0.25;
