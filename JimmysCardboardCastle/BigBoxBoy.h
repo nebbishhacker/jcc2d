@@ -9,4 +9,5 @@ public:
 
 	// state variables
 	bool walking;
+	bool active;
 };
