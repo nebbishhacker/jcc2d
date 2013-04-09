@@ -58,6 +58,12 @@
     <ClCompile Include="Cookie.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RobertsFriends.cpp">
+      <Filter>Sprite Classes\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracks.cpp">
+      <Filter>Sprite Classes\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entities.h">
@@ -190,6 +196,15 @@
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DragonBoy.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobertsFriends.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Marble.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

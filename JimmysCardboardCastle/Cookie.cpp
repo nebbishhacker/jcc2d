@@ -22,6 +22,7 @@ Cookie::Cookie(double x, double y) : PhysicsSprite("images/spr_cookiescore.png")
 	// PHYSICAL PROPERTIES //
 	mass = 0.0330693; // yes, I actually found out the weight of an average chocolate chip cookie in pounds
 	// (airDrag, groundFriction, airGroundFriction and gravity are left to defaults)
+	// Another waste of time
 
 	hitbox = Hitbox(0, 0, 32, 32);
 }

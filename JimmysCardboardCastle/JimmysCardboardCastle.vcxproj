@@ -117,6 +117,7 @@
     <ClInclude Include="LucasTestWorld.h" />
     <ClInclude Include="JonathansTestWorld.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Marble.h" />
     <ClInclude Include="OverlayWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="PhysicsSprite.h" />
