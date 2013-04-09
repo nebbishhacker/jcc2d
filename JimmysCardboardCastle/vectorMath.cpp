@@ -45,6 +45,7 @@ double Matrix2x2::operator()(unsigned int x, unsigned int y) const { return mat[
 Matrix2x2& Matrix2x2::operator*=(Matrix2x2 m)
 {
 	*this = *this * m;
+	return *this;
 }
 Matrix2x2& Matrix2x2::operator*=(double f)
 {
@@ -52,6 +53,7 @@ Matrix2x2& Matrix2x2::operator*=(double f)
 	mat[0][1] *= f;
 	mat[1][0] *= f;
 	mat[1][1] *= f;
+	return *this;
 }
 
 Matrix2x2 operator*(const Matrix2x2 &m1, const Matrix2x2 &m2)
