@@ -34,7 +34,7 @@ void Cookie::update()
 	if (s != NULL)
 	{
 		Player * p = static_cast<Player*>(s);
-		++p->score;
+		p->scoreUp(1);
 		this->kill();
 	}
 }
