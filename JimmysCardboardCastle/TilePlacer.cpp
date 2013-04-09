@@ -5,8 +5,7 @@
 
 void TilePlacer::update()
 {
-	Vector2D cam(world->camera.x * scrollFactorX, world->camera.y * scrollFactorY);
-	Vector2D curr = world->input->current + cam;
+	Vector2D curr = world->input->current + getScrollMatrix() * world->camera;
 
 	position.x = curr.x - tileSheet->tileWidth / 2;
 	position.y = curr.y - tileSheet->tileHeight / 2;

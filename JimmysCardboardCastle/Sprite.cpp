@@ -173,6 +173,11 @@ void Sprite::clearGroups()
 		(*it++)->remove(this);
 }
 
+Matrix2x2 Sprite::getScrollMatrix()
+{
+	return Matrix2x2(scrollFactorX, 0, 0, scrollFactorY);
+}
+
 
 SpriteGroup::~SpriteGroup()
 {

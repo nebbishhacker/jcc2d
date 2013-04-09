@@ -13,7 +13,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 		Sprite * t = NULL;
 		if (info.type == "player") {
 			Player * p = new Player(info.xPos, info.yPos);
-			p->hasBoots = (bool)info.moonBoots;
+			p->hasBoots = info.moonBoots != 0;
 			t = p;
 		}
 		else if (info.type == "boxboy") t = new BoxBoy(info.xPos, info.yPos);
