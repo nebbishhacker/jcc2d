@@ -59,7 +59,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 				TileInfo &info = *it;
 				Sprite * t;
 				if (info.exists) {
-					if (info.r == 0 && info.c == 3) {
+					if (info.r == 0 && info.c == 2) {
 						t = new Cookie(x * tileWidth + 16, y * tileHeight + 16);
 						world->add(t);
 					}
