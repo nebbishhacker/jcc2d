@@ -29,6 +29,7 @@ public:
 		Sprite * t;
 		
 		// Initialize HUD here //
+		add(new Background(0, 0, 800, 600, "images/PlainHud.png", 100, 0, 0));
 		t = new Button(325, /*game->stateInfo.screenHeight - 36*/ 550, 139, 50, "images/button_menu.png", startWorld<QuitDialog>);
 		t->scrollFactorX = 0;
 		t->scrollFactorY = 0;

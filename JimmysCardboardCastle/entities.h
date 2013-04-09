@@ -16,3 +16,4 @@
 #include "Marble.h"
 #include "AsianPaperBoy.h"
 #include "BigBoxBoy.h"
+#include "BlackPaperBoy.h"
