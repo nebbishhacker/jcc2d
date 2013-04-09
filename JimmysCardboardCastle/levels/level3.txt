@@ -15,6 +15,11 @@ entities: [
 		ypos: 200
 	}
 	{
+		type: blackboy
+		xpos: 1000
+		ypos: 200
+	}
+	{
 		type: background
 		xpos: 0
 		ypos: -100
