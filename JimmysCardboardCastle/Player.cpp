@@ -41,6 +41,8 @@ Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 
 	hasBoots = false;
 	score = 0;
+	cookies = 0;
+	health = 3;
 }
 
 void Player::initialize()
@@ -56,9 +58,15 @@ void Player::update()
 		hasBoots = !hasBoots;
 	}
 
+	if (collide(&world->groups["lava"], 0, -2) != NULL)
+	{
+		damage(1);
+		velocity.y = jumpVelocity;
+	}
 
 	// Handle jumping (and resultant instantaneous changes in velocity) //
 	bool grounded = (collide(&world->groups["ground"], 0, -2) != NULL); // Is the character on the ground?
+
 	if (jumpReady && input->specialsDown[GLUT_KEY_UP] && grounded) // JUMP!
 	{
 		velocity.y = hasBoots ? bootJumpVelocity : jumpVelocity; // Directly set velocity, 'cause it's simpler and more reliable than forces in this case

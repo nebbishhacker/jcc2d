@@ -27,6 +27,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 		else if (info.type == "rmarble") t = new Marble(info.xPos, info.yPos, 1);
 		else if (info.type == "gmarble") t = new Marble(info.xPos, info.yPos, 2);
 		else if (info.type == "dmarble") t = new Marble(info.xPos, info.yPos, 3);
+		else if (info.type == "bigboxboy") t = new BigBoxBoy(info.xPos, info.yPos);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
 		if (t != NULL)
 		{
@@ -59,6 +60,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences = 
 				if (info.exists) {
 					Tile * t = new Tile(x * tileWidth, y * tileHeight, info.r * tileMap.sheetWidth + info.c, tileSheet);
 					world->groups["ground"].add(t);
+					if (info.r == 5) world->groups["lava"].add(t);
 					world->add(t);
 				if (storeReferences) info.entity = t;
 				}
