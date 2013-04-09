@@ -8,6 +8,8 @@ Jump: Up Arrow
 Run Left: Left Arrow  
 Run Right: Right Arrow  
 
+As this is still in development, bosses and level completion (among other things) are not fully implimented. As such, to advance to the next level, you must use the developer keyboard shortcut 'shift-plus'.
+
 Developed by:  
 Brandon Le  
 Ben Whittaker  
