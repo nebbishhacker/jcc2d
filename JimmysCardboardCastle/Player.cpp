@@ -40,6 +40,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 	//gravity = Vector2D(0, -1.5); // gravity!	| ^ this way up ^ |
 
 	hasBoots = false;
+	score = 0;
 }
 
 void Player::initialize()

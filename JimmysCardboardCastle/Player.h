@@ -17,6 +17,7 @@ public:
 	double jumpVelocity;
 	double bootJumpVelocity;
 	bool hasBoots;
+	double score;
 private:
 	bool jumpReady;
 	Sound jumpSound;
