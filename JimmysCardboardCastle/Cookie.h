@@ -1,6 +1,6 @@
 #pragma once
 #include "PhysicsSprite.h"
-class Cookie : public PhysicsSprite
+class Cookie : public TextureSprite
 {
 public:
 	Cookie(double x, double y);
