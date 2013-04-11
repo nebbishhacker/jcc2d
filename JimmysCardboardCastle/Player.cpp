@@ -2,14 +2,15 @@
 #include "Game.h"
 #include <iostream>
 
-Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
+Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 {
 	// animations:
 	// 0 - idle
 	// 1 - walk right
 	// 2 - jump up
 	// 3 - fall down
-	setNumberOfAnimations(4);
+	// 4 - bat
+	setNumberOfAnimations(5);
 	setSpriteFrameSize(128,128);
 	addSpriteAnimRow(0, 0, 0, 128, 0, 6);
 	setAnimationSpeed(0,0.05);
@@ -17,6 +18,8 @@ Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 	setAnimationSpeed(1,0.25);
 	addSpriteAnimFrame(2, 128*8, 0);
 	addSpriteAnimFrame(3, 128*7, 0);
+	addSpriteAnimRow(4, 0, 128*1, 128, 0, 4);
+	setAnimationSpeed(4, 0.25);
 	setCurrentAnimation(0);
 		
 	setPosition(x,y);
@@ -40,9 +43,11 @@ Player::Player(double x, double y) : PhysicsSprite("images/dev/SamSheet.png")
 	//gravity = Vector2D(0, -1.5); // gravity!	| ^ this way up ^ |
 
 	hasBoots = false;
+	hasBat = true;
+	useBat = false;
 	score = 0;
 	cookies = 0;
-	health = 3;
+	health = 5;
 }
 
 void Player::initialize()
@@ -60,41 +65,59 @@ void Player::update()
 
 	if (collide(&world->groups["lava"], 0, -2) != NULL)
 	{
-		damage(1);
+		damage(0.25);
 		velocity.y = jumpVelocity;
 	}
+
+	if (flipped)
+		batDistance = -45;
+	else
+		batDistance = 45;
 
 	// Handle jumping (and resultant instantaneous changes in velocity) //
 	bool grounded = (collide(&world->groups["ground"], 0, -2) != NULL); // Is the character on the ground?
 
-	if (jumpReady && input->specialsDown[GLUT_KEY_UP] && grounded) // JUMP!
+	
+	// Play the bat swinging animation //
+	if (input->specialsDown[GLUT_KEY_END] && grounded && hasBat && !useBat)
 	{
-		velocity.y = hasBoots ? bootJumpVelocity : jumpVelocity; // Directly set velocity, 'cause it's simpler and more reliable than forces in this case
-		jumpReady = false; // only wanna jump once
-		soundEngine.playSound(jumpSound); // boing
+		setCurrentAnimation(4);
+		setFrame(0);
+		useBat = true;
 	}
-	if (!jumpReady && !input->specialsDown[GLUT_KEY_UP]) jumpReady = true; // Ready to jump once more
 
-	// Handle input for maneuvering //
-	// contactVelocity is the theoretical speed of the character's feet -- whichever way his feet move, friction makes him move in the opposite direction
-	if (input->specialsDown[GLUT_KEY_LEFT] && !input->specialsDown[GLUT_KEY_RIGHT]) // moving left
+	// These events will not occur if the player is swinging his bat //
+	if (!useBat)
 	{
-		if (grounded) {
-			setCurrentAnimation(1); // walking
-			flipped = true; // facing left
+		if (jumpReady && input->specialsDown[GLUT_KEY_UP] && grounded && !useBat) // JUMP!
+		{
+			velocity.y = hasBoots ? bootJumpVelocity : jumpVelocity; // Directly set velocity, 'cause it's simpler and more reliable than forces in this case
+			jumpReady = false; // only wanna jump once
+			soundEngine.playSound(jumpSound); // boing
 		}
-		contactVelocity += moveSpeed; // move those feet!
-	}
-	else if (input->specialsDown[GLUT_KEY_RIGHT] && !input->specialsDown[GLUT_KEY_LEFT]) // moving right
-	{
-		if (grounded) {
-			setCurrentAnimation(1); // walking
-			flipped = false; // facing right
+		if (!jumpReady && !input->specialsDown[GLUT_KEY_UP]) jumpReady = true; // Ready to jump once more
+
+		// Handle input for maneuvering //
+		// contactVelocity is the theoretical speed of the character's feet -- whichever way his feet move, friction makes him move in the opposite direction
+		if (input->specialsDown[GLUT_KEY_LEFT] && !input->specialsDown[GLUT_KEY_RIGHT]) // moving left
+		{
+			if (grounded) {
+				setCurrentAnimation(1); // walking
+				flipped = true; // facing left
+			}
+			contactVelocity += moveSpeed; // move those feet!
 		}
-		contactVelocity -= moveSpeed; // you heard me.
-	}
-	else if (grounded) {
-		setCurrentAnimation(0); // on the ground and not moving? Idle!
+		else if (input->specialsDown[GLUT_KEY_RIGHT] && !input->specialsDown[GLUT_KEY_LEFT]) // moving right
+		{
+			if (grounded) {
+				setCurrentAnimation(1); // walking
+				flipped = false; // facing right
+			}
+			contactVelocity -= moveSpeed; // you heard me.
+		}
+		else if (grounded) {
+			setCurrentAnimation(0); // on the ground and not moving/using bat? Idle!
+		}
 	}
 
 	// Handles ground friction and acceleration due to foot movement //
@@ -106,6 +129,35 @@ void Player::update()
 		if (velocity.y >= 0) setCurrentAnimation(2);
 		else setCurrentAnimation(3);
 	}
+
+	// Bat using events //
+	if (useBat)
+	{
+		// Objects destroyed upon contact //
+		Sprite * hitObject;
+		hitObject = collide(&world->groups["breakable"],batDistance,5);
+		if (hitObject)
+		{
+			hitObject->kill();
+		}
+
+		hitObject = collide(&world->groups["reflectable"],batDistance,5);
+		if (hitObject)
+		{
+			world->groups["reflectable"].remove(hitObject);
+			if (hitObject->flipped)
+				hitObject->flipped = false;
+			else
+				hitObject->flipped = true;
+		}
+
+		// At the end of the bat animation stop from swinging //
+		if (animations[currentAnimation]->currentFrame == 3)
+		{
+			useBat = false;
+		}
+	}
+
 	// Handles air drag //
 	applyAirDrag();
 

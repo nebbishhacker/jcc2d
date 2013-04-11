@@ -63,6 +63,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 						t = new Tile(x * tileWidth, y * tileHeight, info.r * tileMap.sheetWidth + info.c, tileSheet);
 						world->groups["ground"].add(t);
 						if (info.r == 5) world->groups["lava"].add(t);
+						if (info.r == 4 && info.c == 0) world->groups["breakable"].add(t);
 						world->add(t);
 					}
 				if (storeReferences) info.entity = t;

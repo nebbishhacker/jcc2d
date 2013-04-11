@@ -23,11 +23,16 @@ public:
 	double jumpVelocity;
 	double bootJumpVelocity;
 
+	// Items //
 	bool hasBoots;
+	bool hasBat;
+
+	bool useBat;
 	double score;
 	double cookies;
 	double health;
 
+	double batDistance;
 private:
 	bool jumpReady;
 	Sound jumpSound;

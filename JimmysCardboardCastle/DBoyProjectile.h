@@ -32,6 +32,7 @@ public:
 	};
 	void initialize()
 	{		
+		world->groups["reflectable"].add(this);
 	};
 	void update()
 	{
@@ -63,41 +64,21 @@ public:
 		Vector2D delta = velocity + netAcceleration * 0.5;
 
 		// Check if the box should collide with DBoy //
-		if (getDBoy)
+		// If it should be then it will moveCollide with DBoy //
+		if (moveCollideX(delta.x, &world->groups["dboy"]))
 		{
-			// If it should be then it will moveCollide with DBoy //
-			if (moveCollideX(delta.x, &world->groups["dboy"]))
-			{
-				velocity.y = 10;
-				gravity.y = 1.5;
-				if (flipped)
-					flipped = false;
-				else
-					flipped = true;
-				Sprite * player = moveCollideX(delta.x, &world->groups["dboy"]);
-				if (player) 
-				{
-					player->moveCollideX(delta.x*5, &world->groups["ground"]);
-				}
-				setCurrentAnimation(3);
-				kill();
-			}
-			else
-			{
-				if (moveCollideX(delta.x, &world->groups["ground"])) velocity.x = 0;
-				if (moveCollideY(delta.y, &world->groups["ground"])) kill();
-			}
-		}
-		// TEMP //
-		else if (moveCollideX(delta.x, &world->groups["player"]))
-		{
-			velocity.y = 10;
-			gravity.y = 1.5;
 			if (flipped)
 				flipped = false;
 			else
 				flipped = true;
-			getDBoy = true;
+			Sprite * dboy = moveCollideX(delta.x, &world->groups["dboy"]);
+			if (dboy) 
+			{
+				dboy->moveCollideX(delta.x*5, &world->groups["ground"]);
+			}
+			setCurrentAnimation(3);
+
+			kill();
 		}
 		else
 		{

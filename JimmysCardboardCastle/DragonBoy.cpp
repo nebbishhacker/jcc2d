@@ -66,31 +66,55 @@ void DragonBoy::update()
 	if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
 
 	// 1/200th of a chance each frame to:
-	if (rand() % 200 == 0) {
-		if (walking) {
-			walking = false; // stop walking
-			setCurrentAnimation(0); // and hide animation
+	if (!attacking)
+	{
+		if (rand() % 200 == 0) {
+			if (walking) {
+				walking = false; // stop walking
+				setCurrentAnimation(0); // and hide animation
+			}
+			else {
+				walking = true; // or start walking
+				setCurrentAnimation(1); // and crawl animation
+			}
 		}
-		else {
-			walking = true; // or start walking
-			setCurrentAnimation(1); // and crawl animation
+		if (rand() % 200 == 0) // 1/100th chance of attacking
+		{
+			// Stops it from walking if it already is
+			if (walking)
+				walking = false;
+			setCurrentAnimation(2);
+			setFrame(0); // set animation to the start, as it doesn't loop
+			attacking = true;
 		}
 	}
-	if (rand() % 200 == 0) // 1/100th chance of attacking
-	{
-		// Stops it from walking if it already is
-		if (walking)
-			walking = false;
-		setCurrentAnimation(2);
-		setFrame(0); // set animation to the start, as it doesn't loop
 
-		// Create the box projectile
-		Sprite * t;
+	if (collide(&world->groups["reflectable"],0,0))
+	{
 		if (!flipped)
-			t = new DBoy_proj(position.x+65, position.y+58, flipped);
+			moveCollideX(20, &world->groups["ground"]);
 		else
-			t = new DBoy_proj(position.x-65, position.y+58, flipped);
-		world->add(t);
+			moveCollideX(-20,  &world->groups["ground"]);
+		setCurrentAnimation(3);
+	}
+
+	if (attacking)
+	{
+		if (animations[currentAnimation]->currentFrame == 5)
+		{
+			// Create the box projectile
+			Sprite * t;
+			if (!flipped)
+				t = new DBoy_proj(position.x+65, position.y+58, flipped);
+			else
+				t = new DBoy_proj(position.x-65, position.y+58, flipped);
+			world->add(t);
+		}
+		else if (animations[currentAnimation]->currentFrame == 6)
+		{
+			setCurrentAnimation(0);
+			attacking = false;
+		}
 	}
 
 	if (walking) // If we are walking
