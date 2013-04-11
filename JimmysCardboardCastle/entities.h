@@ -17,3 +17,4 @@
 #include "AsianPaperBoy.h"
 #include "BigBoxBoy.h"
 #include "BlackPaperBoy.h"
+#include "BatItem.h"

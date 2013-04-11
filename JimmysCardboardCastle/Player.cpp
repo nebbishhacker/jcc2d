@@ -43,7 +43,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	//gravity = Vector2D(0, -1.5); // gravity!	| ^ this way up ^ |
 
 	hasBoots = false;
-	hasBat = true;
+	hasBat = false;
 	useBat = false;
 	score = 0;
 	cookies = 0;

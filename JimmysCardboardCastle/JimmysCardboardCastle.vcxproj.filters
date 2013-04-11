@@ -243,6 +243,9 @@
     <ClInclude Include="BlackPaperBoy.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BatItem.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

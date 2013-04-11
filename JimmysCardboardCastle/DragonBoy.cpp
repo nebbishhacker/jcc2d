@@ -40,13 +40,15 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 	groundFriction = 0.75;
 	// (airGroundFriction and gravity are left to defaults)
 
-	hitbox = Hitbox(40, 0, 50, 117);
-	setCenter(65, 58);
+	hitbox = Hitbox(40, 0, 48, 117);
+	setCenter(64, 58);
 
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = false;
 	attacking = false;
 	gotHit = false;
+	thrown = false;
+	willAttack = false;
 }
 
 void DragonBoy::initialize() // use initialize for anything involving world (like groups)
@@ -78,14 +80,17 @@ void DragonBoy::update()
 				setCurrentAnimation(1); // and crawl animation
 			}
 		}
-		if (rand() % 200 == 0) // 1/100th chance of attacking
+		if (willAttack)
 		{
-			// Stops it from walking if it already is
-			if (walking)
-				walking = false;
-			setCurrentAnimation(2);
-			setFrame(0); // set animation to the start, as it doesn't loop
-			attacking = true;
+			if (rand() % 200 == 0) // 1/100th chance of attacking
+			{
+				// Stops it from walking if it already is
+				if (walking)
+					walking = false;
+				setCurrentAnimation(2);
+				setFrame(0); // set animation to the start, as it doesn't loop
+				attacking = true;
+			}
 		}
 	}
 
@@ -100,20 +105,24 @@ void DragonBoy::update()
 
 	if (attacking)
 	{
-		if (animations[currentAnimation]->currentFrame == 5)
+		if (animations[currentAnimation]->currentFrame == 5 && !thrown)
 		{
+			animations[currentAnimation]->nextFrame();
+			thrown = true;
+
 			// Create the box projectile
 			Sprite * t;
 			if (!flipped)
-				t = new DBoy_proj(position.x+65, position.y+58, flipped);
+				t = new DBoy_proj(position.x+100, position.y+58, flipped);
 			else
-				t = new DBoy_proj(position.x-65, position.y+58, flipped);
+				t = new DBoy_proj(position.x-41, position.y+58, flipped);
 			world->add(t);
 		}
 		else if (animations[currentAnimation]->currentFrame == 6)
 		{
 			setCurrentAnimation(0);
 			attacking = false;
+			thrown = false;
 		}
 	}
 

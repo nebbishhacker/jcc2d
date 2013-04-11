@@ -102,6 +102,7 @@
     <ClCompile Include="World.cpp" />
     <ClInclude Include="AsianPaperBoy.h" />
     <ClInclude Include="Background.h" />
+    <ClInclude Include="BatItem.h" />
     <ClInclude Include="BigBoxBoy.h" />
     <ClInclude Include="BensTestWorld.h" />
     <ClInclude Include="BlackPaperBoy.h" />

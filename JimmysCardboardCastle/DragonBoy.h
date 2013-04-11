@@ -11,4 +11,7 @@ public:
 	bool walking;
 	bool attacking;
 	bool gotHit;
+	bool thrown;
+
+	bool willAttack;
 };

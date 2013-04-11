@@ -67,10 +67,6 @@ public:
 		// If it should be then it will moveCollide with DBoy //
 		if (moveCollideX(delta.x, &world->groups["dboy"]))
 		{
-			if (flipped)
-				flipped = false;
-			else
-				flipped = true;
 			Sprite * dboy = moveCollideX(delta.x, &world->groups["dboy"]);
 			if (dboy) 
 			{
