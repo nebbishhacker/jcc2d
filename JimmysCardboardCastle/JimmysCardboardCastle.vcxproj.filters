@@ -82,6 +82,9 @@
     <ClCompile Include="BlackPaperBoy.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Fan.cpp">
+      <Filter>Sprite Classes\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entities.h">
@@ -244,6 +247,9 @@
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BatItem.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fan.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

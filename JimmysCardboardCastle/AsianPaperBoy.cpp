@@ -51,7 +51,7 @@ AsianPaperBoy::AsianPaperBoy(double x, double y) : PhysicsSprite("images/spr_asi
 
 void AsianPaperBoy::initialize() // use initialize for anything involving world (like groups)
 {
-	// adds this sprite to DBoy, so that the box can collide with it
+	// adds this sprite to PBoy, so that the box can collide with it
 	world->groups["asianPBoy"].add(this);
 }
 

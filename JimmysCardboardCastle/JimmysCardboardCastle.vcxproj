@@ -89,6 +89,7 @@
     <ClCompile Include="Cookie.cpp" />
     <ClCompile Include="DragonBoy.cpp" />
     <ClCompile Include="drawPrimitives.cpp" />
+    <ClCompile Include="Fan.cpp" />
     <ClCompile Include="levelConstructor.cpp" />
     <ClCompile Include="LevelList.cpp" />
     <ClCompile Include="levelLoader.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="DBoyProjectile.h" />
     <ClInclude Include="DragonBoy.h" />
     <ClInclude Include="drawPrimitives.h" />
+    <ClInclude Include="fan.h" />
     <ClInclude Include="GameWorld.h" />
     <ClInclude Include="HowToPlay.h" />
     <ClInclude Include="Level2.h" />

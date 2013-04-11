@@ -3,7 +3,6 @@
 #include "Player.h"
 
 #include <random>
-
 Cookie::Cookie(double x, double y) : TextureSprite("images/spr_cookiescore.png")
 {
 	setPosition(x, y);
