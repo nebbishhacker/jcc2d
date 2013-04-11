@@ -62,9 +62,10 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 						t = new Cookie(x * tileWidth + 16, y * tileHeight + 16);
 						world->add(t);
 					}
-					else if (info.r == 7 && info.c == 0)
+					else if (info.r == 6 && info.c == 0)
 					{
 						t = new Fan(x * tileWidth + 16, y * tileHeight + 16);
+						world->add(t);
 					}
 					else {
 						t = new Tile(x * tileWidth, y * tileHeight, info.r * tileMap.sheetWidth + info.c, tileSheet);
