@@ -16,6 +16,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 		else if (info.type == "tracks") t = new Tracks(info.xPos, info.yPos);
 		else if (info.type == "dragonboy") t = new DragonBoy(info.xPos, info.yPos);
 		else if (info.type == "asianboy") t = new AsianPaperBoy(info.xPos, info.yPos);
+		else if (info.type == "blackboy") t = new BlackPaperBoy(info.xPos, info.yPos);
 		else if (info.type == "robertsfriends") t = new RobertsFriends(info.xPos, info.yPos);
 		else if (info.type == "cookie") t = new Cookie(info.xPos, info.yPos);
 		else if (info.type == "bmarble") t = new Marble(info.xPos, info.yPos, 0);
@@ -62,6 +63,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 						t = new Tile(x * tileWidth, y * tileHeight, info.r * tileMap.sheetWidth + info.c, tileSheet);
 						world->groups["ground"].add(t);
 						if (info.r == 5) world->groups["lava"].add(t);
+						if (info.r == 4 && info.c == 0) world->groups["breakable"].add(t);
 						world->add(t);
 					}
 				if (storeReferences) info.entity = t;
