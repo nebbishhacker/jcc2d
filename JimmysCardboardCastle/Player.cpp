@@ -79,7 +79,7 @@ void Player::update()
 
 	
 	// Play the bat swinging animation //
-	if (input->specialsDown[GLUT_KEY_END] && grounded && hasBat && !useBat)
+	if (((input->specialsDown[GLUT_KEY_END] || (input->keysDown['x'] && hasBat)) && grounded && !useBat)
 	{
 		setCurrentAnimation(4);
 		setFrame(0);
@@ -89,13 +89,14 @@ void Player::update()
 	// These events will not occur if the player is swinging his bat //
 	if (!useBat)
 	{
-		if (jumpReady && input->specialsDown[GLUT_KEY_UP] && grounded && !useBat) // JUMP!
+		bool jumpKeysDown = (input->specialsDown[GLUT_KEY_UP] || input->keysDown[' ']);
+		if (jumpReady && jumpKeysDown && grounded && !useBat) // JUMP!
 		{
 			velocity.y = hasBoots ? bootJumpVelocity : jumpVelocity; // Directly set velocity, 'cause it's simpler and more reliable than forces in this case
 			jumpReady = false; // only wanna jump once
 			soundEngine.playSound(jumpSound); // boing
 		}
-		if (!jumpReady && !input->specialsDown[GLUT_KEY_UP]) jumpReady = true; // Ready to jump once more
+		if (!jumpReady && !jumpKeysDown) jumpReady = true; // Ready to jump once more
 
 		// Handle input for maneuvering //
 		// contactVelocity is the theoretical speed of the character's feet -- whichever way his feet move, friction makes him move in the opposite direction
