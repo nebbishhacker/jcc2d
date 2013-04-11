@@ -70,6 +70,9 @@ struct EntityInfo
 	double scrollFactorX;
 	double scrollFactorY;
 	int moonBoots; // pretend it's a bool
+	int bat; // pretend it's a bool
+	int waterGun; // pretend it's a bool
+	int sheild; // pretend it's a bool
 	Sprite * entity;
 
 	EntityInfo()
@@ -82,6 +85,9 @@ struct EntityInfo
 		scrollFactorX = INVALID_DOUBLE;
 		scrollFactorY = INVALID_DOUBLE;
 		moonBoots = 0;
+		bat = 0;
+		waterGun = 0;
+		sheild = 0;
 		entity = NULL;
 	}
 

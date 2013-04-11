@@ -197,6 +197,9 @@ bool EntityInfo::read(std::istream &stream)
 				if (label == "scrollfactorx") readDouble(stream, scrollFactorX);
 				if (label == "scrollfactory") readDouble(stream, scrollFactorY);
 				if (label == "moonboots") readInt(stream, moonBoots);
+				if (label == "bat") readInt(stream, bat);
+				if (label == "waterGun") readInt(stream, waterGun);
+				if (label == "sheild") readInt(stream, sheild);
 				//std::cout << " ";
 			}
 		}
@@ -217,6 +220,10 @@ void EntityInfo::write(std::ostream &stream)
 	if (layerID != INVALID_DOUBLE) stream << "\t\t" << "layerid: " << layerID << "\n";
 	if (scrollFactorX != INVALID_DOUBLE) stream << "\t\t" << "scrollfactorx: " << scrollFactorX << "\n";
 	if (scrollFactorY != INVALID_DOUBLE) stream << "\t\t" << "scrollfactory: " << scrollFactorY << "\n";
+	if (moonBoots != 0) stream << "\t\t" << "moonboots: " << moonBoots << "\n";
+	if (bat != 0) stream << "\t\t" << "bat: " << bat << "\n";
+	if (waterGun != 0) stream << "\t\t" << "watergun: " << waterGun << "\n";
+	if (sheild != 0) stream << "\t\t" << "shield: " << sheild << "\n";
 	stream << "\t}\n";
 }
 
