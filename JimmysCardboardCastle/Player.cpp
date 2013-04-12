@@ -48,6 +48,8 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	score = 0;
 	cookies = 0;
 	health = 5;
+	invincibleTimer = 0;
+	invincibleLength = 80;
 }
 
 void Player::initialize()
@@ -79,7 +81,7 @@ void Player::update()
 
 	
 	// Play the bat swinging animation //
-	if (((input->specialsDown[GLUT_KEY_END] || (input->keysDown['x'] && hasBat)) && grounded && !useBat)
+	if ((input->specialsDown[GLUT_KEY_END] || (input->keysDown['x'] && hasBat)) && grounded && !useBat)
 	{
 		setCurrentAnimation(4);
 		setFrame(0);
@@ -180,4 +182,11 @@ void Player::update()
 
 	// reset netForce and netAcceleration for the next timestep (so they can be modified externally, if need be)
 	resetPhysicsVars();
+
+	if (invincibleTimer > 0)
+	{
+		if (invincibleTimer % 4 == 0) { visible = !visible; }
+		--invincibleTimer;
+		if (invincibleTimer == 0) visible = true;
+	}
 }

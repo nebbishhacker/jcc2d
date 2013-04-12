@@ -159,6 +159,7 @@ public:
 	SpriteSheetInfo sheet;
 	int numberOfAnimations;
 	int currentAnimation;
+	bool visible;
 
 	/* list of animations */
 	std::vector<SpriteAnimation*> animations;

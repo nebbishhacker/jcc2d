@@ -13,7 +13,7 @@ public:
 	void initialize();
 	void update();
 
-	void damage(double damage) { health -= damage; }
+	void damage(double damage) { if (invincibleTimer <= 0) { health -= damage; invincibleTimer = invincibleLength; } }
 	void scoreUp(double points) { score += points; }
 	void cookiesUp(double cookies) { this->cookies += cookies; }
 
@@ -28,9 +28,13 @@ public:
 	bool hasBat;
 
 	bool useBat;
+
 	double score;
 	double cookies;
 	double health;
+
+	int invincibleTimer;
+	int invincibleLength;
 
 	double batDistance;
 private:

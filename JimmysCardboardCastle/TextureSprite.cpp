@@ -8,6 +8,7 @@ TextureSprite::TextureSprite(std::string spriteSheetFilename)
 {
 	this->loadSpriteSheet(spriteSheetFilename.c_str());
 	currentAnimation = 0;
+	visible = true;
 }
 
 TextureSprite::~TextureSprite(void)
@@ -90,6 +91,8 @@ void TextureSprite::setAnimationSpeed(int animationNumber, float speed)
  */
 void TextureSprite::draw(Vector2D camera)
 {
+	if (!visible) return;
+
 	glEnable(GL_TEXTURE_2D); // turn on texturing
 
 	/* draw the sprite */
