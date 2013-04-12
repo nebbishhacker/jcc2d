@@ -64,7 +64,12 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 					}
 					else if (info.r == 6 && info.c == 0)
 					{
-						t = new Fan(x * tileWidth + 16, y * tileHeight + 16);
+						t = new Fan(x * tileWidth, y * tileHeight);
+						world->add(t);
+					}
+					else if (info.r == 6 && info.c == 1)
+					{
+						t = new milkCarton(x * tileWidth, y * tileHeight);
 						world->add(t);
 					}
 					else {

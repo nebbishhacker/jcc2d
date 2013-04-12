@@ -252,6 +252,9 @@
     <ClInclude Include="fan.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="milkCarton.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

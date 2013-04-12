@@ -13,7 +13,12 @@ public:
 	void initialize();
 	void update();
 
+<<<<<<< HEAD
+	void damage(double damage) { health -= damage; }
+	void heal(double heal) { health += heal; }
+=======
 	void damage(double damage) { if (invincibleTimer <= 0) { health -= damage; invincibleTimer = invincibleLength; } }
+>>>>>>> cb09b38bdc00df80633c7195cc6188dfbe366c75
 	void scoreUp(double points) { score += points; }
 	void cookiesUp(double cookies) { this->cookies += cookies; }
 
