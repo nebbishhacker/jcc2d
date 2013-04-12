@@ -79,7 +79,7 @@ void Player::update()
 
 	
 	// Play the bat swinging animation //
-	if (((input->specialsDown[GLUT_KEY_END] || (input->keysDown['x'] && hasBat)) && grounded && !useBat)
+	if (((input->specialsDown[GLUT_KEY_END] || (input->keysDown['x'] && hasBat)) && grounded && !useBat))
 	{
 		setCurrentAnimation(4);
 		setFrame(0);
