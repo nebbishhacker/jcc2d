@@ -155,7 +155,7 @@ void Player::update()
 		}
 
 		// At the end of the bat animation stop from swinging //
-		if (animations[currentAnimation]->currentFrame == 3)
+		if (animations[currentAnimation]->currentFrame == 3 || currentAnimation != 4)
 		{
 			useBat = false;
 		}
