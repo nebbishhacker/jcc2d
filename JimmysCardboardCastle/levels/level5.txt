@@ -24,7 +24,7 @@ entities: [
 tilemap: {
 	tilesheetpath: "images/tileset.png"
 	sheetwidth: 4
-	sheetheight: 6
+	sheetheight: 7
 	tilewidth: 64
 	tileheight: 64
 	data: [

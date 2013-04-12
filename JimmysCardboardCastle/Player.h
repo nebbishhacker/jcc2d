@@ -14,6 +14,7 @@ public:
 	void update();
 
 	void damage(double damage) { health -= damage; }
+	void heal(double heal) { health += heal; }
 	void scoreUp(double points) { score += points; }
 	void cookiesUp(double cookies) { this->cookies += cookies; }
 
