@@ -78,9 +78,9 @@ void BigBoxBoy::update()
 	if (walking) // If we are walking:
 	{
 		if (!flipped)	// and facing left (the image faces right)
-			contactVelocity.x += 5; // move feet right (thus pushing self left);
+			contactVelocity.x += 10; // move feet right (thus pushing self left);
 		else			// and facing right
-			contactVelocity.x -= 5; // move feet left (thus pushing self right);
+			contactVelocity.x -= 10; // move feet left (thus pushing self right);
 	}
 
 	if (!active)
@@ -109,10 +109,11 @@ void BigBoxBoy::update()
 	Vector2D delta = velocity + netAcceleration * 0.5;
 
 	// Push the player if moving into him
-	Sprite * player = moveCollideX(delta.x, &world->groups["player"]);
+	Sprite * player = collide(&world->groups["player"], delta.x, 0);
 	if (player) {
 		static_cast<Player*>(player)->damage(1);
 		double oldPPosX = player->position.x;
+		//player->moveCollideX(-delta.x, &world->groups["ground"]);
 		player->moveCollideX(delta.x, &world->groups["ground"]);
 		if (oldPPosX == player->position.x && rand() % 200 == 0) flipped = !flipped;
 	}
