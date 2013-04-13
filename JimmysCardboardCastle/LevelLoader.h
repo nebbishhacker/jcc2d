@@ -73,6 +73,10 @@ struct EntityInfo
 	int bat; // pretend it's a bool
 	int waterGun; // pretend it's a bool
 	int sheild; // pretend it's a bool
+	int cornerX;
+	int cornerY;
+	std::string target;
+	std::string trigger;
 	Sprite * entity;
 
 	EntityInfo()
@@ -89,6 +93,8 @@ struct EntityInfo
 		waterGun = 0;
 		sheild = 0;
 		entity = NULL;
+		int cornerX = INVALID_INT;
+		int cornerY = INVALID_INT;
 	}
 
 	bool read(std::istream &stream);

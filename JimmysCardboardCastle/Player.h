@@ -20,10 +20,6 @@ public:
 
 	InputInfo *input;
 
-	Vector2D moveSpeed;
-	double jumpVelocity;
-	double bootJumpVelocity;
-
 	// Items //
 	bool hasBoots;
 	bool hasBat;
@@ -34,12 +30,17 @@ public:
 	double cookies;
 	double health;
 
+	double marbles;
+private:
+	Vector2D moveSpeed;
+	double jumpVelocity;
+	double bootJumpVelocity;
+
+	double batDistance;
+
 	int invincibleTimer;
 	int invincibleLength;
 
-	double batDistance;
-	double marbles;
-private:
 	bool jumpReady;
 	Sound jumpSound;
 };

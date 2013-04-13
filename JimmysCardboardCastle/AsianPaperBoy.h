@@ -7,6 +7,7 @@ public:
 	void initialize();
 	void update();
 
+private:
 	// state variables
 	bool walking;
 	bool attacking;

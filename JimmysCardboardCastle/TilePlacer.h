@@ -26,6 +26,7 @@ public:
 	void draw(Vector2D camera);
 	void update();
 	
+private:
 	int levelData;
 	TileMap * tileMapData;
 	std::shared_ptr<TileSheet> tileSheet;

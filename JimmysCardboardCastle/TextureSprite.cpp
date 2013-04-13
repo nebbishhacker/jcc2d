@@ -21,9 +21,10 @@ TextureSprite::~TextureSprite(void)
 
 void TextureSprite::loadSpriteSheet(const char *filename)
 {
-	sheet.textureID = textureCache.loadTexture((char*)filename);//ilutGLLoadImage((char*)filename);
-	sheet.width = textureCache.getWidth(sheet.textureID);//ilGetInteger(IL_IMAGE_WIDTH);
-	sheet.height = textureCache.getHeight(sheet.textureID);//ilGetInteger(IL_IMAGE_HEIGHT);
+	TextureCache * textureCache = TextureCache::getInstance();
+	sheet.textureID = textureCache->loadTexture((char*)filename);//ilutGLLoadImage((char*)filename);
+	sheet.width = textureCache->getWidth(sheet.textureID);//ilGetInteger(IL_IMAGE_WIDTH);
+	sheet.height = textureCache->getHeight(sheet.textureID);//ilGetInteger(IL_IMAGE_HEIGHT);
 }
 
 void TextureSprite::setSpriteFrameSize(int width, int height)

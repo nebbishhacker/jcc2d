@@ -85,6 +85,9 @@
     <ClCompile Include="Fan.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TriggerArea.cpp">
+      <Filter>Sprite Classes\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entities.h">
@@ -253,6 +256,9 @@
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="milkCarton.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerArea.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
