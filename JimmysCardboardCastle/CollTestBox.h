@@ -12,5 +12,7 @@ public:
 	CollTestBox(double x, double y);
 	void initialize();
 	void update();
+
+private:
 	InputInfo *input;
 };

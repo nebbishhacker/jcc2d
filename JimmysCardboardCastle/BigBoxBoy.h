@@ -10,6 +10,7 @@ public:
 	double health;
 	double movespeed;
 
+private:
 	// state variables
 	bool walking;
 	bool active;
