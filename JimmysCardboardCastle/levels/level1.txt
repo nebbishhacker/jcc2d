@@ -74,13 +74,13 @@ entities: [
 	{
 		type: background
 		xpos: -512
-		ypos: 64
+		ypos: 56
 		imagepath: "images/bgm_backyard1.png"
 		framesizex: 8192
 		framesizey: 256
 		layerid: -90
-		scrollfactorx: 1
-		scrollfactory: 1
+		scrollfactorx: 0.75
+		scrollfactory: 0.9
 	}
 ]
 tilemap: {
