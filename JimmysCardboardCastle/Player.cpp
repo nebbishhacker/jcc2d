@@ -1,5 +1,7 @@
 #include "Player.h"
 #include "Game.h"
+#include "GameWorld.h"
+#include "healthHandler.h"
 #include <iostream>
 
 Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
@@ -58,12 +60,18 @@ void Player::initialize()
 	input = world->input;
 	world->groups["player"].add(this);
 	world->groups["ground"].add(this);
+
+	Sprite * t = new healthHandler(this, 5);
+	world->add(t);
 }
 
 void Player::update()
 {
 	if (input->keysPressed['z']) {
 		hasBoots = !hasBoots;
+	}
+	if (input->keysPressed['a']) {
+		health-=0.5;
 	}
 
 	if (collide(&world->groups["lava"], 0, -2) != NULL)
@@ -169,6 +177,8 @@ void Player::update()
 
 	// Figure out the net acceleration from forces //
 	netAcceleration += netForce / mass;
+
+	
 
 	// Move the sprite, checking for collisions //
 	Vector2D delta = velocity + netAcceleration * 0.5;

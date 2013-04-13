@@ -255,6 +255,15 @@
     <ClInclude Include="milkCarton.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="healthMilk.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="healthHandler.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComicStrip1.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
