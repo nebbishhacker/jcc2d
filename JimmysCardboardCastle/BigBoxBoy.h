@@ -7,6 +7,9 @@ public:
 	void initialize();
 	void update();
 
+	double health;
+	double movespeed;
+
 	// state variables
 	bool walking;
 	bool active;

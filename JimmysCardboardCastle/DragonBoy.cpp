@@ -1,5 +1,8 @@
 #include "DragonBoy.h"
 #include "Game.h"
+#include "GameWorld.h"
+#include "levelList.h"
+#include "World.h"
 #include "DBoyProjectile.h"
 
 #include <random>
@@ -43,6 +46,8 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 	hitbox = Hitbox(40, 0, 48, 117);
 	setCenter(64, 58);
 
+	health = 3;
+
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = false;
 	attacking = false;
@@ -70,19 +75,19 @@ void DragonBoy::update()
 	// 1/200th of a chance each frame to:
 	if (!attacking)
 	{
+		walking = true;
+		setCurrentAnimation(1);
 		if (rand() % 200 == 0) {
 			if (walking) {
-				walking = false; // stop walking
-				setCurrentAnimation(0); // and hide animation
-			}
-			else {
-				walking = true; // or start walking
-				setCurrentAnimation(1); // and crawl animation
+				if (!flipped)
+					flipped = true;
+				else
+					flipped = false;
 			}
 		}
 		if (willAttack)
 		{
-			if (rand() % 200 == 0) // 1/100th chance of attacking
+			if (rand() % 100 == 0) // 1/100th chance of attacking
 			{
 				// Stops it from walking if it already is
 				if (walking)
@@ -93,14 +98,18 @@ void DragonBoy::update()
 			}
 		}
 	}
-
-	if (collide(&world->groups["reflectable"],0,0))
+	
+	Sprite * projectile = collide(&world->groups["dboyscryptonite"],0,0);
+	if (projectile)
 	{
+		health--;
 		if (!flipped)
-			moveCollideX(20, &world->groups["ground"]);
+			velocity.x -= 10;
 		else
-			moveCollideX(-20,  &world->groups["ground"]);
+			velocity.x += 10;
 		setCurrentAnimation(3);
+
+		projectile->kill();
 	}
 
 	if (attacking)
@@ -137,6 +146,21 @@ void DragonBoy::update()
 	// Handles ground friction and acceleration due to movement //
 	if (grounded) {
 		applyGroundFriction();
+	}
+	
+	if (health <= 0)
+	{
+		world->game->replacingCurrentWorld(levelList.constructNextLevel());
+	}
+
+
+	if (!willAttack)
+	{
+		Sprite * s = collide(&world->groups["player"]);
+		if (s != NULL && static_cast<Player*>(s)->marbles == 3)
+		{
+			willAttack = true;
+		}
 	}
 
 	// Handles air drag //
