@@ -113,6 +113,8 @@ public:
 	Sprite * moveCollideY(double y, SpriteGroup*);
 	Sprite * moveCollide(double x, double y, SpriteGroup*);
 	Sprite * moveCollide(const Vector2D &v, SpriteGroup*);
+
+	//  - collidePoint just checks for collision with a point, using the points absolute world position
 	bool collidePoint(double pointX, double pointY);
 	bool collidePoint(Vector2D v);
 
