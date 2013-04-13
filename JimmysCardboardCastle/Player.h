@@ -38,6 +38,7 @@ public:
 	int invincibleLength;
 
 	double batDistance;
+	double marbles;
 private:
 	bool jumpReady;
 	Sound jumpSound;

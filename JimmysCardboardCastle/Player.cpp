@@ -47,6 +47,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	useBat = false;
 	score = 0;
 	cookies = 0;
+	marbles = 0;
 	health = 5;
 	invincibleTimer = 0;
 	invincibleLength = 80;

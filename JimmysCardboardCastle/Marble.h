@@ -41,8 +41,12 @@ public:
 	//void initialize();
 	void update()
 	{
-		if (collide(&world->groups["player"]))
+		Sprite * s = collide(&world->groups["player"]);
+		if (s != NULL)
+		{
+			static_cast<Player*>(s)->marbles++;
 			this->kill();
+		}
 	};
 	
 };

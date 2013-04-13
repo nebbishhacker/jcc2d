@@ -14,4 +14,6 @@ public:
 	bool thrown;
 
 	bool willAttack;
+
+	double health;
 };
