@@ -20,3 +20,4 @@
 #include "BatItem.h"
 #include "Fan.h"
 #include "milkCarton.h"
+#include "TriggerArea.h"
