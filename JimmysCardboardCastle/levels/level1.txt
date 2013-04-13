@@ -3,51 +3,71 @@ entities: [
 		type: player
 		xpos: 256
 		ypos: 64
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: bigboxboy
 		xpos: 7200
 		ypos: 64
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
 		xpos: 738
 		ypos: 96
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
 		xpos: 1504
 		ypos: 417
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
 		xpos: 3131
 		ypos: 118
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
 		xpos: 2225
 		ypos: 97
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
 		xpos: 3521
 		ypos: 128
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
 		xpos: 4101
 		ypos: 150
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
 		xpos: 4262
 		ypos: 174
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
 		xpos: 4851
 		ypos: 129
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: background
@@ -59,6 +79,8 @@ entities: [
 		layerid: -100
 		scrollfactorx: 0.5
 		scrollfactory: 0.25
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: background
@@ -70,6 +92,8 @@ entities: [
 		layerid: -100
 		scrollfactorx: 1
 		scrollfactory: 1
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: background
@@ -81,6 +105,8 @@ entities: [
 		layerid: -90
 		scrollfactorx: 0.75
 		scrollfactory: 0.9
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 ]
 tilemap: {
