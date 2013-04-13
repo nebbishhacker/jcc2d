@@ -77,7 +77,7 @@ entities: [
 		ypos: 56
 		imagepath: "images/bgm_backyard1.png"
 		framesizex: 8192
-		framesizey: 256
+		framesizey: 255
 		layerid: -90
 		scrollfactorx: 0.75
 		scrollfactory: 0.9
