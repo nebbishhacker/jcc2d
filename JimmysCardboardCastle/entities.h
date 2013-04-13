@@ -19,3 +19,6 @@
 #include "BlackPaperBoy.h"
 #include "BatItem.h"
 #include "Fan.h"
+#include "RobFriend.h"
+#include "RobbyFriendsProjectile.h"
+

@@ -85,6 +85,9 @@
     <ClCompile Include="Fan.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RobFriend.cpp">
+      <Filter>Sprite Classes\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="entities.h">
@@ -250,6 +253,12 @@
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="fan.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobbyFriendsProjectile.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobFriend.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
