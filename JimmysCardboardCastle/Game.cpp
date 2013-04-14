@@ -389,7 +389,7 @@ bool Game::killWorldNow()
 		World * temp = currentWorld->nextWorldDown;
 		delete currentWorld;
 		currentWorld = temp;
-		currentWorld->triggerMusic();
+		if (currentWorld) currentWorld->triggerMusic();
 		killWorld = NULL;
 		return true;
 	}

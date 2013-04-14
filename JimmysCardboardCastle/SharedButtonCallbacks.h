@@ -2,19 +2,15 @@
 
 #include "World.h"
 #include "Game.h"
+#include "GameWorld.h"
 #include "levelList.h"
 
 // Callback for killing the current world (thus dropping to the one on the stack below it)
-static void killWorld(World* world) {
-	world->game->killCurrentWorld();
-}
+void killWorld(World* world);
 
 // Callback for killing the current world, as well as the one below it (thus dropping to the one on the stack below that)
 // Useful for "are you sure?" pop-ups
-static void doubleKillWorld(World* world) {
-	world->killNextWorldDown();
-	world->game->killCurrentWorld();
-}
+void doubleKillWorld(World* world);
 
 // Templated callback, specifically for starting a new world. Things like this should be good if you need a lot of similar callbacks.
 template<class TWorld>
@@ -41,3 +37,5 @@ void switchLevel(World * currentWorld)
 {
 	currentWorld->game->replacingCurrentWorld(levelList.constructLevel(num));
 }
+
+void switchNextLevel(World * currentWorld);
