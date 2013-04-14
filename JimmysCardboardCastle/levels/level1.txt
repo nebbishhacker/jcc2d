@@ -11,6 +11,8 @@ entities: [
 		type: nanny
 		xpos: 384
 		ypos: 64
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: bigboxboy
@@ -44,11 +46,15 @@ entities: [
 		type: boxboy
 		xpos: 7135
 		ypos: 396
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
 		xpos: 6371
 		ypos: 382
+		cornerx: 1809451337
+		cornery: 5193552
 	}
 	{
 		type: boxboy
