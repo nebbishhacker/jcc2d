@@ -9,7 +9,14 @@ entities: [
 	}
 	{
 		type: boxboy
-		xpos: 600
+		xpos: 1308
+		ypos: 200
+		cornerx: 1921386825
+		cornery: 1392728
+	}
+	{
+		type: boxboy
+		xpos: 3899
 		ypos: 200
 		cornerx: 1921386825
 		cornery: 1392728
@@ -23,7 +30,7 @@ entities: [
 	}
 	{
 		type: blackboy
-		xpos: 1000
+		xpos: 1308
 		ypos: 200
 		cornerx: 1921386825
 		cornery: 1392728
