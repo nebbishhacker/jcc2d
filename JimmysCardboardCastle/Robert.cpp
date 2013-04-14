@@ -21,17 +21,17 @@ Robert::Robert(double x, double y) : PhysicsSprite("images/spr_robert.png")
 	setNumberOfAnimations(4);
 	setSpriteFrameSize(128,128);
 
-	addSpriteAnimRow(0, 0, 384, 128, 0, 2); // standing animation - 0
+	addSpriteAnimRow(0, 0, 256, 128, 0, 1); // standing animation - 0
 	setAnimationSpeed(0, 0.1);
 
-	addSpriteAnimRow(1, 0, 256, 128, 0, 7); // walking animation - 1
+	addSpriteAnimRow(1, 0, 384, 128, 0, 4); // walking animation - 1
 	setAnimationSpeed(1, 0.25);
 
-	addSpriteAnimRow(2, 0, 128, 128, 0, 7); // attacking animation - 2
+	addSpriteAnimRow(2, 0, 128, 128, 0, 5); // attacking animation - 2
 	setAnimationSpeed(2, 0.25);
 	setAnimationLoop(2, false);
 
-	addSpriteAnimRow(3, 0, 0, 128, 0, 1); // hit animation - 3
+	addSpriteAnimRow(3, 0, 0, 128, 0, 2); // hit animation - 3
 	setAnimationSpeed(3, 0.1);
 	setAnimationLoop(3, false);
 
