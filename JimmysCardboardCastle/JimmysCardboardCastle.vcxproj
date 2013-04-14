@@ -135,6 +135,7 @@
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Marble.h" />
     <ClInclude Include="milkCarton.h" />
+    <ClInclude Include="Nanny.h" />
     <ClInclude Include="OverlayWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="PaperAirplane.h" />

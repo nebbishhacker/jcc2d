@@ -7,6 +7,11 @@ entities: [
 		cornery: 5193552
 	}
 	{
+		type: nanny
+		xpos: 384
+		ypos: 64
+	}
+	{
 		type: bigboxboy
 		xpos: 7200
 		ypos: 64

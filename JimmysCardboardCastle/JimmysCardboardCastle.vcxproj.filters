@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="Button.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
@@ -303,5 +304,97 @@
       <UniqueIdentifier>{45e76b01-1468-4fbd-9724-04a19d1635c8}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+=======
+    <ClCompile Include="AsianPaperBoy.cpp" />
+    <ClCompile Include="BigBoxBoy.cpp" />
+    <ClCompile Include="BlackPaperBoy.cpp" />
+    <ClCompile Include="BoxBot.cpp" />
+    <ClCompile Include="BoxBoy.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Cookie.cpp" />
+    <ClCompile Include="DragonBoy.cpp" />
+    <ClCompile Include="drawPrimitives.cpp" />
+    <ClCompile Include="Fan.cpp" />
+    <ClCompile Include="levelConstructor.cpp" />
+    <ClCompile Include="LevelList.cpp" />
+    <ClCompile Include="levelLoader.cpp" />
+    <ClCompile Include="RobertsFriends.cpp" />
+    <ClCompile Include="RobFriend.cpp" />
+    <ClCompile Include="ScreenFillSprite.cpp" />
+    <ClCompile Include="SoundEngine.cpp" />
+    <ClCompile Include="TextureCache.cpp" />
+    <ClCompile Include="TilePlacer.cpp" />
+    <ClCompile Include="Tracks.cpp" />
+    <ClCompile Include="TriggerArea.cpp" />
+    <ClCompile Include="vectorMath.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="CollTestBox.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TextureSprite.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AsianPaperBoy.h" />
+    <ClInclude Include="Background.h" />
+    <ClInclude Include="BatItem.h" />
+    <ClInclude Include="BigBoxBoy.h" />
+    <ClInclude Include="BensTestWorld.h" />
+    <ClInclude Include="BlackPaperBoy.h" />
+    <ClInclude Include="BoxBot.h" />
+    <ClInclude Include="BoxBoy.h" />
+    <ClInclude Include="BrandonTestWorld.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="ComicStrip1.h" />
+    <ClInclude Include="convert.h" />
+    <ClInclude Include="Cookie.h" />
+    <ClInclude Include="DBoyProjectile.h" />
+    <ClInclude Include="DragonBoy.h" />
+    <ClInclude Include="drawPrimitives.h" />
+    <ClInclude Include="fan.h" />
+    <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="healthHandler.h" />
+    <ClInclude Include="healthMilk.h" />
+    <ClInclude Include="HowToPlay.h" />
+    <ClInclude Include="levelConstructor.h" />
+    <ClInclude Include="LevelEditor.h" />
+    <ClInclude Include="levelList.h" />
+    <ClInclude Include="levelLoader.h" />
+    <ClInclude Include="LucasTestWorld.h" />
+    <ClInclude Include="JonathansTestWorld.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Marble.h" />
+    <ClInclude Include="milkCarton.h" />
+    <ClInclude Include="OverlayWorld.h" />
+    <ClInclude Include="PaolosTestWorld.h" />
+    <ClInclude Include="PaperAirplane.h" />
+    <ClInclude Include="PhysicsSprite.h" />
+    <ClInclude Include="QuitDialog.h" />
+    <ClInclude Include="RobbyFriendsProjectile.h" />
+    <ClInclude Include="RobertsFriends.h" />
+    <ClInclude Include="RobFriend.h" />
+    <ClInclude Include="ScreenFillSprite.h" />
+    <ClInclude Include="sharedButtonCallbacks.h" />
+    <ClInclude Include="SoundEngine.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="CollTestBox.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="TestWorld.h" />
+    <ClInclude Include="TextureCache.h" />
+    <ClInclude Include="TilePlacer.h" />
+    <ClInclude Include="Tracks.h" />
+    <ClInclude Include="TriggerArea.h" />
+    <ClInclude Include="vectorMath.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="entities.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Hitbox.h" />
+    <ClInclude Include="TextureSprite.h" />
+    <ClInclude Include="TileSheet.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Nanny.h" />
+>>>>>>> d3734235c7926d9558e26cbf83deaba0d9b58e4d
   </ItemGroup>
 </Project>
