@@ -95,6 +95,7 @@
     <ClCompile Include="levelConstructor.cpp" />
     <ClCompile Include="LevelList.cpp" />
     <ClCompile Include="levelLoader.cpp" />
+    <ClCompile Include="Robert.cpp" />
     <ClCompile Include="RobertsFriends.cpp" />
     <ClCompile Include="ScreenFillSprite.cpp" />
     <ClCompile Include="sharedButtonCallbacks.cpp" />
@@ -146,6 +147,8 @@
     <ClInclude Include="PhysicsSprite.h" />
     <ClInclude Include="QuitDialog.h" />
     <ClInclude Include="RobbyFriendsProjectile.h" />
+    <ClInclude Include="Robert.h" />
+    <ClInclude Include="RobertProjectile.h" />
     <ClInclude Include="RobertsFriends.h" />
     <ClInclude Include="RobFriend.h" />
     <ClInclude Include="ScreenFillSprite.h" />

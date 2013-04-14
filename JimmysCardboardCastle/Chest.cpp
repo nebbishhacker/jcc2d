@@ -52,14 +52,11 @@ void Chest::update() // use initialize for anything involving world (like groups
 	// Is the character on the ground?
 	bool grounded = (collide(&world->groups["ground"], 0, -2) != NULL);
 
-	if(!opening) 
-	{
-		setCurrentAnimation(0); 
-	}
-
 	if(opening)
 	{
+
 		setCurrentAnimation(2); 
+		opening = true; 
 	}
 	if (!opening)
 	{
@@ -68,6 +65,11 @@ void Chest::update() // use initialize for anything involving world (like groups
 		{
 			opening = true; 
 		}
+	if(itemObtained)
+	{
+		setCurrentAnimation(1); 
+		itemObtained = true; 
+	}
 	}
 
 }

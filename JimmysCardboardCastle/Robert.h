@@ -1,9 +1,9 @@
 #pragma once
 #include "physicssprite.h"
-class BlackPaperBoy : public PhysicsSprite
+class Robert : public PhysicsSprite
 {
 public:
-	BlackPaperBoy(double x, double y);
+	Robert(double x, double y);
 	void initialize();
 	void update();
 
@@ -12,6 +12,9 @@ private:
 	bool walking;
 	bool attacking;
 	bool gotHit;
+	bool thrown;
 
-	double health; 
+	bool willAttack;
+
+	double health;
 };
