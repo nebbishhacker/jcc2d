@@ -15,8 +15,6 @@ class MainMenu : public World
 {
 public:
 	virtual void initialize()
-		
-
 	{
 		add(new Background(0, 0, 800, 600, "images/spr_mainMenu.png", -100, 0.5, 0.25));
 		add(new Button(60+20, 300+10, 145, 28, "images/dev/NewGameButton.png", startLevel<0>));
@@ -28,5 +26,7 @@ public:
 
 		// Exit sign button 
 		add(new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/dev/exit_sign.png", killWorld));
+
+		//soundEngine.playMusic(soundEngine.loadStream("sound/Wind.mp3"));
 	}
 };

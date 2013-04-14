@@ -23,13 +23,16 @@ public:
 	~SoundEngine();
 
 	Sound loadSound(std::string fileName);
+	Sound loadStream(std::string fileName);
 	FMOD::Channel * playSound(Sound &sound);
+	FMOD::Channel * playMusic(Sound &sound);
 
 	void update();
 
 private:
 	FMOD::System * system;
 	std::map<std::string, Sound> soundMap;
+	FMOD::Channel * musicChannel;
 };
 
 extern SoundEngine soundEngine;

@@ -50,5 +50,5 @@ private:
 	Sound jumpSound;
 	Sound batSound;
 	Sound moonJumpSound;
-	Sound lavaHit;
+	Sound lavaHitSound;
 };
