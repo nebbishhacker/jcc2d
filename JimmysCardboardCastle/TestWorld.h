@@ -4,20 +4,21 @@
 #include "entities.h"
 
 #include "BensTestWorld.h"
-#include "Level1.h"
-#include "Level2.h"
-#include "Level3.h"
-#include "Level4.h"
-#include "Level5.h"
 #include "LucasTestWorld.h"
 #include "JonathansTestWorld.h"
 #include "BrandonTestWorld.h"
 #include "PaolosTestWorld.h"
+#include "GameWorld.h"
 
 // sharedButtonCallbacks.h is where I'm putting button callback functions that are useful in more than one world.
 #include "sharedButtonCallbacks.h"
 
 
+static void startLevel1(World * w)  { w->game->setNewWorld(new GameWorld("levels/level1.txt")); }
+static void startLevel2(World * w)  { w->game->setNewWorld(new GameWorld("levels/level2.txt")); }
+static void startLevel3(World * w)  { w->game->setNewWorld(new GameWorld("levels/level3.txt")); }
+static void startLevel4(World * w)  { w->game->setNewWorld(new GameWorld("levels/level4.txt")); }
+static void startLevel5(World * w)  { w->game->setNewWorld(new GameWorld("levels/level5.txt")); }
 
 
 class TestWorld : public World
@@ -43,10 +44,10 @@ public:
 		// Exit sign button
 		add(new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/dev/exit_sign.png", killWorld));
 
-		add(new Button(100, 0, 110, 100, "images/dev/Button_Level1.png", startLevel<0>));
-		add(new Button(225, 0, 110, 100, "images/dev/Button_Level2.png", startLevel<1>));
-		add(new Button(350, 0, 110, 100, "images/dev/Button_Level3.png", startLevel<2>));
-		add(new Button(475, 0, 110, 100, "images/dev/Button_Level4.png", startLevel<3>));
-		add(new Button(600, 0, 110, 100, "images/dev/Button_Level5.png", startLevel<4>));
+		add(new Button(100, 0, 110, 100, "images/dev/Button_Level1.png", startLevel1));
+		add(new Button(225, 0, 110, 100, "images/dev/Button_Level2.png", startLevel2));
+		add(new Button(350, 0, 110, 100, "images/dev/Button_Level3.png", startLevel3));
+		add(new Button(475, 0, 110, 100, "images/dev/Button_Level4.png", startLevel4));
+		add(new Button(600, 0, 110, 100, "images/dev/Button_Level5.png", startLevel5));
 	}
 };
