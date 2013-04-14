@@ -43,4 +43,7 @@ private:
 
 	bool jumpReady;
 	Sound jumpSound;
+	Sound batSound;
+	Sound moonJumpSound;
+	Sound lavaHit;
 };
