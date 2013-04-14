@@ -27,6 +27,7 @@ public:
 		// Exit sign button 
 		add(new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/dev/exit_sign.png", killWorld));
 
-		//soundEngine.playMusic(soundEngine.loadStream("sound/Wind.mp3"));
+		// This is how you set the music for a menu
+		setMusic(soundEngine.loadStream("sound/Wind.mp3"));
 	}
 };

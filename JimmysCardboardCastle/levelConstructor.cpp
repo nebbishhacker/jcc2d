@@ -3,7 +3,7 @@
 
 void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 {
-	if (levelData.music != "") soundEngine.playMusic(soundEngine.loadStream(levelData.music));
+	if (levelData.music != "") world->music = soundEngine.loadStream(levelData.music);
 
 	for (EntityList::iterator it = levelData.entities.begin(); it != levelData.entities.end(); ++it)
 	{

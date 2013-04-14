@@ -8,6 +8,8 @@
 
 #include "Sprite.h"
 
+#include "SoundEngine.h"
+
 // Forward declarations
 class Game;
 typedef struct _GameStateInfo GameStateInfo;
@@ -59,6 +61,16 @@ public:
 	virtual void draw();
 	virtual void update();
 	virtual void updateAnimation();
+
+	virtual void setMusic(Sound music)
+	{
+		this->music = music;
+	}
+
+	virtual void triggerMusic()
+	{
+		if (!music.null && soundEngine.getCurrentMusic() != music) soundEngine.playMusic(music);
+	}
 
 	//  - When remove() is called, the sprite is added to the world's hitList, and at the end of the frame
 	//		it is completely removed from all groups, the destructor is called and the memory is freed.
@@ -127,6 +139,8 @@ public:
 	SpriteGroup drawList;
 	SpriteGroup updateList;
 	SpriteGroup animationList;
+
+	Sound music;
 
 private:
 	void executeHitList();

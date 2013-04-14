@@ -24,6 +24,8 @@ Sound SoundEngine::loadSound(std::string fileName)
 		FMOD_RESULT result = system->createSound(fileName.c_str(), FMOD_2D, 0, &fmodSound);
 		if (result != FMOD_OK) std::cout << "Loading file \"" << fileName << "\" failed with code " << result << "\n";
 		sound = Sound(fmodSound);
+		soundMap[fileName] = sound;
+		std::cout << fileName << '\n';
 	}
 	else sound = soundMap[fileName];
 	return sound;
@@ -38,6 +40,8 @@ Sound SoundEngine::loadStream(std::string fileName)
 		FMOD_RESULT result = system->createStream(fileName.c_str(), FMOD_2D, 0, &fmodSound);
 		if (result != FMOD_OK) std::cout << "Loading file \"" << fileName << "\" failed with code " << result << "\n";
 		sound = Sound(fmodSound);
+		soundMap[fileName] = sound;
+		std::cout << fileName << '\n';
 	}
 	else sound = soundMap[fileName];
 	return sound;
@@ -50,10 +54,14 @@ FMOD::Channel * SoundEngine::playSound(Sound &sound)
 }
 FMOD::Channel * SoundEngine::playMusic(Sound &sound)
 {
-	FMOD::Channel * channel;
 	unsigned int n = 0;
 	system->playSound(FMOD_CHANNEL_REUSE, sound.fmodSound, false, &musicChannel);
-	return channel;
+	currentMusic = sound;
+	return musicChannel;
+}
+Sound SoundEngine::getCurrentMusic()
+{
+	return currentMusic;
 }
 
 void SoundEngine::update()
@@ -64,6 +72,7 @@ void SoundEngine::update()
 Sound::Sound(FMOD::Sound * fmodSound)
 {
 	this->fmodSound = fmodSound;
+	null = false;
 }
 
 SoundEngine soundEngine;
