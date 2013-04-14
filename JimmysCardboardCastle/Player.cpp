@@ -1,5 +1,7 @@
 #include "Player.h"
 #include "Game.h"
+#include "GameWorld.h"
+#include "healthHandler.h"
 #include <iostream>
 
 Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
@@ -32,6 +34,9 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	jumpReady = false;
 
 	jumpSound = soundEngine.loadSound("sound/retrojump.wav");
+	batSound = soundEngine.loadSound("sound/bat_sound.wav");
+	moonJumpSound = soundEngine.loadSound("sound/moon_jump.wav");
+	lavaHit = soundEngine.loadSound("sound/lava_hit.wav");
 
 	mass = 50;
 	airDrag = 0.1; // coefficient of fluid drag... ir something
@@ -58,6 +63,9 @@ void Player::initialize()
 	input = world->input;
 	world->groups["player"].add(this);
 	world->groups["ground"].add(this);
+
+	Sprite * t = new healthHandler(this, 5);
+	world->add(t);
 }
 
 void Player::update()
@@ -65,11 +73,15 @@ void Player::update()
 	if (input->keysPressed['z']) {
 		hasBoots = !hasBoots;
 	}
+	if (input->keysPressed['a']) {
+		health-=0.5;
+	}
 
 	if (collide(&world->groups["lava"], 0, -2) != NULL)
 	{
-		damage(0.25);
+		damage(1);
 		velocity.y = jumpVelocity;
+		soundEngine.playSound(lavaHit); // oooh, burn
 	}
 
 	if (flipped)
@@ -87,6 +99,7 @@ void Player::update()
 		setCurrentAnimation(4);
 		setFrame(0);
 		useBat = true;
+		soundEngine.playSound(batSound); // swoosh
 	}
 
 	// These events will not occur if the player is swinging his bat //
@@ -97,7 +110,11 @@ void Player::update()
 		{
 			velocity.y = hasBoots ? bootJumpVelocity : jumpVelocity; // Directly set velocity, 'cause it's simpler and more reliable than forces in this case
 			jumpReady = false; // only wanna jump once
-			soundEngine.playSound(jumpSound); // boing
+
+			if (hasBoots)
+				soundEngine.playSound(moonJumpSound); // different boing
+			else
+				soundEngine.playSound(jumpSound); // boing
 		}
 		if (!jumpReady && !jumpKeysDown) jumpReady = true; // Ready to jump once more
 
@@ -169,6 +186,8 @@ void Player::update()
 
 	// Figure out the net acceleration from forces //
 	netAcceleration += netForce / mass;
+
+	
 
 	// Move the sprite, checking for collisions //
 	Vector2D delta = velocity + netAcceleration * 0.5;

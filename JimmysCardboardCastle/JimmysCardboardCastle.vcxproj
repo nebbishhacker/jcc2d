@@ -112,6 +112,7 @@
     <ClInclude Include="BoxBoy.h" />
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="ComicStrip1.h" />
     <ClInclude Include="convert.h" />
     <ClInclude Include="Cookie.h" />
     <ClInclude Include="DBoyProjectile.h" />
@@ -119,6 +120,8 @@
     <ClInclude Include="drawPrimitives.h" />
     <ClInclude Include="fan.h" />
     <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="healthHandler.h" />
+    <ClInclude Include="healthMilk.h" />
     <ClInclude Include="HowToPlay.h" />
     <ClInclude Include="levelConstructor.h" />
     <ClInclude Include="LevelEditor.h" />
@@ -129,6 +132,7 @@
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Marble.h" />
     <ClInclude Include="milkCarton.h" />
+    <ClInclude Include="Nanny.h" />
     <ClInclude Include="OverlayWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="PaperAirplane.h" />
