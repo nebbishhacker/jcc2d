@@ -73,7 +73,31 @@ void RobertsFriends::update()
 		Sprite * s;
 		if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = true;
 		if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
-
+		if (!attacking)
+	{
+		walking = true;
+		setCurrentAnimation(1);
+		if (rand() % 200 == 0) {
+			if (walking) {
+				if (!flipped)
+					flipped = true;
+				else
+					flipped = false;
+			}
+		}
+		if (willAttack)
+		{
+			if (rand() % 100 == 0) // 1/100th chance of attacking
+			{
+				// Stops it from walking if it already is
+				if (walking)
+					walking = false;
+				setCurrentAnimation(2);
+				setFrame(0); // set animation to the start, as it doesn't loop
+				attacking = true;
+			}
+		}
+	}
 		// 1/200th of a chance each frame to:
 		if (rand() % 200 == 0) {
 			if (walking) {
