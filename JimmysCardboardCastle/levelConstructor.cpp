@@ -35,18 +35,15 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 		else if (info.type == "bat")  t = new BatItem(info.xPos, info.yPos);
 		else if (info.type == "bigboxboy") t = new BigBoxBoy(info.xPos, info.yPos);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
-<<<<<<< HEAD
 		else if (info.type == "triggerarea") t = new TriggerArea(info.xPos, info.yPos, info.cornerX, info.cornerY, info.trigger, info.target);
 		else if (info.type == "nanny") t = new Nanny(info.xPos, info.yPos, info.bubble);
 		else if (info.type == "key") t = new Key(info.xPos, info.yPos); 
 		else if (info.type == "chest") t = new Chest(info.xPos, info.yPos); 
-=======
 		else if (info.type == "triggerarea") t = new TriggerArea(info.xPos, info.yPos, info.cornerX, info.cornerY, info.target, info.trigger);
-		else if (info.type == "nanny") t = new Nanny(info.xPos, info.yPos);
+		else if (info.type == "nanny") t = new Nanny(info.xPos, info.yPos, info.bubble);
 		else if (info.type == "key") t = new Key(info.xPos, info.yPos);
 		else if (info.type == "chest") t = new Chest(info.xPos, info.yPos);
 		else if (info.type == "nextlevelbutton") t = new Button(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath, switchNextLevel);
->>>>>>> 10e1d16475f6c7475926965acb6f60f4462933c8
 		if (t != NULL)
 		{
 			if (info.layerID != INVALID_DOUBLE) t->layerID = info.layerID;

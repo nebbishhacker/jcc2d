@@ -9,11 +9,9 @@ entities: [
 		type: nanny
 		xpos: 384
 		ypos: 64
-<<<<<<< HEAD
 		cornerx: 1809451337
 		cornery: 5193552
 		bubble: 0
-=======
 	}
 	{
 		type: triggerarea
@@ -23,7 +21,6 @@ entities: [
 		cornery: 756
 		trigger: "boxzonetrigger"
 		target: "player"
->>>>>>> 10e1d16475f6c7475926965acb6f60f4462933c8
 	}
 	{
 		type: bigboxboy

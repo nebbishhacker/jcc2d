@@ -94,14 +94,11 @@ struct EntityInfo
 		waterGun = 0;
 		sheild = 0;
 		entity = NULL;
-<<<<<<< HEAD
 		int cornerX = INVALID_INT;
 		int cornerY = INVALID_INT;
 		bubble = INVALID_INT;
-=======
 		cornerX = INVALID_INT;
 		cornerY = INVALID_INT;
->>>>>>> 10e1d16475f6c7475926965acb6f60f4462933c8
 	}
 
 	bool read(std::istream &stream);
