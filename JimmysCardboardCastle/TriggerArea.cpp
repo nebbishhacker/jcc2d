@@ -6,5 +6,5 @@ void TriggerArea::update()
 {
 	if (collide(&world->groups[targetGroup]))
 		world->groups[groupToAdd].add(this);
-	else ;world->groups[groupToAdd].remove(this);
+	else world->groups[groupToAdd].remove(this);
 }
