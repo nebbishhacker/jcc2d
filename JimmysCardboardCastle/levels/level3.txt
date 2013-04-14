@@ -22,6 +22,20 @@ entities: [
 		cornery: 1392728
 	}
 	{
+		type: chest
+		xpos: 590
+		ypos: 1280
+		cornerx: 1921386825
+		cornery: 1392728
+	}
+	{
+		type: key
+		xpos: 3899
+		ypos: 200
+		cornerx: 1921386825
+		cornery: 1392728
+	}
+	{
 		type: asianboy
 		xpos: 900
 		ypos: 200
