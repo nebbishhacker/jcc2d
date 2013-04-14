@@ -1,5 +1,6 @@
 #pragma once
 #include "physicssprite.h"
+#include "Player.h"
 class RobFriend_proj : public PhysicsSprite
 {
 public:
