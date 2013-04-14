@@ -37,7 +37,7 @@ BigBoxBoy::BigBoxBoy(double x, double y) : PhysicsSprite("images/spr_BBBoy.png")
 	setCenter(128, 71);
 
 	health = 4;
-	movespeed = 7.5;
+	movespeed = 10;
 
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = false;
@@ -66,7 +66,7 @@ void BigBoxBoy::update()
 
 			// When BBBoy hits a wall he will take damage and increase in speed //
 			health--;
-			movespeed += 2.5;
+			movespeed += 5;
 
 			velocity.x -= 20;
 			velocity.y += 20;
@@ -79,7 +79,7 @@ void BigBoxBoy::update()
 
 			// When BBBoy hits a wall he will take damage and increase in speed //
 			health--;
-			movespeed += 2.5;
+			movespeed += 5;
 
 			velocity.x += 20;
 			velocity.y += 20;
@@ -104,9 +104,9 @@ void BigBoxBoy::update()
 
 	if (!active)
 	{
-		if (collide(&world->groups["player"],2,0))
+		if (collide(&world->groups["player"],32,0))
 			active = true;
-		else if (collide(&world->groups["player"],-2,0))
+		else if (collide(&world->groups["player"],-32,0))
 			active = true;
 	}
 

@@ -76,7 +76,7 @@ void Player::update()
 
 	if (collide(&world->groups["lava"], 0, -2) != NULL)
 	{
-		damage(0.25);
+		damage(1);
 		velocity.y = jumpVelocity;
 	}
 
