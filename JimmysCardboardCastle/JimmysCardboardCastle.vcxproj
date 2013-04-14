@@ -176,6 +176,7 @@
     <ClInclude Include="Tracks.h" />
     <ClInclude Include="TriggerArea.h" />
     <ClInclude Include="vectorMath.h" />
+    <ClInclude Include="WaterGunItem.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>

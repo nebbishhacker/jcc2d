@@ -33,6 +33,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 		else if (info.type == "towerstart") t = new TowerStart(info.xPos, info.yPos); 
 		else if (info.type == "towerend") t = new TowerEnd(info.xPos, info.yPos);
 		else if (info.type == "bat")  t = new BatItem(info.xPos, info.yPos);
+		else if (info.type == "watergun") t = new WaterGunItem(info.xPos, info.yPos); 
 		else if (info.type == "bigboxboy") t = new BigBoxBoy(info.xPos, info.yPos);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
 		else if (info.type == "triggerarea") t = new TriggerArea(info.xPos, info.yPos, info.cornerX, info.cornerY, info.target, info.trigger);

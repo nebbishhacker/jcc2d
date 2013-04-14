@@ -21,6 +21,7 @@
 #include "BigBoxBoy.h"
 #include "BlackPaperBoy.h"
 #include "BatItem.h"
+#include "WaterGunItem.h"
 #include "Fan.h"
 #include "milkCarton.h"
 #include "TriggerArea.h"
