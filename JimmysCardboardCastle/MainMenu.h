@@ -28,6 +28,6 @@ public:
 		add(new Button(0, game->stateInfo.screenHeight - 36, 76, 36, "images/dev/exit_sign.png", killWorld));
 
 		// This is how you set the music for a menu
-		setMusic(soundEngine.loadStream("sound/Wind.mp3"));
+		setMusic(soundEngine.loadStream("sound/electrodoodle.mp3"));
 	}
 };
