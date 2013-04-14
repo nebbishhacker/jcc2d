@@ -15,6 +15,15 @@ entities: [
 		cornery: 5193552
 	}
 	{
+		type: triggerarea
+		xpos: 6974
+		ypos: 64
+		cornerx: 7486
+		cornery: 756
+		target: "player"
+		trigger: "boxzonetrigger"
+	}
+	{
 		type: bigboxboy
 		xpos: 7200
 		ypos: 64
