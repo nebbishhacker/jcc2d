@@ -33,6 +33,17 @@ entities: [
 	}
 	{
 		type: background
+		xpos: -1600
+		ypos: -100
+		imagepath: "images/background_fourthlevel.png"
+		framesizex: 1600
+		framesizey: 1200
+		layerid: -100
+		scrollfactorx: 0.5
+		scrollfactory: 0.25
+	}
+	{
+		type: background
 		xpos: 0
 		ypos: -100
 		imagepath: "images/background_fourthlevel.png"

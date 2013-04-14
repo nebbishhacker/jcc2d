@@ -13,7 +13,7 @@ public:
 	void initialize();
 	void update();
 
-	void heal(double heal) { health += heal; }
+	void heal(double heal) { if (health+heal <= 5) health += heal; else health = 5; }
 	void damage(double damage) { if (invincibleTimer <= 0) { health -= damage; invincibleTimer = invincibleLength; } }
 	void scoreUp(double points) { score += points; }
 	void cookiesUp(double cookies) { this->cookies += cookies; }

@@ -94,6 +94,7 @@
     <ClCompile Include="LevelList.cpp" />
     <ClCompile Include="levelLoader.cpp" />
     <ClCompile Include="RobertsFriends.cpp" />
+    <ClCompile Include="RobFriend.cpp" />
     <ClCompile Include="ScreenFillSprite.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
     <ClCompile Include="TextureCache.cpp" />
@@ -114,6 +115,7 @@
     <ClInclude Include="BoxBoy.h" />
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="ComicStrip1.h" />
     <ClInclude Include="convert.h" />
     <ClInclude Include="Cookie.h" />
     <ClInclude Include="DBoyProjectile.h" />
@@ -121,16 +123,13 @@
     <ClInclude Include="drawPrimitives.h" />
     <ClInclude Include="fan.h" />
     <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="healthHandler.h" />
+    <ClInclude Include="healthMilk.h" />
     <ClInclude Include="HowToPlay.h" />
-    <ClInclude Include="Level2.h" />
-    <ClInclude Include="Level3.h" />
-    <ClInclude Include="Level4.h" />
-    <ClInclude Include="Level5.h" />
     <ClInclude Include="levelConstructor.h" />
     <ClInclude Include="LevelEditor.h" />
     <ClInclude Include="levelList.h" />
     <ClInclude Include="levelLoader.h" />
-    <ClInclude Include="Level1.h" />
     <ClInclude Include="LucasTestWorld.h" />
     <ClInclude Include="JonathansTestWorld.h" />
     <ClInclude Include="MainMenu.h" />
@@ -141,7 +140,9 @@
     <ClInclude Include="PaperAirplane.h" />
     <ClInclude Include="PhysicsSprite.h" />
     <ClInclude Include="QuitDialog.h" />
+    <ClInclude Include="RobbyFriendsProjectile.h" />
     <ClInclude Include="RobertsFriends.h" />
+    <ClInclude Include="RobFriend.h" />
     <ClInclude Include="ScreenFillSprite.h" />
     <ClInclude Include="sharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />

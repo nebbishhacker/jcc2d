@@ -195,21 +195,6 @@
     <ClInclude Include="TextureCache.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Level2.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Level1.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Level3.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Level4.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Level5.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="vectorMath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -264,15 +249,30 @@
     <ClInclude Include="milkCarton.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
+    <ClInclude Include="healthMilk.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="healthHandler.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComicStrip1.h">
+      <Filter>World Classes\Header Files</Filter>
+    </ClInclude>
+=======
     <ClInclude Include="TriggerArea.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="TowerStart.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TowerEnd.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> b7fc3ce3a57f2c6a92338bd7762ef3312117f2ed
+>>>>>>> e667695c2b6f1244039fd032dee95afb79e4f9dd
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
