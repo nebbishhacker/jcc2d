@@ -43,15 +43,17 @@ BlackPaperBoy::BlackPaperBoy(double x, double y) : PhysicsSprite("images/spr_bla
 	hitbox = Hitbox(40, 0, 50, 117);
 	setCenter(65, 58);
 
+	health = 2; 
+	
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = false;
 	attacking = false;
-	//gotHit = false;
+	gotHit = false;
 }
 
 void BlackPaperBoy::initialize() // use initialize for anything involving world (like groups)
 {
-	// adds this sprite to DBoy, so that the box can collide with it
+	// adds this sprite to PBoy, so that the box can collide with it
 	world->groups["blackPBoy"].add(this);
 }
 
@@ -73,7 +75,7 @@ void BlackPaperBoy::update()
 		}
 		else {
 			walking = true; // or start walking
-			setCurrentAnimation(1); // and crawl animation
+			setCurrentAnimation(2); // and crawl animation
 		}
 	}
 	if (rand() % 200 == 0) // 1/100th chance of attacking
@@ -81,7 +83,7 @@ void BlackPaperBoy::update()
 		// Stops it from walking if it already is
 		if (walking)
 			walking = false;
-		setCurrentAnimation(2);
+		setCurrentAnimation(1);
 		setFrame(0); // set animation to the start, as it doesn't loop
 
 		// Create the box projectile
@@ -96,9 +98,9 @@ void BlackPaperBoy::update()
 	if (walking) // If we are walking
 	{
 		if (flipped)
-			contactVelocity.x += 2.5;
+			contactVelocity.x += 3.5;
 		else
-			contactVelocity.x -= 2.5;
+			contactVelocity.x -= 3.5;
 	}
 
 	// Handles ground friction and acceleration due to movement //

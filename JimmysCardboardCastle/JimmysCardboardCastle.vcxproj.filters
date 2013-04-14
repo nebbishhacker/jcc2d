@@ -33,6 +33,8 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Chest.cpp" />
+    <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="sharedButtonCallbacks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsianPaperBoy.h" />

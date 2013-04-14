@@ -229,10 +229,12 @@ void EntityInfo::write(std::ostream &stream)
 	if (bat != 0) stream << "\t\t" << "bat: " << bat << "\n";
 	if (waterGun != 0) stream << "\t\t" << "watergun: " << waterGun << "\n";
 	if (sheild != 0) stream << "\t\t" << "shield: " << sheild << "\n";
-	if (cornerX != INVALID_INT) stream << "\t\t" << "cornerx: " << cornerX << "\n";
-	if (cornerY != INVALID_INT) stream << "\t\t" << "cornery: " << cornerY << "\n";
-	if (trigger != "") stream << "\t\t" << "trigger: " << trigger << "\n";
-	if (target != "") stream << "\t\t" << "target: " << target << "\n";
+	if (type == "triggerarea") { // This is just to clean up a rash of cornerx's and cornery's from an earlier bug.
+		if (cornerX != INVALID_INT) stream << "\t\t" << "cornerx: " << cornerX << "\n";
+		if (cornerY != INVALID_INT) stream << "\t\t" << "cornery: " << cornerY << "\n";
+	}
+	if (trigger != "") stream << "\t\t" << "trigger: \"" << trigger << "\"\n";
+	if (target != "") stream << "\t\t" << "target: \"" << target << "\"\n";
 	stream << "\t}\n";
 }
 
