@@ -1,5 +1,6 @@
 #pragma once
 #include "PhysicsSprite.h"
+#include "Player.h"
 class Key : public PhysicsSprite
 {
 public:
