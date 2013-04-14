@@ -59,8 +59,12 @@ void BoxBoy::update()
 	}
 	else // If not:
 	{
-		// check if a member of 'ground' who IS NOT the player is beside me, and if so, turn away
+		// check if there's ground underneath my leading edge, and if not, turn around
+		if (!flipped && !relBoxCollide(&world->groups["ground"], Hitbox(53, 0, 2, 2), -40, -2)) flipped = true;
+		if (flipped && !relBoxCollide(&world->groups["ground"], Hitbox(53, 0, 2, 2), 40, -2)) flipped = false;
+		
 		Sprite * s;
+		// check if a member of 'ground' who IS NOT the player is beside me, and if so, turn away
 		if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = true;
 		if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
 
@@ -107,7 +111,7 @@ void BoxBoy::update()
 	Vector2D delta = velocity + netAcceleration * 0.5;
 
 	// Push the player if moving into him
-	Sprite * player = moveCollideX(delta.x, &world->groups["player"]);
+	Sprite * player = collide(&world->groups["player"], delta.x, 0);
 	if (player) {
 		double oldPPosX = player->position.x;
 		player->moveCollideX(delta.x, &world->groups["ground"]);

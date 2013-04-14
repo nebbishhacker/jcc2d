@@ -55,7 +55,7 @@ bool Sprite::relBoxCollide(Sprite * sprite, const Hitbox &hitbox, double offsetX
 Sprite * Sprite::relBoxCollide(SpriteGroup * group, const Hitbox &hitbox, const Vector2D &offset)
 {
 	for (SpriteGroup::iterator it = group->begin(); it != group->end(); ++it)
-		if ((*it) != this && collide(*it, offset)) return *it;
+		if ((*it) != this && relBoxCollide(*it, hitbox, offset)) return *it;
 	return NULL;
 }
 Sprite * Sprite::relBoxCollide(SpriteGroup * group, const Hitbox &hitbox, double offsetX, double offsetY)
