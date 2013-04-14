@@ -1,280 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Button.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CollTestBox.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprite.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureSprite.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Timer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>World Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TextureCache.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ScreenFillSprite.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="levelLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="drawPrimitives.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TilePlacer.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="vectorMath.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BoxBoy.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DragonBoy.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Cookie.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RobertsFriends.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Tracks.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BoxBot.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BigBoxBoy.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AsianPaperBoy.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LevelList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="levelConstructor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BlackPaperBoy.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Fan.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TriggerArea.cpp">
-      <Filter>Sprite Classes\Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="AsianPaperBoy.cpp" />
+    <ClCompile Include="BigBoxBoy.cpp" />
+    <ClCompile Include="BlackPaperBoy.cpp" />
+    <ClCompile Include="BoxBot.cpp" />
+    <ClCompile Include="BoxBoy.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Cookie.cpp" />
+    <ClCompile Include="DragonBoy.cpp" />
+    <ClCompile Include="drawPrimitives.cpp" />
+    <ClCompile Include="Fan.cpp" />
+    <ClCompile Include="levelConstructor.cpp" />
+    <ClCompile Include="LevelList.cpp" />
+    <ClCompile Include="levelLoader.cpp" />
+    <ClCompile Include="RobertsFriends.cpp" />
+    <ClCompile Include="RobFriend.cpp" />
+    <ClCompile Include="ScreenFillSprite.cpp" />
+    <ClCompile Include="SoundEngine.cpp" />
+    <ClCompile Include="TextureCache.cpp" />
+    <ClCompile Include="TilePlacer.cpp" />
+    <ClCompile Include="Tracks.cpp" />
+    <ClCompile Include="TriggerArea.cpp" />
+    <ClCompile Include="vectorMath.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="CollTestBox.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TextureSprite.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="entities.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Hitbox.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Timer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Background.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TileSheet.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CollTestBox.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureSprite.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BensTestWorld.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TestWorld.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BrandonTestWorld.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="JonathansTestWorld.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LucasTestWorld.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaolosTestWorld.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="World.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameWorld.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MainMenu.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HowToPlay.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OverlayWorld.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="drawPrimitives.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ScreenFillSprite.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="sharedButtonCallbacks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="levelLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="levelConstructor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="convert.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="QuitDialog.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelEditor.h">
-      <Filter>World Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TilePlacer.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TextureCache.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="vectorMath.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PhysicsSprite.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BoxBoy.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Cookie.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DBoyProjectile.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DragonBoy.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RobertsFriends.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Tracks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Marble.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BoxBot.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BigBoxBoy.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AsianPaperBoy.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaperAirplane.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="levelList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BlackPaperBoy.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BatItem.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="fan.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="milkCarton.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TriggerArea.h">
-      <Filter>Sprite Classes\Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{e72607fd-64f9-4e52-96ee-9e64cf780c0b}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Sprite Classes">
-      <UniqueIdentifier>{9dd2b322-9000-4855-bb92-53d25fb8d4bb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Sprite Classes\Header Files">
-      <UniqueIdentifier>{11fccb70-179b-4dda-8561-c9af42b81da6}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="World Classes">
-      <UniqueIdentifier>{036f9c13-4ad8-4012-934d-9ed810b30135}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{611dc40e-078a-4692-b0bf-5ef4bb0cf672}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="World Classes\Header Files">
-      <UniqueIdentifier>{bd2bf05a-6c77-4b38-853e-62084cfd7c2a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="World Classes\Source Files">
-      <UniqueIdentifier>{86d5aebb-3617-4a48-be9a-48ef77e06d50}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Sprite Classes\Source Files">
-      <UniqueIdentifier>{45e76b01-1468-4fbd-9724-04a19d1635c8}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
+    <ClInclude Include="AsianPaperBoy.h" />
+    <ClInclude Include="Background.h" />
+    <ClInclude Include="BatItem.h" />
+    <ClInclude Include="BigBoxBoy.h" />
+    <ClInclude Include="BensTestWorld.h" />
+    <ClInclude Include="BlackPaperBoy.h" />
+    <ClInclude Include="BoxBot.h" />
+    <ClInclude Include="BoxBoy.h" />
+    <ClInclude Include="BrandonTestWorld.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="ComicStrip1.h" />
+    <ClInclude Include="convert.h" />
+    <ClInclude Include="Cookie.h" />
+    <ClInclude Include="DBoyProjectile.h" />
+    <ClInclude Include="DragonBoy.h" />
+    <ClInclude Include="drawPrimitives.h" />
+    <ClInclude Include="fan.h" />
+    <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="healthHandler.h" />
+    <ClInclude Include="healthMilk.h" />
+    <ClInclude Include="HowToPlay.h" />
+    <ClInclude Include="levelConstructor.h" />
+    <ClInclude Include="LevelEditor.h" />
+    <ClInclude Include="levelList.h" />
+    <ClInclude Include="levelLoader.h" />
+    <ClInclude Include="LucasTestWorld.h" />
+    <ClInclude Include="JonathansTestWorld.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Marble.h" />
+    <ClInclude Include="milkCarton.h" />
+    <ClInclude Include="OverlayWorld.h" />
+    <ClInclude Include="PaolosTestWorld.h" />
+    <ClInclude Include="PaperAirplane.h" />
+    <ClInclude Include="PhysicsSprite.h" />
+    <ClInclude Include="QuitDialog.h" />
+    <ClInclude Include="RobbyFriendsProjectile.h" />
+    <ClInclude Include="RobertsFriends.h" />
+    <ClInclude Include="RobFriend.h" />
+    <ClInclude Include="ScreenFillSprite.h" />
+    <ClInclude Include="sharedButtonCallbacks.h" />
+    <ClInclude Include="SoundEngine.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="CollTestBox.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="TestWorld.h" />
+    <ClInclude Include="TextureCache.h" />
+    <ClInclude Include="TilePlacer.h" />
+    <ClInclude Include="Tracks.h" />
+    <ClInclude Include="TriggerArea.h" />
+    <ClInclude Include="vectorMath.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="entities.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Hitbox.h" />
+    <ClInclude Include="TextureSprite.h" />
+    <ClInclude Include="TileSheet.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Nanny.h" />
   </ItemGroup>
 </Project>
