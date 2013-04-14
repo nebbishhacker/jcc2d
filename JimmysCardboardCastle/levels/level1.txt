@@ -13,6 +13,7 @@ entities: [
 		ypos: 64
 		cornerx: 1809451337
 		cornery: 5193552
+		bubble: 0
 	}
 	{
 		type: bigboxboy

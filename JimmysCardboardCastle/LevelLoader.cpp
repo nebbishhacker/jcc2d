@@ -204,6 +204,7 @@ bool EntityInfo::read(std::istream &stream)
 				if (label == "cornery") readInt(stream, cornerY);
 				if (label == "target") readString(stream, target);
 				if (label == "trigger") readString(stream, trigger);
+				if (label == "bubble") readInt(stream, bubble);
 				//std::cout << " ";
 			}
 		}
