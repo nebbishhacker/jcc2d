@@ -1,5 +1,6 @@
 #pragma once
 #include "physicssprite.h"
+#include "Player.h"
 class PaperAirplane_proj : public PhysicsSprite
 {
 public:
@@ -71,7 +72,7 @@ public:
 				Sprite * s= collide(&world->groups["player"], delta.x, 0); 
 				if (s)
 				{
-					//static_cast<Player*>(s)->damage(2); 
+					static_cast<Player*>(s)->damage(2); 
 				}
 				kill(); 
 			}

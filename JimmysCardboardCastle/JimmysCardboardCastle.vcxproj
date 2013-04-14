@@ -91,12 +91,14 @@
     <ClCompile Include="DragonBoy.cpp" />
     <ClCompile Include="drawPrimitives.cpp" />
     <ClCompile Include="Fan.cpp" />
+    <ClCompile Include="GameWorld.cpp" />
     <ClCompile Include="levelConstructor.cpp" />
     <ClCompile Include="LevelList.cpp" />
     <ClCompile Include="levelLoader.cpp" />
     <ClCompile Include="Robert.cpp" />
     <ClCompile Include="RobertsFriends.cpp" />
     <ClCompile Include="ScreenFillSprite.cpp" />
+    <ClCompile Include="sharedButtonCallbacks.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
     <ClCompile Include="TextureCache.cpp" />
     <ClCompile Include="TilePlacer.cpp" />
