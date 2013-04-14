@@ -26,6 +26,8 @@ BigBoxBoy::BigBoxBoy(double x, double y) : PhysicsSprite("images/spr_BBBoy.png")
 
 	setCurrentAnimation(0);
 
+	wallHitSound = soundEngine.loadSound("sound/bbboy_wallhit.wav");
+
 	// PHYSICAL PROPERTIES //
 	mass = 150;
 	airDrag = 0.1;
@@ -64,6 +66,8 @@ void BigBoxBoy::update()
 			walking = false;
 			setCurrentAnimation(0);
 
+			soundEngine.playSound(wallHitSound);
+
 			// When BBBoy hits a wall he will take damage and increase in speed //
 			health--;
 			movespeed += 5;
@@ -76,6 +80,8 @@ void BigBoxBoy::update()
 			flipped = false;
 			walking = false;
 			setCurrentAnimation(0);
+
+			soundEngine.playSound(wallHitSound);
 
 			// When BBBoy hits a wall he will take damage and increase in speed //
 			health--;

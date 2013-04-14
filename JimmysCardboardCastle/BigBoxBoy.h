@@ -1,5 +1,6 @@
 #pragma once
 #include "physicssprite.h"
+#include "SoundEngine.h"
 class BigBoxBoy : public PhysicsSprite
 {
 public:
@@ -14,4 +15,5 @@ private:
 	// state variables
 	bool walking;
 	bool active;
+	Sound wallHitSound;
 };

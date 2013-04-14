@@ -20,7 +20,7 @@ public:
 		setCurrentAnimation(0);
 
 		// PHYSICAL PROPERTIES //
-		mass = 1;
+		mass = .5;
 		airDrag = 0.1;
 		groundFriction = 0.45;
 		gravity.y = 3;
@@ -31,7 +31,8 @@ public:
 		setCenter(32, 32);
 	};
 	void initialize()
-	{		
+	{	
+		world->groups["reflectable"].add(this); 
 	};
 	void update()
 	{
@@ -48,7 +49,7 @@ public:
 		theta += 0.09;
 
 		// Increase how much the gravity effects the projectile //
-		gravity.y -= 0.25;
+		gravity.y -= 0.50;
 
 		// Handles air drag //
 		applyAirDrag();
@@ -63,49 +64,23 @@ public:
 		Vector2D delta = velocity + netAcceleration * 0.5;
 
 		// Check if the box should collide with DBoy //
-		if (getAsianPaperBoy)
-		{
+		
 			// If it should be then it will moveCollide with DBoy //
-			if (moveCollideX(delta.x, &world->groups["asianPBoy"]))
+			if (moveCollideX(delta.x, &world->groups["player"]))
 			{
-				velocity.y = 10;
-				gravity.y = 1.5;
-				if (flipped)
-					flipped = false;
-				else
-					flipped = true;
-				Sprite * player = moveCollideX(delta.x, &world->groups["asianPBOY"]);
-				if (player) 
+				Sprite * s= collide(&world->groups["player"], delta.x, 0); 
+				if (s)
 				{
-					player->moveCollideX(delta.x*5, &world->groups["ground"]);
+					//static_cast<Player*>(s)->damage(2); 
 				}
-				setCurrentAnimation(3);
-				kill();
+				kill(); 
 			}
 			else
 			{
-				if (moveCollideX(delta.x, &world->groups["ground"])) velocity.x = 0;
-				if (moveCollideY(delta.y, &world->groups["ground"])) kill();
+				if(moveCollideX(delta.x, &world->groups["ground"])) velocity.x=0; 
+				if(moveCollideY(delta.y, &world->groups["ground"])) kill(); 
 			}
-		}
-		// TEMP //
-		else if (moveCollideX(delta.x, &world->groups["player"]))
-		{
-			velocity.y = 10;
-			gravity.y = 1.5;
-			if (flipped)
-				flipped = false;
-			else
-				flipped = true;
-			getAsianPaperBoy = true;
-		}
-		else
-		{
-			if (moveCollideX(delta.x, &world->groups["ground"])) velocity.x = 0;
-			if (moveCollideY(delta.y, &world->groups["ground"])) kill();
-		}
-
-		// update velocity to reflect acceleration //
+			
 		velocity += netAcceleration;
 
 		// reset netForce, netAcceleration, and possibly other things for the next timestep (so they can be modified externally, if need be)

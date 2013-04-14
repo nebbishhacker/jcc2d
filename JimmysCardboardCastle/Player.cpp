@@ -36,7 +36,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	jumpSound = soundEngine.loadSound("sound/retrojump.wav");
 	batSound = soundEngine.loadSound("sound/bat_sound.wav");
 	moonJumpSound = soundEngine.loadSound("sound/moon_jump.wav");
-	lavaHit = soundEngine.loadSound("sound/lava_hit.wav");
+	lavaHitSound = soundEngine.loadSound("sound/lava_hit.wav");
 
 	mass = 50;
 	airDrag = 0.1; // coefficient of fluid drag... ir something
@@ -81,7 +81,7 @@ void Player::update()
 	{
 		damage(1);
 		velocity.y = jumpVelocity;
-		soundEngine.playSound(lavaHit); // oooh, burn
+		soundEngine.playSound(lavaHitSound); // oooh, burn
 	}
 
 	if (flipped)
