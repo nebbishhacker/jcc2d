@@ -32,7 +32,7 @@
     <ClCompile Include="TextureSprite.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Robert.cpp" />
+    <ClCompile Include="Chest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsianPaperBoy.h" />
@@ -95,7 +95,7 @@
     <ClInclude Include="TextureSprite.h" />
     <ClInclude Include="TileSheet.h" />
     <ClInclude Include="Timer.h" />
-    <ClInclude Include="Robert.h" />
-    <ClInclude Include="RobertProjectile.h" />
+    <ClInclude Include="Key.h" />
+    <ClInclude Include="Chest.h" />
   </ItemGroup>
 </Project>

@@ -12,16 +12,38 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	// 2 - jump up
 	// 3 - fall down
 	// 4 - bat
-	setNumberOfAnimations(5);
+	// 5 - lava hit
+	// 6 - shield
+	// 7 - shoot
+	// 8 - spring shoes
+	setNumberOfAnimations(9);
 	setSpriteFrameSize(128,128);
+
 	addSpriteAnimRow(0, 0, 0, 128, 0, 6);
 	setAnimationSpeed(0,0.05);
+
+	
+
 	addSpriteAnimRow(1, 128*6, 0, 128, 0, 9);
 	setAnimationSpeed(1,0.25);
 	addSpriteAnimFrame(2, 128*8, 0);
 	addSpriteAnimFrame(3, 128*7, 0);
+
 	addSpriteAnimRow(4, 0, 128*1, 128, 0, 4);
 	setAnimationSpeed(4, 0.25);
+
+	addSpriteAnimRow(5, 0, 0, 128, 0, 1); 
+	setAnimationSpeed(0,0.25); 
+
+	addSpriteAnimRow(6, 0, 0, 128, 0, 5); 
+	setAnimationSpeed(0, 0.25); 
+
+	addSpriteAnimRow(7, 0, 0 , 128, 0, 6); 
+	setAnimationSpeed(0, 0.25); 
+
+	addSpriteAnimRow(8, 0, 0, 128, 0, 1); 
+	setAnimationSpeed(0, 0.25); 
+
 	setCurrentAnimation(0);
 		
 	setPosition(x,y);
@@ -56,6 +78,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	health = 5;
 	invincibleTimer = 0;
 	invincibleLength = 80;
+	key = 0; 
 }
 
 void Player::initialize()
@@ -101,7 +124,13 @@ void Player::update()
 		useBat = true;
 		soundEngine.playSound(batSound); // swoosh
 	}
-
+	if ((input->specialsDown[GLUT_KEY_END] || (input->keysDown['y'] && hasWaterGun)) && grounded && !useWaterGun)
+	{
+		setCurrentAnimation(7);
+		setFrame(0);
+		useWaterGun = true;
+		//soundEngine.playSound(batSound); // swoosh
+	}
 	// These events will not occur if the player is swinging his bat //
 	if (!useBat)
 	{
@@ -119,7 +148,7 @@ void Player::update()
 		if (!jumpReady && !jumpKeysDown) jumpReady = true; // Ready to jump once more
 
 		// Handle input for maneuvering //
-		// contactVelocity is the theoretical speed of the character's feet -- whichever way his feet move, friction makes him move in the opposite direction
+		// contactVelocity is the theoretical speed of the character's feet -- whichever way his feet move, 2friction makes him move in the opposite direction
 		if (input->specialsDown[GLUT_KEY_LEFT] && !input->specialsDown[GLUT_KEY_RIGHT]) // moving left
 		{
 			if (grounded) {

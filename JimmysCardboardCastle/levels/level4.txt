@@ -12,9 +12,9 @@ entities: [
 		ypos: 65
 	}
 	{
-		type: boxboy
-		xpos: 1300
-		ypos: 64
+		type: robert
+		xpos: 5861
+		ypos: 425
 	}
 	{
 		type: boxboy
@@ -25,11 +25,6 @@ entities: [
 		type: boxboy
 		xpos: 2000
 		ypos: 64
-	}
-	{
-		type: cookie
-		xpos: 400
-		ypos: 100
 	}
 	{
 		type: background

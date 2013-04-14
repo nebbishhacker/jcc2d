@@ -23,14 +23,19 @@ public:
 	// Items //
 	bool hasBoots;
 	bool hasBat;
-
+	bool hasWaterGun; 
+	bool hasShield; 
+	
 	bool useBat;
+	bool useWaterGun; 
+	bool useShield; 
 
 	double score;
 	double cookies;
 	double health;
 
 	double marbles;
+	double key; 
 private:
 	Vector2D moveSpeed;
 	double jumpVelocity;

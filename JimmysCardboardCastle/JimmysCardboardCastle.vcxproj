@@ -86,6 +86,7 @@
     <ClCompile Include="BoxBot.cpp" />
     <ClCompile Include="BoxBoy.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Chest.cpp" />
     <ClCompile Include="Cookie.cpp" />
     <ClCompile Include="DragonBoy.cpp" />
     <ClCompile Include="drawPrimitives.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="BoxBoy.h" />
     <ClInclude Include="BrandonTestWorld.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="Chest.h" />
     <ClInclude Include="ComicStrip1.h" />
     <ClInclude Include="convert.h" />
     <ClInclude Include="Cookie.h" />
@@ -126,6 +128,7 @@
     <ClInclude Include="healthHandler.h" />
     <ClInclude Include="healthMilk.h" />
     <ClInclude Include="HowToPlay.h" />
+    <ClInclude Include="Key.h" />
     <ClInclude Include="levelConstructor.h" />
     <ClInclude Include="LevelEditor.h" />
     <ClInclude Include="levelList.h" />
