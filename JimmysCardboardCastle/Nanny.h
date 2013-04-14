@@ -36,7 +36,7 @@ public:
 		groundFriction = 0.75;
 		// (airGroundFriction and gravity are left to defaults)
 
-		hitbox = Hitbox(20, 0, 78, 200);
+		hitbox = Hitbox(20-128, 0, 78+128, 200);
 		setCenter(64, 58);
 
 		bubbleNumber = bubbleNum;

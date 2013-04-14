@@ -2,7 +2,7 @@ music: "sound/move_forward.mp3"
 entities: [
 	{
 		type: player
-		xpos: 256
+		xpos: 64
 		ypos: 64
 	}
 	{
