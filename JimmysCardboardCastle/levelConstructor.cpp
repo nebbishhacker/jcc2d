@@ -25,6 +25,8 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 		else if (info.type == "gmarble") t = new Marble(info.xPos, info.yPos, 2);
 		else if (info.type == "dmarble") t = new Marble(info.xPos, info.yPos, 3);
 		else if (info.type == "fan") t = new Fan(info.xPos, info.yPos); 
+		else if (info.type == "towerstart") t = new TowerStart(info.xPos, info.yPos); 
+		else if (info.type == "towerend") t = new TowerEnd(info.xPos, info.yPos);
 		else if (info.type == "bat")  t = new BatItem(info.xPos, info.yPos);
 		else if (info.type == "bigboxboy") t = new BigBoxBoy(info.xPos, info.yPos);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);

@@ -98,6 +98,8 @@
     <ClCompile Include="SoundEngine.cpp" />
     <ClCompile Include="TextureCache.cpp" />
     <ClCompile Include="TilePlacer.cpp" />
+    <ClCompile Include="TowerEnd.cpp" />
+    <ClCompile Include="TowerStart.cpp" />
     <ClCompile Include="Tracks.cpp" />
     <ClCompile Include="TriggerArea.cpp" />
     <ClCompile Include="vectorMath.cpp" />
@@ -160,6 +162,8 @@
     <ClInclude Include="TestWorld.h" />
     <ClInclude Include="TextureCache.h" />
     <ClInclude Include="TilePlacer.h" />
+    <ClInclude Include="TowerEnd.h" />
+    <ClInclude Include="TowerStart.h" />
     <ClInclude Include="Tracks.h" />
     <ClInclude Include="TriggerArea.h" />
     <ClInclude Include="vectorMath.h" />
