@@ -1,4 +1,4 @@
-music: "sound/wave.wav"
+music: "sound/move_forward.mp3"
 entities: [
 	{
 		type: player
