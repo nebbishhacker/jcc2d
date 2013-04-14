@@ -232,8 +232,8 @@ void EntityInfo::write(std::ostream &stream)
 		if (cornerX != INVALID_INT) stream << "\t\t" << "cornerx: " << cornerX << "\n";
 		if (cornerY != INVALID_INT) stream << "\t\t" << "cornery: " << cornerY << "\n";
 	}
-	if (trigger != "") stream << "\t\t" << "trigger: " << trigger << "\n";
-	if (target != "") stream << "\t\t" << "target: " << target << "\n";
+	if (trigger != "") stream << "\t\t" << "trigger: \"" << trigger << "\"\n";
+	if (target != "") stream << "\t\t" << "target: \"" << target << "\"\n";
 	stream << "\t}\n";
 }
 

@@ -16,6 +16,8 @@ entities: [
 		ypos: 64
 		cornerx: 7486
 		cornery: 756
+		trigger: "boxzonetrigger"
+		target: "player"
 	}
 	{
 		type: bigboxboy

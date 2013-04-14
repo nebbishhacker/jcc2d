@@ -4,6 +4,7 @@
 #include "levelList.h"
 #include "World.h"
 #include "RobertProjectile.h"
+#include "DBoyProjectile.h"
 
 #include <random>
 
