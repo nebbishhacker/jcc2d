@@ -207,9 +207,6 @@
     <ClInclude Include="DragonBoy.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RobertsFriends.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Tracks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -244,6 +241,15 @@
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TriggerArea.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobFriend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobbyFriendsProjectile.h">
+      <Filter>Sprite Classes\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobertsFriends.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
