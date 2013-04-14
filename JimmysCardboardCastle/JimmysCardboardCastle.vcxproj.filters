@@ -85,7 +85,7 @@
     <ClCompile Include="Fan.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RobFriend.cpp">
+    <ClCompile Include="TriggerArea.cpp">
       <Filter>Sprite Classes\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -255,10 +255,10 @@
     <ClInclude Include="fan.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RobbyFriendsProjectile.h">
+    <ClInclude Include="milkCarton.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RobFriend.h">
+    <ClInclude Include="TriggerArea.h">
       <Filter>Sprite Classes\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

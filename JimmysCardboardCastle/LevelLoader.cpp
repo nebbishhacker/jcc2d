@@ -200,6 +200,10 @@ bool EntityInfo::read(std::istream &stream)
 				if (label == "bat") readInt(stream, bat);
 				if (label == "waterGun") readInt(stream, waterGun);
 				if (label == "sheild") readInt(stream, sheild);
+				if (label == "cornerx") readInt(stream, cornerX);
+				if (label == "cornery") readInt(stream, cornerY);
+				if (label == "target") readString(stream, target);
+				if (label == "trigger") readString(stream, trigger);
 				//std::cout << " ";
 			}
 		}
@@ -224,6 +228,10 @@ void EntityInfo::write(std::ostream &stream)
 	if (bat != 0) stream << "\t\t" << "bat: " << bat << "\n";
 	if (waterGun != 0) stream << "\t\t" << "watergun: " << waterGun << "\n";
 	if (sheild != 0) stream << "\t\t" << "shield: " << sheild << "\n";
+	if (cornerX != INVALID_INT) stream << "\t\t" << "cornerx: " << cornerX << "\n";
+	if (cornerY != INVALID_INT) stream << "\t\t" << "cornery: " << cornerY << "\n";
+	if (trigger != "") stream << "\t\t" << "trigger: " << trigger << "\n";
+	if (target != "") stream << "\t\t" << "target: " << target << "\n";
 	stream << "\t}\n";
 }
 

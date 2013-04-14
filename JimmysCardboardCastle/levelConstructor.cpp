@@ -28,6 +28,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 		else if (info.type == "bat")  t = new BatItem(info.xPos, info.yPos);
 		else if (info.type == "bigboxboy") t = new BigBoxBoy(info.xPos, info.yPos);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
+		else if (info.type == "triggerarea") t = new TriggerArea(info.xPos, info.yPos, info.cornerX, info.cornerY, info.trigger, info.target);
 		if (t != NULL)
 		{
 			if (info.layerID != INVALID_DOUBLE) t->layerID = info.layerID;
@@ -64,7 +65,12 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 					}
 					else if (info.r == 6 && info.c == 0)
 					{
-						t = new Fan(x * tileWidth + 16, y * tileHeight + 16);
+						t = new Fan(x * tileWidth, y * tileHeight);
+						world->add(t);
+					}
+					else if (info.r == 6 && info.c == 1)
+					{
+						t = new milkCarton(x * tileWidth, y * tileHeight);
 						world->add(t);
 					}
 					else {

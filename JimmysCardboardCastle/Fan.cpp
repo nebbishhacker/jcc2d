@@ -21,7 +21,7 @@ Fan::Fan(double x, double y) : TextureSprite("images/spr_fan.png")
 }
 
 
-	void Fan::update() // use initialize for anything involving world (like groups)
+void Fan::update() // use initialize for anything involving world (like groups)
 {
 	// adds this sprite to ground, so that player can't move through it
 	world->groups["ground"].add(this);

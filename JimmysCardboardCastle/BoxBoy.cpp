@@ -65,15 +65,13 @@ void BoxBoy::update()
 		if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
 
 		// 1/200th of a chance each frame to:
-		if (rand() % 200 == 0) {
-			if (walking) {
-				walking = false; // stop walking
-				setCurrentAnimation(0); // and hide animation
-			}
-			else {
-				walking = true; // or start walking
-				setCurrentAnimation(2); // and crawl animation
-			}
+		if (walking && rand() % 200 == 0) {
+			walking = false; // stop walking
+			setCurrentAnimation(0); // and hide animation
+		}
+		if (!walking && rand() % 100 == 0) {
+			walking = true; // or start walking
+			setCurrentAnimation(2); // and crawl animation
 		}
 		if (!walking && rand() % 200 == 0) // If standing still, 1/200th chance of
 		{

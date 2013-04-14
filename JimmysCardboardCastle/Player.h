@@ -13,15 +13,12 @@ public:
 	void initialize();
 	void update();
 
+	void heal(double heal) { health += heal; }
 	void damage(double damage) { if (invincibleTimer <= 0) { health -= damage; invincibleTimer = invincibleLength; } }
 	void scoreUp(double points) { score += points; }
 	void cookiesUp(double cookies) { this->cookies += cookies; }
 
 	InputInfo *input;
-
-	Vector2D moveSpeed;
-	double jumpVelocity;
-	double bootJumpVelocity;
 
 	// Items //
 	bool hasBoots;
@@ -33,11 +30,17 @@ public:
 	double cookies;
 	double health;
 
+	double marbles;
+private:
+	Vector2D moveSpeed;
+	double jumpVelocity;
+	double bootJumpVelocity;
+
+	double batDistance;
+
 	int invincibleTimer;
 	int invincibleLength;
 
-	double batDistance;
-private:
 	bool jumpReady;
 	Sound jumpSound;
 };

@@ -5,7 +5,7 @@ class RobFriend_proj : public PhysicsSprite
 public:
 	bool getRobFriend;
 
-	RobFriend_proj(double x, double y, bool flip) : PhysicsSprite("images/spr_waterballons.png")
+	RobFriend_proj(double x, double y, bool flip) : PhysicsSprite("images/spr_waterballoons.png")
 	{
 		setPosition(x, y);
 		// Allows setting of where the box should go //
@@ -33,17 +33,18 @@ public:
 	void initialize()
 	{		
 		world->groups["reflectable"].add(this);
+		world->groups["robfriendscryptonite"].add(this);
 	};
 	void update()
 	{
 		// Set the velocity //
 		if (!flipped)
 		{
-			velocity.x = 10;
+			velocity.x = 20;
 		}
 		else
 		{
-			velocity.x = -10;
+			velocity.x = -20;
 		}
 
 		theta += 0.09;
@@ -63,17 +64,15 @@ public:
 		// Move the sprite, checking for collisions //
 		Vector2D delta = velocity + netAcceleration * 0.5;
 
-		// Check if the box should collide with DBoy //
-		// If it should be then it will moveCollide with DBoy //
-		if (moveCollideX(delta.x, &world->groups["rfriend"]))
+		// Check if the box should collide with robfried //
+		// If it should be then it will moveCollide with robfriend //
+		if (moveCollideX(delta.x, &world->groups["player"]))
 		{
-			Sprite * dboy = moveCollideX(delta.x, &world->groups["rfriend"]);
-			if (dboy) 
+			Sprite * s = collide(&world->groups["player"], delta.x, 0);
+			if (s) 
 			{
-				dboy->moveCollideX(delta.x*5, &world->groups["ground"]);
+				static_cast<Player*>(s)->damage(2);
 			}
-			setCurrentAnimation(3);
-
 			kill();
 		}
 		else

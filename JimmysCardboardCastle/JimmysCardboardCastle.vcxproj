@@ -100,6 +100,7 @@
     <ClCompile Include="TextureCache.cpp" />
     <ClCompile Include="TilePlacer.cpp" />
     <ClCompile Include="Tracks.cpp" />
+    <ClCompile Include="TriggerArea.cpp" />
     <ClCompile Include="vectorMath.cpp" />
     <ClCompile Include="World.cpp" />
     <ClInclude Include="AsianPaperBoy.h" />
@@ -133,6 +134,7 @@
     <ClInclude Include="JonathansTestWorld.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Marble.h" />
+    <ClInclude Include="milkCarton.h" />
     <ClInclude Include="OverlayWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="PaperAirplane.h" />
@@ -162,6 +164,7 @@
     <ClInclude Include="TextureCache.h" />
     <ClInclude Include="TilePlacer.h" />
     <ClInclude Include="Tracks.h" />
+    <ClInclude Include="TriggerArea.h" />
     <ClInclude Include="vectorMath.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>

@@ -47,6 +47,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	useBat = false;
 	score = 0;
 	cookies = 0;
+	marbles = 0;
 	health = 5;
 	invincibleTimer = 0;
 	invincibleLength = 80;
@@ -155,7 +156,7 @@ void Player::update()
 		}
 
 		// At the end of the bat animation stop from swinging //
-		if (animations[currentAnimation]->currentFrame == 3)
+		if (animations[currentAnimation]->currentFrame == 3 || currentAnimation != 4)
 		{
 			useBat = false;
 		}

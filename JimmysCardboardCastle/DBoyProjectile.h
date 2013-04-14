@@ -33,17 +33,18 @@ public:
 	void initialize()
 	{		
 		world->groups["reflectable"].add(this);
+		world->groups["dboyscryptonite"].add(this);
 	};
 	void update()
 	{
 		// Set the velocity //
 		if (!flipped)
 		{
-			velocity.x = 10;
+			velocity.x = 20;
 		}
 		else
 		{
-			velocity.x = -10;
+			velocity.x = -20;
 		}
 
 		theta += 0.09;
@@ -65,15 +66,13 @@ public:
 
 		// Check if the box should collide with DBoy //
 		// If it should be then it will moveCollide with DBoy //
-		if (moveCollideX(delta.x, &world->groups["dboy"]))
+		if (moveCollideX(delta.x, &world->groups["player"]))
 		{
-			Sprite * dboy = moveCollideX(delta.x, &world->groups["dboy"]);
-			if (dboy) 
+			Sprite * s = collide(&world->groups["player"], delta.x, 0);
+			if (s) 
 			{
-				dboy->moveCollideX(delta.x*5, &world->groups["ground"]);
+				static_cast<Player*>(s)->damage(2);
 			}
-			setCurrentAnimation(3);
-
 			kill();
 		}
 		else

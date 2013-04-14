@@ -3,6 +3,7 @@ entities: [
 		type: player
 		xpos: 200
 		ypos: 200
+		bat: 1
 	}
 	{
 		type: boxboy
