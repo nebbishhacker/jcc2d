@@ -62,7 +62,7 @@ public:
 		setColor(0, 0, 0);
 		drawText(stringify(score), 10, stateInfo->screenHeight - 30);
 		drawText("Cookies:" + stringify(cookies), 70, stateInfo->screenHeight - 30);
-		drawText("Health:" + stringify(health), 200, stateInfo->screenHeight - 30);
+		//drawText("Health:" + stringify(health), 200, stateInfo->screenHeight - 30);
 	}
 
 	double score;
