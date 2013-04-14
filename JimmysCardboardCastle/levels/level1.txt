@@ -2,16 +2,13 @@ music: "sound/move_forward.mp3"
 entities: [
 	{
 		type: player
-		xpos: 64
+		xpos: 256
 		ypos: 64
 	}
 	{
 		type: nanny
 		xpos: 384
 		ypos: 64
-		cornerx: 1809451337
-		cornery: 5193552
-		bubble: 0
 	}
 	{
 		type: triggerarea
