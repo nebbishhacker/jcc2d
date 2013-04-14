@@ -1,29 +1,42 @@
-#include "RobertsFriends.h"
+#include "RobFriend.h"
 #include "Game.h"
+#include "RobbyFriendsProjectile.h"
+#include "GameWorld.h"
+#include "levelList.h"
+#include "World.h"
+
 
 #include <random>
-
-RobertsFriends::RobertsFriends(double x, double y) : PhysicsSprite("images/spr_robertsfriends.png")
+RobertsFriends::RobertsFriends(double x, double y) : PhysicsSprite("images/spr_robertsfriend.png")
 {
 	setPosition(x, y);
 
 	// animations:
-	// 0 - walking
-	// 1 - attacking
+	// 0 - standing
+	// 1 - walking
+	// 2 - attacking
+	// 3 - get hit
 
 	// ANIMATION SETUP //
-	setNumberOfAnimations(2);
+	setNumberOfAnimations(4);
 	setSpriteFrameSize(128,128);
 
-	addSpriteAnimRow(0, 0, 0, 128, 0, 4); // walking animation - 0
-	setAnimationSpeed(0, 0.25);
+	addSpriteAnimRow(0, 0, 128, 128, 0, 1); // standing animation - 0
+	setAnimationSpeed(0, 0.1);
 
-	addSpriteAnimRow(1, 0, 128, 128, 0, 6); // attacking animation - 1
+	addSpriteAnimRow(1, 0, 128, 128, 0, 4); // walking animation - 1
 	setAnimationSpeed(1, 0.25);
-	setAnimationLoop(1, false);
 
+	addSpriteAnimRow(2, 0, 256, 128, 0, 6); // attacking animation - 2
+	setAnimationSpeed(2, 0.25);
+	setAnimationLoop(2, false);
+
+	addSpriteAnimRow(3, 0, 0, 128, 0, 3); // hit animation - 3
+	setAnimationSpeed(3, 0.1);
+	setAnimationLoop(3, false);
 
 	setCurrentAnimation(0);
+
 
 	// PHYSICAL PROPERTIES //
 	mass = 50;
@@ -32,7 +45,7 @@ RobertsFriends::RobertsFriends(double x, double y) : PhysicsSprite("images/spr_r
 	// (airGroundFriction and gravity are left to defaults)
 
 	hitbox = Hitbox(40, 0, 50, 117);
-	setCenter(65, 58);
+	setCenter(5 , 58);
 
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = true;
@@ -60,7 +73,31 @@ void RobertsFriends::update()
 		Sprite * s;
 		if ((s = collide(&world->groups["ground"], 2, 0)) && !s->inGroup(&world->groups["player"])) flipped = true;
 		if ((s = collide(&world->groups["ground"], -2, 0)) && !s->inGroup(&world->groups["player"])) flipped = false;
-
+		if (!attacking)
+	{
+		walking = true;
+		setCurrentAnimation(1);
+		if (rand() % 200 == 0) {
+			if (walking) {
+				if (!flipped)
+					flipped = true;
+				else
+					flipped = false;
+			}
+		}
+		if (willAttack)
+		{
+			if (rand() % 100 == 0) // 1/100th chance of attacking
+			{
+				// Stops it from walking if it already is
+				if (walking)
+					walking = false;
+				setCurrentAnimation(2);
+				setFrame(0); // set animation to the start, as it doesn't loop
+				attacking = true;
+			}
+		}
+	}
 		// 1/200th of a chance each frame to:
 		if (rand() % 200 == 0) {
 			if (walking) {

@@ -107,7 +107,9 @@ void DragonBoy::update()
 			velocity.x -= 10;
 		else
 			velocity.x += 10;
-		setCurrentAnimation(3);
+
+		if (!attacking)
+			setCurrentAnimation(3);
 
 		projectile->kill();
 	}

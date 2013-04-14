@@ -1,6 +1,9 @@
 #include "AsianPaperBoy.h"
 #include "Game.h"
 #include "PaperAirplane.h"
+#include "GameWorld.h"
+#include "levelList.h"
+#include "World.h"
 
 #include <random>
 
@@ -34,6 +37,7 @@ AsianPaperBoy::AsianPaperBoy(double x, double y) : PhysicsSprite("images/spr_asi
 
 	setCurrentAnimation(0);
 
+
 	// PHYSICAL PROPERTIES //
 	mass = 50;
 	airDrag = 0.1;
@@ -43,10 +47,12 @@ AsianPaperBoy::AsianPaperBoy(double x, double y) : PhysicsSprite("images/spr_asi
 	hitbox = Hitbox(40, 0, 50, 117);
 	setCenter(65, 58);
 
+	health = 2; 
+
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = false;
 	attacking = false;
-	//gotHit = false;
+	gotHit = false;
 }
 
 void AsianPaperBoy::initialize() // use initialize for anything involving world (like groups)
@@ -73,7 +79,7 @@ void AsianPaperBoy::update()
 		}
 		else {
 			walking = true; // or start walking
-			setCurrentAnimation(1); // and crawl animation
+			setCurrentAnimation(2); // and crawl animation
 		}
 	}
 	if (rand() % 200 == 0) // 1/100th chance of attacking
@@ -81,7 +87,7 @@ void AsianPaperBoy::update()
 		// Stops it from walking if it already is
 		if (walking)
 			walking = false;
-		setCurrentAnimation(2);
+		setCurrentAnimation(1);
 		setFrame(0); // set animation to the start, as it doesn't loop
 
 		// Create the box projectile
@@ -96,9 +102,9 @@ void AsianPaperBoy::update()
 	if (walking) // If we are walking
 	{
 		if (flipped)
-			contactVelocity.x += 2.5;
+			contactVelocity.x += 3.0;
 		else
-			contactVelocity.x -= 2.5;
+			contactVelocity.x -= 3.0;
 	}
 
 	// Handles ground friction and acceleration due to movement //
