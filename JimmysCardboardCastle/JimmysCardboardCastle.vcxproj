@@ -94,6 +94,7 @@
     <ClCompile Include="LevelList.cpp" />
     <ClCompile Include="levelLoader.cpp" />
     <ClCompile Include="RobertsFriends.cpp" />
+    <ClCompile Include="RobFriend.cpp" />
     <ClCompile Include="ScreenFillSprite.cpp" />
     <ClCompile Include="SoundEngine.cpp" />
     <ClCompile Include="TextureCache.cpp" />
@@ -137,7 +138,9 @@
     <ClInclude Include="PaperAirplane.h" />
     <ClInclude Include="PhysicsSprite.h" />
     <ClInclude Include="QuitDialog.h" />
+    <ClInclude Include="RobbyFriendsProjectile.h" />
     <ClInclude Include="RobertsFriends.h" />
+    <ClInclude Include="RobFriend.h" />
     <ClInclude Include="ScreenFillSprite.h" />
     <ClInclude Include="sharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />
