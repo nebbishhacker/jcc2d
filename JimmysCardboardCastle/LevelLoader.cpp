@@ -264,6 +264,7 @@ void LevelData::read(std::istream &stream)
 		if (readLabel(stream, label)) {
 			if (expectChar(':', stream)) {
 				TileMap tileMap;
+				if (label == "music") readString(stream, music);
 				if (label == "tilemap" && tileMap.read(stream)) tileMaps.push_back(tileMap);
 				if (label == "entities") readEntityList(stream, entities);
 			}
@@ -274,6 +275,7 @@ void LevelData::read(std::istream &stream)
 
 void LevelData::write(std::ostream &stream)
 {
+	stream << "music: \"" << music << "\"\n";
 	stream << "entities: ";
 	writeEntityList(stream, entities);
 

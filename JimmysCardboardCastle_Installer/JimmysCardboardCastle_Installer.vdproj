@@ -21,13 +21,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0BF4D5C9598240608E6751949AABA5BE"
+        "MsmKey" = "8:_0F0C74C5685D48D795200F4D2EEE7D86"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0F0C74C5685D48D795200F4D2EEE7D86"
+        "MsmKey" = "8:_12BCAF9F015A40A493D2FA26D18F02DE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -45,7 +45,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_17A8D4BDBA584E9EBA23E22B643FFC65"
+        "MsmKey" = "8:_13EAD8F73A1146B7A23C7C494FA9B1BF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -57,13 +57,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_22C07D4023F24FD9809186816975E839"
+        "MsmKey" = "8:_1999E28AC068453E81AC011FD7911A2A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_2300890498B44492AFAF65230DB9C715"
+        "MsmKey" = "8:_1FD6731DE2EC41A9A1ADDE4636A42C0A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_22C07D4023F24FD9809186816975E839"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -81,6 +87,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2ADB483C480A44B7AD25C8969869DFC9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2C6FB69818E6482C928797275AF1FEA8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3634F325F4034E0C988134D46469E8DA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -88,6 +106,18 @@
         "Entry"
         {
         "MsmKey" = "8:_3825041BA45C4113A5F04C5C6364D98E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_385190495ABD498D9DB2F1413A9E3036"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3C97490C88D341599D29958A11748881"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -105,13 +135,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_46C88596E12049C3808909C2A8BA1569"
+        "MsmKey" = "8:_4AB60AE78D044D0B80187162006D44D1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4D3ED45913CC41C6B335170967C0A598"
+        "MsmKey" = "8:_4C99AB34C1D3402BA55532C7379C52F0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4DE3A4913DC34FF98F5FE4AC842A61AD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -123,7 +159,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4F7A3606DE6549BD87B75D710FCADA3A"
+        "MsmKey" = "8:_4E52745084DA4227846CE25DDE18D107"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5421F37C56FF411592425D97840C9055"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -135,7 +177,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5EEA9A117B5A4EB6BE424C8ABD44D835"
+        "MsmKey" = "8:_5B179F04347D46F08F3F6506D288F878"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5EDF9705DBA6464D89C089CEA9DEDAE0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_646A51E3D1D64C4CAB74EDCDFEA89A55"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -147,14 +201,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6A5DCA35BFE7B16110F9D89969326EA9"
-        "OwnerKey" = "8:_D5C09F23079F4CFCABD75865D95EA34B"
+        "MsmKey" = "8:_69611EAAFA404980BE5D26DC69E11806"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6AC4EC8ED4094E64B38CEC7D29072A02"
+        "MsmKey" = "8:_6A00891A62FB4F4480D0D680EEDFFB6E"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6A5DCA35BFE7B16110F9D89969326EA9"
+        "OwnerKey" = "8:_D5C09F23079F4CFCABD75865D95EA34B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -165,37 +225,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6FF83DE9EB2A482DA1B70049863BD83D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_70F563D2D0C448C18510C7494F2BE63D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_72CDB1015F1645E4A3E7E9EF1B30B5C0"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7385F979E66745E88C51638244C3D26B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7872DA6F1F3849B6B6944D92A6733AE2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7BB7F2251692496F926BBC3207B046FD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -213,13 +243,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_81409398D6C04565B546665344E6A6CA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_83C64D4E4D05B2682EC65D1774431513"
         "OwnerKey" = "8:_D5C09F23079F4CFCABD75865D95EA34B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_865C43C2ED2C43319451277D6D9242D1"
+        "MsmKey" = "8:_85C0A196F66641ABAD2CADF1AEA3A7AC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_87496D71BF274645AA7F39C9FBC660D8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -237,7 +279,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_8FDACED9559C432EB47642CF170E500F"
+        "MsmKey" = "8:_8F14579663D349DEBEC837741B7A46CF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -249,25 +291,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9318D04767E740379D0EBF018E7FAFC1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_93556E06626C4D3DBF16D92B1FEF6BFA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9679199A2FBE4CB79A032BB489F199DF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9B165FE75EE74080B1758DB80D549516"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9E629B7B1D0D426FACC4EA0676474268"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -285,37 +321,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A1E7AB19C359485BBB382BFF96DB6CE3"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A4A000C5B7244D4595284D54F43F9CC6"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A76CD4CFAB054DAAB4D1D1DDAB0DC57E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A86B9417F1BC4505985767D55FF67334"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A88EC2F0FCA444F891D7A61A1521F500"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A9259DAE9A3D483DB96DB7A2A2CE0F77"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -327,13 +333,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_AA52D6C7D4294F0398BF1F4A642793CA"
+        "MsmKey" = "8:_ADBD2E56C43C42ACBC5F52365A10A021"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_AEE8D1F8F59B4E37A933E59F328EAC01"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B0A1BAE0C4E54D7A8F247A8F680F0545"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B2357B68CEA84B4E8DC673BAEE551163"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -357,6 +375,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C0838CC88C8A48F1A98EF8DE2819BCF3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C0C67BDAE83549D0BB726DBF407B181B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C12C5E21441EA541CBE58C009A42C2D2"
         "OwnerKey" = "8:_D5C09F23079F4CFCABD75865D95EA34B"
         "MsmSig" = "8:_UNDEFINED"
@@ -369,7 +399,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C8B6109C32EB47BEA3966896EF6D2CAD"
+        "MsmKey" = "8:_C7C22212A93A44D3884F1CC8BCBE69FD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C8D39135AB2D4AAB896FACBA5331C50D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -381,7 +417,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CB49C123F25E45C79449C80138DBEA71"
+        "MsmKey" = "8:_CA1246B9DE504178A0FE7B1FDAFBD642"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -393,7 +429,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CDD88DAEF25B478AA9B8098FDBCF471F"
+        "MsmKey" = "8:_CDB4D6A85E8B401A8B38D701C4CA088F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -423,7 +459,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D7744973E3BC4B18AEBA746BF84AB593"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D7F7923FC2A54E9199CD9E04ADA95681"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D940E8CB7F9546EE809AA63900425EC2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -441,20 +489,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E2B4610A40BF4CAFBB6E85AE70034F2C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E45EC8DB4F9240878FE213F1D9ABB493"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E6668ECB58856F3BF00034850951B9AF"
         "OwnerKey" = "8:_D5C09F23079F4CFCABD75865D95EA34B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E9C21AA49AA847ED9AC2511952CCD7D7"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -471,13 +513,37 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F069710210814FA98E96220139154D32"
+        "MsmKey" = "8:_EC8FDCB2C2524A049670389923605D68"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EF91C69AE5DF425085A45FAED9141081"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EF9572DB3E8B4D33871D43FE495AAA76"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_F266A955A3064C7B8C62940057024E92"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F4576EA7B55E477DAC7FE62E135F3D25"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F46C1D1378F745E2B5CA4434DEB7EB33"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -507,7 +573,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FF298EE460624F74A264F0BE8FFAA348"
+        "MsmKey" = "8:_FED65C2DAC864247AE59DFC49995062E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -536,6 +602,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -560,6 +639,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -602,12 +694,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0BF4D5C9598240608E6751949AABA5BE"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F0C74C5685D48D795200F4D2EEE7D86"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_lavaRoom1.png"
-            "TargetName" = "8:bgm_lavaRoom1.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\dev\\Jonathan'sHud.png"
+            "TargetName" = "8:Jonathan'sHud.png"
             "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Folder" = "8:_F5651F5126B245E2AEF588E2A5D689A5"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -622,12 +714,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F0C74C5685D48D795200F4D2EEE7D86"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_12BCAF9F015A40A493D2FA26D18F02DE"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\dev\\Jonathan'sHud.png"
-            "TargetName" = "8:Jonathan'sHud.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_BBBoy.png"
+            "TargetName" = "8:spr_BBBoy.png"
             "Tag" = "8:"
-            "Folder" = "8:_F5651F5126B245E2AEF588E2A5D689A5"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -682,10 +774,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_17A8D4BDBA584E9EBA23E22B643FFC65"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_13EAD8F73A1146B7A23C7C494FA9B1BF"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_backyard2.png"
-            "TargetName" = "8:bgm_backyard2.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\tileset.png"
+            "TargetName" = "8:tileset.png"
             "Tag" = "8:"
             "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
@@ -722,12 +814,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22C07D4023F24FD9809186816975E839"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1999E28AC068453E81AC011FD7911A2A"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\levels\\level3.txt"
-            "TargetName" = "8:level3.txt"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\test_sfx.wav"
+            "TargetName" = "8:test_sfx.wav"
             "Tag" = "8:"
-            "Folder" = "8:_13C25BCA883A4E21B0793E8E4BA15CF2"
+            "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -742,12 +834,32 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2300890498B44492AFAF65230DB9C715"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1FD6731DE2EC41A9A1ADDE4636A42C0A"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_marbles.png"
-            "TargetName" = "8:spr_marbles.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\aa_spr_sam.png"
+            "TargetName" = "8:aa_spr_sam.png"
             "Tag" = "8:"
             "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22C07D4023F24FD9809186816975E839"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\levels\\level3.txt"
+            "TargetName" = "8:level3.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_13C25BCA883A4E21B0793E8E4BA15CF2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -802,6 +914,46 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2ADB483C480A44B7AD25C8969869DFC9"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\button_menu.png"
+            "TargetName" = "8:button_menu.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2C6FB69818E6482C928797275AF1FEA8"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_boxbot.png"
+            "TargetName" = "8:spr_boxbot.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3634F325F4034E0C988134D46469E8DA"
             {
             "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\dev\\map2.gif"
@@ -828,6 +980,46 @@
             "TargetName" = "8:HaggarSNEStransp.gif"
             "Tag" = "8:"
             "Folder" = "8:_F5651F5126B245E2AEF588E2A5D689A5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_385190495ABD498D9DB2F1413A9E3036"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_enemy9.png"
+            "TargetName" = "8:spr_enemy9.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3C97490C88D341599D29958A11748881"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_backyard1.png"
+            "TargetName" = "8:bgm_backyard1.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -882,12 +1074,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_46C88596E12049C3808909C2A8BA1569"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4AB60AE78D044D0B80187162006D44D1"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\Wind.mp3"
-            "TargetName" = "8:Wind.mp3"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_enemy2.png"
+            "TargetName" = "8:spr_enemy2.png"
             "Tag" = "8:"
-            "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -902,10 +1094,30 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4D3ED45913CC41C6B335170967C0A598"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4C99AB34C1D3402BA55532C7379C52F0"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_lavaRoom2.png"
-            "TargetName" = "8:bgm_lavaRoom2.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_robertsfriend.png"
+            "TargetName" = "8:spr_robertsfriend.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4DE3A4913DC34FF98F5FE4AC842A61AD"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\DBoy_spr.png"
+            "TargetName" = "8:DBoy_spr.png"
             "Tag" = "8:"
             "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
@@ -942,10 +1154,30 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4F7A3606DE6549BD87B75D710FCADA3A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E52745084DA4227846CE25DDE18D107"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_blackpaperboy.png"
-            "TargetName" = "8:spr_blackpaperboy.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\bat_sound.wav"
+            "TargetName" = "8:bat_sound.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5421F37C56FF411592425D97840C9055"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\plane.png"
+            "TargetName" = "8:plane.png"
             "Tag" = "8:"
             "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
@@ -982,12 +1214,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5EEA9A117B5A4EB6BE424C8ABD44D835"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B179F04347D46F08F3F6506D288F878"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\wave.wav"
-            "TargetName" = "8:wave.wav"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_lavaRoom1.png"
+            "TargetName" = "8:bgm_lavaRoom1.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5EDF9705DBA6464D89C089CEA9DEDAE0"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\wave.ogg"
+            "TargetName" = "8:wave.ogg"
             "Tag" = "8:"
             "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_646A51E3D1D64C4CAB74EDCDFEA89A55"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_fan.png"
+            "TargetName" = "8:spr_fan.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1022,6 +1294,46 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_69611EAAFA404980BE5D26DC69E11806"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\moon_jump.wav"
+            "TargetName" = "8:moon_jump.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A00891A62FB4F4480D0D680EEDFFB6E"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\button_yes.png"
+            "TargetName" = "8:button_yes.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A5DCA35BFE7B16110F9D89969326EA9"
             {
             "SourcePath" = "8:DevIL.dll"
@@ -1040,26 +1352,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6AC4EC8ED4094E64B38CEC7D29072A02"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\text_quit.png"
-            "TargetName" = "8:text_quit.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E759B941C2E4BDD806FAC40D5B66A98"
@@ -1082,112 +1374,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6FF83DE9EB2A482DA1B70049863BD83D"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\DBoy_spr.png"
-            "TargetName" = "8:DBoy_spr.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_70F563D2D0C448C18510C7494F2BE63D"
             {
             "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\dev\\Paolo_IronMan_Button.png"
             "TargetName" = "8:Paolo_IronMan_Button.png"
             "Tag" = "8:"
             "Folder" = "8:_F5651F5126B245E2AEF588E2A5D689A5"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_72CDB1015F1645E4A3E7E9EF1B30B5C0"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\tileset.png"
-            "TargetName" = "8:tileset.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7385F979E66745E88C51638244C3D26B"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_backyard3.png"
-            "TargetName" = "8:bgm_backyard3.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7872DA6F1F3849B6B6944D92A6733AE2"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\plane.png"
-            "TargetName" = "8:plane.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7BB7F2251692496F926BBC3207B046FD"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_cookiescore.png"
-            "TargetName" = "8:spr_cookiescore.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1242,6 +1434,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_81409398D6C04565B546665344E6A6CA"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\text_quit.png"
+            "TargetName" = "8:text_quit.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83C64D4E4D05B2682EC65D1774431513"
             {
             "SourcePath" = "8:ILU.dll"
@@ -1262,10 +1474,30 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_865C43C2ED2C43319451277D6D9242D1"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_85C0A196F66641ABAD2CADF1AEA3A7AC"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\Level3_Background.png"
-            "TargetName" = "8:Level3_Background.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\wave.wav"
+            "TargetName" = "8:wave.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_87496D71BF274645AA7F39C9FBC660D8"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_nanny.png"
+            "TargetName" = "8:spr_nanny.png"
             "Tag" = "8:"
             "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
@@ -1322,10 +1554,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8FDACED9559C432EB47642CF170E500F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8F14579663D349DEBEC837741B7A46CF"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\test_sfx.wav"
-            "TargetName" = "8:test_sfx.wav"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\retrojump.wav"
+            "TargetName" = "8:retrojump.wav"
             "Tag" = "8:"
             "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
             "Condition" = "8:"
@@ -1362,6 +1594,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9318D04767E740379D0EBF018E7FAFC1"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\Wind.mp3"
+            "TargetName" = "8:Wind.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_93556E06626C4D3DBF16D92B1FEF6BFA"
             {
             "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\dev\\DBoy_spr.png"
@@ -1382,52 +1634,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9679199A2FBE4CB79A032BB489F199DF"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_asianpaperboy.png"
-            "TargetName" = "8:spr_asianpaperboy.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9B165FE75EE74080B1758DB80D549516"
             {
             "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\dev\\dkong.png"
             "TargetName" = "8:dkong.png"
             "Tag" = "8:"
             "Folder" = "8:_F5651F5126B245E2AEF588E2A5D689A5"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E629B7B1D0D426FACC4EA0676474268"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_enemy2.png"
-            "TargetName" = "8:spr_enemy2.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1482,112 +1694,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A1E7AB19C359485BBB382BFF96DB6CE3"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\background_fourthlevel.png"
-            "TargetName" = "8:background_fourthlevel.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A4A000C5B7244D4595284D54F43F9CC6"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\button_no.png"
-            "TargetName" = "8:button_no.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A76CD4CFAB054DAAB4D1D1DDAB0DC57E"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\button_yes.png"
-            "TargetName" = "8:button_yes.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A86B9417F1BC4505985767D55FF67334"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_dboyproj.png"
-            "TargetName" = "8:spr_dboyproj.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A88EC2F0FCA444F891D7A61A1521F500"
             {
             "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\dev\\MainMenuBGTEST.png"
             "TargetName" = "8:MainMenuBGTEST.png"
             "Tag" = "8:"
             "Folder" = "8:_F5651F5126B245E2AEF588E2A5D689A5"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A9259DAE9A3D483DB96DB7A2A2CE0F77"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\button_menu.png"
-            "TargetName" = "8:button_menu.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1622,10 +1734,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AA52D6C7D4294F0398BF1F4A642793CA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ADBD2E56C43C42ACBC5F52365A10A021"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_robertsfriends.png"
-            "TargetName" = "8:spr_robertsfriends.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_lavaRoom2.png"
+            "TargetName" = "8:bgm_lavaRoom2.png"
             "Tag" = "8:"
             "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
@@ -1648,6 +1760,46 @@
             "TargetName" = "8:Button_Level1.png"
             "Tag" = "8:"
             "Folder" = "8:_F5651F5126B245E2AEF588E2A5D689A5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B0A1BAE0C4E54D7A8F247A8F680F0545"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\Level3_Background.png"
+            "TargetName" = "8:Level3_Background.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B2357B68CEA84B4E8DC673BAEE551163"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_milk.png"
+            "TargetName" = "8:spr_milk.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1722,6 +1874,46 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C0838CC88C8A48F1A98EF8DE2819BCF3"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_cookiescore.png"
+            "TargetName" = "8:spr_cookiescore.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C0C67BDAE83549D0BB726DBF407B181B"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\button_no.png"
+            "TargetName" = "8:button_no.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C12C5E21441EA541CBE58C009A42C2D2"
             {
             "SourcePath" = "8:fmodex.dll"
@@ -1762,10 +1954,30 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C8B6109C32EB47BEA3966896EF6D2CAD"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C7C22212A93A44D3884F1CC8BCBE69FD"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_backyard1.png"
-            "TargetName" = "8:bgm_backyard1.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_milkCarton.png"
+            "TargetName" = "8:spr_milkCarton.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C8D39135AB2D4AAB896FACBA5331C50D"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_backyard3.png"
+            "TargetName" = "8:bgm_backyard3.png"
             "Tag" = "8:"
             "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
@@ -1802,10 +2014,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CB49C123F25E45C79449C80138DBEA71"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CA1246B9DE504178A0FE7B1FDAFBD642"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_enemy9.png"
-            "TargetName" = "8:spr_enemy9.png"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\background_fourthlevel.png"
+            "TargetName" = "8:background_fourthlevel.png"
             "Tag" = "8:"
             "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
@@ -1842,7 +2054,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDD88DAEF25B478AA9B8098FDBCF471F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDB4D6A85E8B401A8B38D701C4CA088F"
             {
             "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\PlainHud.png"
             "TargetName" = "8:PlainHud.png"
@@ -1922,12 +2134,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7744973E3BC4B18AEBA746BF84AB593"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_battobe.png"
+            "TargetName" = "8:spr_battobe.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7F7923FC2A54E9199CD9E04ADA95681"
             {
             "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\dev\\lavaRoom_bgm.png"
             "TargetName" = "8:lavaRoom_bgm.png"
             "Tag" = "8:"
             "Folder" = "8:_F5651F5126B245E2AEF588E2A5D689A5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D940E8CB7F9546EE809AA63900425EC2"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_waterballoons.png"
+            "TargetName" = "8:spr_waterballoons.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1982,46 +2234,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2B4610A40BF4CAFBB6E85AE70034F2C"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_BBBoy.png"
-            "TargetName" = "8:spr_BBBoy.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E45EC8DB4F9240878FE213F1D9ABB493"
-            {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_boxbot.png"
-            "TargetName" = "8:spr_boxbot.png"
-            "Tag" = "8:"
-            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6668ECB58856F3BF00034850951B9AF"
             {
             "SourcePath" = "8:GLU32.dll"
@@ -2040,6 +2252,26 @@
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E9C21AA49AA847ED9AC2511952CCD7D7"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_marbles.png"
+            "TargetName" = "8:spr_marbles.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EACEDA5DE2C44E5D81B4A9B4C0EF222A"
@@ -2082,12 +2314,52 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F069710210814FA98E96220139154D32"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC8FDCB2C2524A049670389923605D68"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\retrojump.wav"
-            "TargetName" = "8:retrojump.wav"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_dboyproj.png"
+            "TargetName" = "8:spr_dboyproj.png"
             "Tag" = "8:"
-            "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EF91C69AE5DF425085A45FAED9141081"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_asianpaperboy.png"
+            "TargetName" = "8:spr_asianpaperboy.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EF9572DB3E8B4D33871D43FE495AAA76"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\bgm_backyard2.png"
+            "TargetName" = "8:bgm_backyard2.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2108,6 +2380,46 @@
             "TargetName" = "8:HowToPlay.png"
             "Tag" = "8:"
             "Folder" = "8:_F5651F5126B245E2AEF588E2A5D689A5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F4576EA7B55E477DAC7FE62E135F3D25"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\lava_hit.wav"
+            "TargetName" = "8:lava_hit.wav"
+            "Tag" = "8:"
+            "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F46C1D1378F745E2B5CA4434DEB7EB33"
+            {
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_blackpaperboy.png"
+            "TargetName" = "8:spr_blackpaperboy.png"
+            "Tag" = "8:"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2202,12 +2514,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FF298EE460624F74A264F0BE8FFAA348"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FED65C2DAC864247AE59DFC49995062E"
             {
-            "SourcePath" = "8:..\\JimmysCardboardCastle\\sound\\wave.ogg"
-            "TargetName" = "8:wave.ogg"
+            "SourcePath" = "8:..\\JimmysCardboardCastle\\images\\spr_mainMenu.png"
+            "TargetName" = "8:spr_mainMenu.png"
             "Tag" = "8:"
-            "Folder" = "8:_2FF74964194A4B0DA60BB54156903279"
+            "Folder" = "8:_CE1B0A126A4C40B79843445252943CD4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"

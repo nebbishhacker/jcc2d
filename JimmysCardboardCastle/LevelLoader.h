@@ -105,6 +105,7 @@ typedef std::vector<EntityInfo> EntityList;
 
 struct LevelData
 {
+	std::string music;
 	std::vector<TileMap> tileMaps;
 	EntityList entities;
 
