@@ -110,10 +110,11 @@ void BigBoxBoy::update()
 
 	if (!active)
 	{
-		if (collide(&world->groups["player"],32,0))
-			active = true;
-		else if (collide(&world->groups["player"],-32,0))
-			active = true;
+		//if (collide(&world->groups["player"],32,0))
+		//	active = true;
+		//else if (collide(&world->groups["player"],-32,0))
+		//	active = true;
+		if (!world->groups["boxzonetrigger"].empty()) active = true;
 	}
 
 	// Handles ground friction and acceleration due to movement //

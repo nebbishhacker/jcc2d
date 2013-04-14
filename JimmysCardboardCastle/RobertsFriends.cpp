@@ -1,4 +1,4 @@
-#include "RobFriend.h"
+#include "RobertsFriends.h"
 #include "Game.h"
 #include "RobbyFriendsProjectile.h"
 #include "GameWorld.h"
@@ -45,7 +45,7 @@ RobertsFriends::RobertsFriends(double x, double y) : PhysicsSprite("images/spr_r
 	// (airGroundFriction and gravity are left to defaults)
 
 	hitbox = Hitbox(40, 0, 50, 117);
-	setCenter(5 , 58);
+	setCenter(0 , 58);
 
 	// BEHAVIORAL STATE VARIABLE(S) //
 	walking = true;

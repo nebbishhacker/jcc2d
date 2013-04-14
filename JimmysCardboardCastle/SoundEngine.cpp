@@ -39,6 +39,7 @@ Sound SoundEngine::loadStream(std::string fileName)
 	{
 		FMOD_RESULT result = system->createStream(fileName.c_str(), FMOD_2D, 0, &fmodSound);
 		if (result != FMOD_OK) std::cout << "Loading file \"" << fileName << "\" failed with code " << result << "\n";
+		fmodSound->setMode(FMOD_LOOP_NORMAL);
 		sound = Sound(fmodSound);
 		soundMap[fileName] = sound;
 		std::cout << fileName << '\n';

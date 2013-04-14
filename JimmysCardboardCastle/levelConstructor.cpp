@@ -22,6 +22,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 		else if (info.type == "asianboy") t = new AsianPaperBoy(info.xPos, info.yPos);
 		else if (info.type == "blackboy") t = new BlackPaperBoy(info.xPos, info.yPos);
 		else if (info.type == "robertsfriends") t = new RobertsFriends(info.xPos, info.yPos);
+		else if (info.type == "robert") t = new Robert(info.xPos, info.yPos);
 		else if (info.type == "cookie") t = new Cookie(info.xPos, info.yPos);
 		else if (info.type == "bmarble") t = new Marble(info.xPos, info.yPos, 0);
 		else if (info.type == "rmarble") t = new Marble(info.xPos, info.yPos, 1);
@@ -33,7 +34,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 		else if (info.type == "bat")  t = new BatItem(info.xPos, info.yPos);
 		else if (info.type == "bigboxboy") t = new BigBoxBoy(info.xPos, info.yPos);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
-		else if (info.type == "triggerarea") t = new TriggerArea(info.xPos, info.yPos, info.cornerX, info.cornerY, info.trigger, info.target);
+		else if (info.type == "triggerarea") t = new TriggerArea(info.xPos, info.yPos, info.cornerX, info.cornerY, info.target, info.trigger);
 		else if (info.type == "nanny") t = new Nanny(info.xPos, info.yPos);
 		else if (info.type == "key") t = new Key(info.xPos, info.yPos); 
 		else if (info.type == "chest") t = new Chest(info.xPos, info.yPos); 
