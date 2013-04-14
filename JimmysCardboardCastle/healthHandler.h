@@ -28,6 +28,12 @@ public:
 		{
 			milks[_i]->setPosition((p->position.x + 64*_i) - 325, p->position.y + 270);
 		}
+
+		for (int _i = 0; _i < numMilks; _i++)
+		{
+			milks[_i]->setFrame(2);
+		}
+
 		if (p->health > 0)
 		{
 			int _i = (int)((p->health*2));
