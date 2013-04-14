@@ -27,6 +27,7 @@ BigBoxBoy::BigBoxBoy(double x, double y) : PhysicsSprite("images/spr_BBBoy.png")
 	setCurrentAnimation(0);
 
 	wallHitSound = soundEngine.loadSound("sound/bbboy_wallhit.wav");
+	bbboyBattleMusic = soundEngine.loadStream("sound/jaunty_gumption.mp3");
 
 	// PHYSICAL PROPERTIES //
 	mass = 150;
@@ -114,7 +115,11 @@ void BigBoxBoy::update()
 		//	active = true;
 		//else if (collide(&world->groups["player"],-32,0))
 		//	active = true;
-		if (!world->groups["boxzonetrigger"].empty()) active = true;
+		if (!world->groups["boxzonetrigger"].empty())
+		{
+			active = true;
+			soundEngine.playMusic(bbboyBattleMusic);
+		}
 	}
 
 	// Handles ground friction and acceleration due to movement //

@@ -16,4 +16,5 @@ private:
 	bool walking;
 	bool active;
 	Sound wallHitSound;
+	Sound bbboyBattleMusic;
 };
