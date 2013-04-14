@@ -42,7 +42,9 @@ void GameWorld::update()
 		score = p->score;
 		cookies = p->cookies;
 		health = p->health;
+		playerExists = true;
 	}
+	else playerExists = false;
 	if (input->keysPressed['~']) game->replacingCurrentWorld(new LevelEditor(levelFileName));
 	if (input->keysPressed['+']) game->replacingCurrentWorld(levelList.constructNextLevel());
 }
@@ -50,9 +52,11 @@ void GameWorld::draw()
 {
 	World::draw();
 
-	// Draw the current score to the screen
-	setColor(0, 0, 0);
-	drawText(stringify(score), 10, stateInfo->screenHeight - 30);
-	drawText("Cookies:" + stringify(cookies), 70, stateInfo->screenHeight - 30);
-	//drawText("Health:" + stringify(health), 200, stateInfo->screenHeight - 30);
+	if (playerExists) {
+		// Draw the current score to the screen
+		setColor(0, 0, 0);
+		drawText(stringify(score), 10, stateInfo->screenHeight - 30);
+		drawText("Cookies:" + stringify(cookies), 70, stateInfo->screenHeight - 30);
+		//drawText("Health:" + stringify(health), 200, stateInfo->screenHeight - 30);
+	}
 }

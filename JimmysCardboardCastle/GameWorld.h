@@ -19,5 +19,6 @@ public:
 	double health;
 
 private:
+	bool playerExists;
 	std::string levelFileName;
 };
