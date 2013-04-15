@@ -20,7 +20,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	setSpriteFrameSize(128,128);
 
 	addSpriteAnimRow(0, 0, 0, 128, 0, 6);
-	setAnimationSpeed(0,0.01);
+	setAnimationSpeed(0,0.05);
 
 	
 
@@ -33,13 +33,13 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	setAnimationSpeed(4, 0.25);
 
 	addSpriteAnimRow(5, 0, 0, 128, 0, 1); 
-	setAnimationSpeed(0,0.25); 
+	setAnimationSpeed(5,0.25); 
 
 	addSpriteAnimRow(6, 0, 0, 128, 0, 5); 
-	setAnimationSpeed(0, 0.25); 
+	setAnimationSpeed(6, 0.25); 
 
 	addSpriteAnimRow(7, 0, 0 , 128, 0, 6); 
-	setAnimationSpeed(0, 0.25); 
+	setAnimationSpeed(7, 0.25); 
 
 	addSpriteAnimFrame(8, 0, 608);
 
