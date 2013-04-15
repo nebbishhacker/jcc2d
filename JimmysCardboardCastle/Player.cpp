@@ -20,7 +20,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	setSpriteFrameSize(128,128);
 
 	addSpriteAnimRow(0, 0, 0, 128, 0, 6);
-	setAnimationSpeed(0,0.01);
+	setAnimationSpeed(0,0.05);
 
 	
 
@@ -33,13 +33,13 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	setAnimationSpeed(4, 0.25);
 
 	addSpriteAnimRow(5, 0, 0, 128, 0, 1); 
-	setAnimationSpeed(0,0.25); 
+	setAnimationSpeed(5,0.25); 
 
 	addSpriteAnimRow(6, 0, 0, 128, 0, 5); 
-	setAnimationSpeed(0, 0.25); 
+	setAnimationSpeed(6, 0.25); 
 
 	addSpriteAnimRow(7, 0, 0 , 128, 0, 6); 
-	setAnimationSpeed(0, 0.25); 
+	setAnimationSpeed(7, 0.25); 
 
 	addSpriteAnimFrame(8, 0, 608);
 
@@ -70,7 +70,9 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 
 	hasBoots = false;
 	hasBat = false;
+	hasWaterGun = false; 
 	useBat = false;
+	useWaterGun = false; 
 	score = 0;
 	cookies = 0;
 	marbles = 0;
@@ -123,7 +125,7 @@ void Player::update()
 		useBat = true;
 		soundEngine.playSound(batSound); // swoosh
 	}
-	if ((input->specialsDown[GLUT_KEY_END] || (input->keysDown['y'] && hasWaterGun)) && grounded && !useWaterGun)
+	if ((input->specialsDown[GLUT_KEY_END] || (input->keysDown['c'] && hasWaterGun)) && grounded && !useWaterGun)
 	{
 		setCurrentAnimation(7);
 		setFrame(0);
@@ -146,6 +148,22 @@ void Player::update()
 		}
 		if (!jumpReady && !jumpKeysDown) jumpReady = true; // Ready to jump once more
 
+	if (!useWaterGun)
+	{
+		bool jumpKeysDown = (input->specialsDown[GLUT_KEY_UP] || input->keysDown[' ']);
+		if (jumpReady && jumpKeysDown && grounded && !useWaterGun) // JUMP!
+		{
+			velocity.y = hasBoots ? bootJumpVelocity : jumpVelocity; // Directly set velocity, 'cause it's simpler and more reliable than forces in this case
+			jumpReady = false; // only wanna jump once
+
+			if (hasBoots)
+				soundEngine.playSound(moonJumpSound); // different boing
+			else
+				soundEngine.playSound(jumpSound); // boing
+		}
+		if (!jumpReady && !jumpKeysDown) jumpReady = true;
+	}
+		// Ready to jump once more
 		// Handle input for maneuvering //
 		// contactVelocity is the theoretical speed of the character's feet -- whichever way his feet move, 2friction makes him move in the opposite direction
 		if (input->specialsDown[GLUT_KEY_LEFT] && !input->specialsDown[GLUT_KEY_RIGHT]) // moving left
@@ -204,6 +222,15 @@ void Player::update()
 		if (animations[currentAnimation]->currentFrame == 3 || currentAnimation != 4)
 		{
 			useBat = false;
+		}
+	}
+
+	if (useWaterGun)
+	{
+		// At the end of the bat animation stop from swinging //
+		if (animations[currentAnimation]->currentFrame == 3 || currentAnimation != 4)
+		{
+			useWaterGun = false;
 		}
 	}
 

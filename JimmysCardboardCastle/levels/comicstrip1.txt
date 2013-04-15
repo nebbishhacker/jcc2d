@@ -8,4 +8,13 @@ entities: [
 		imagepath: "images/ComicStrip1.png"
 		layerid: 1001
 	}
+	{
+		type: nextlevelbutton
+		xpos: 0
+		ypos: -50
+		framesizex: 512
+		framesizey: 128
+		imagepath: "images/spr_clicktocont.png"
+		layerid: 1002
+	}
 ]

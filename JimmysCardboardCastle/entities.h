@@ -21,6 +21,7 @@
 #include "BigBoxBoy.h"
 #include "BlackPaperBoy.h"
 #include "BatItem.h"
+#include "WaterGunItem.h"
 #include "Fan.h"
 #include "milkCarton.h"
 #include "TriggerArea.h"
@@ -28,6 +29,7 @@
 #include "TowerStart.h"
 #include "TowerEnd.h"
 
+#include "PaperGirl.h"
 #include "Nanny.h"
 #include "Key.h"
 #include "Chest.h"

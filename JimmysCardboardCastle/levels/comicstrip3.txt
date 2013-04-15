@@ -5,7 +5,7 @@ entities: [
 		ypos: 0
 		framesizex: 800
 		framesizey: 600
-		imagepath: "images/ComicStrip2.png"
+		imagepath: "images/ComicStrip3.png"
 		layerid: 1001
 	}
 	{
