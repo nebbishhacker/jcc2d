@@ -29,6 +29,7 @@
 #include "TowerStart.h"
 #include "TowerEnd.h"
 
+#include "PaperGirl.h"
 #include "Nanny.h"
 #include "Key.h"
 #include "Chest.h"

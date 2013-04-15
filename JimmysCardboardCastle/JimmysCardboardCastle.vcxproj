@@ -95,6 +95,7 @@
     <ClCompile Include="levelConstructor.cpp" />
     <ClCompile Include="LevelList.cpp" />
     <ClCompile Include="levelLoader.cpp" />
+    <ClCompile Include="PaperGirl.cpp" />
     <ClCompile Include="Robert.cpp" />
     <ClCompile Include="RobertsFriends.cpp" />
     <ClCompile Include="ScreenFillSprite.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="OverlayWorld.h" />
     <ClInclude Include="PaolosTestWorld.h" />
     <ClInclude Include="PaperAirplane.h" />
+    <ClInclude Include="PaperGirl.h" />
     <ClInclude Include="PhysicsSprite.h" />
     <ClInclude Include="QuitDialog.h" />
     <ClInclude Include="RobbyFriendsProjectile.h" />
