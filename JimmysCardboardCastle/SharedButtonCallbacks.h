@@ -39,3 +39,5 @@ void switchLevel(World * currentWorld)
 }
 
 void switchNextLevel(World * currentWorld);
+
+void startCurrentLevel(World * currentWorld);

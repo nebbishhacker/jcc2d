@@ -17,3 +17,10 @@ void switchNextLevel(World * currentWorld)
 	World * g = levelList.constructNextLevel();
 	currentWorld->game->replacingCurrentWorld(g);
 }
+
+
+void startCurrentLevel(World * currentWorld)
+{
+	World * g = levelList.constructCurrentLevel();
+	currentWorld->game->setNewWorld(g);
+}
