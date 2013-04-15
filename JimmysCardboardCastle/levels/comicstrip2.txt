@@ -6,5 +6,6 @@ entities: [
 		framesizex: 800
 		framesizey: 600
 		imagepath: "images/ComicStrip2.png"
+		layerid: 1001
 	}
 ]

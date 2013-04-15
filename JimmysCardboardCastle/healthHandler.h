@@ -13,6 +13,7 @@ public:
 		p = t;
 		milks = new healthMilk*[size];
 		numMilks = size;
+
 	};
 	void initialize()
 	{
@@ -26,7 +27,7 @@ public:
 	{
 		for (int _i = 0; _i < numMilks; _i++)
 		{
-			milks[_i]->setPosition((p->position.x + 64*_i) - 325, p->position.y + 270);
+			milks[_i]->setPosition((64*_i), 500);
 		}
 
 		for (int _i = 0; _i < numMilks; _i++)

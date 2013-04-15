@@ -36,7 +36,10 @@
     <ClCompile Include="GameWorld.cpp" />
     <ClCompile Include="sharedButtonCallbacks.cpp" />
     <ClCompile Include="Robert.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="PaperGirl.cpp" />
+=======
+>>>>>>> 8a9829998a20ae9967ab54dedd49029cf320c3e0
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsianPaperBoy.h" />
@@ -108,6 +111,12 @@
     <ClInclude Include="PaperGirl.h" />
 =======
     <ClInclude Include="speechBubbles.h" />
+<<<<<<< HEAD
 >>>>>>> 6a53950f86e0599c24420fbc6d2029eaf35a4e97
+=======
+    <ClInclude Include="Robert.h" />
+    <ClInclude Include="RobertProjectile.h" />
+    <ClInclude Include="CreditsScreen.h" />
+>>>>>>> 8a9829998a20ae9967ab54dedd49029cf320c3e0
   </ItemGroup>
 </Project>

@@ -77,7 +77,7 @@ public:
 	void remove(Sprite*);
 
 	//	- Centers the camera on the given position. (duh)
-	void centerCamera(double x = 0, double y = 0);
+	virtual void centerCamera(double x = 0, double y = 0);
 	void centerCamera(Vector2D v);
 
 	//  - Deletes the next world down, and amends the nextWorldDown pointer to point to the one below it.

@@ -20,7 +20,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	setSpriteFrameSize(128,128);
 
 	addSpriteAnimRow(0, 0, 0, 128, 0, 6);
-	setAnimationSpeed(0,0.05);
+	setAnimationSpeed(0,0.01);
 
 	
 
@@ -41,8 +41,7 @@ Player::Player(double x, double y) : PhysicsSprite("images/aa_spr_sam.png")
 	addSpriteAnimRow(7, 0, 0 , 128, 0, 6); 
 	setAnimationSpeed(0, 0.25); 
 
-	addSpriteAnimRow(8, 0, 0, 128, 0, 1); 
-	setAnimationSpeed(0, 0.25); 
+	addSpriteAnimFrame(8, 0, 608);
 
 	setCurrentAnimation(0);
 		
@@ -194,7 +193,7 @@ void Player::update()
 	else {
 		// There is still ground friction while airborn, but to a different extent. This is a game. It is not real.
 		applyAirGroundFriction();
-		if (velocity.y >= 0) setCurrentAnimation(2);
+		if (velocity.y >= 0) if (hasBoots) setCurrentAnimation(8); else setCurrentAnimation(2);
 		else setCurrentAnimation(3);
 	}
 

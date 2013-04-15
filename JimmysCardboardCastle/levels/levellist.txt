@@ -1,3 +1,4 @@
+levels/comicstrip1.txt
 levels/level1.txt
 levels/comicstrip2.txt
 levels/level2.txt

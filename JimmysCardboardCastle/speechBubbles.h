@@ -18,6 +18,7 @@ public:
 	};
 	void initialize()
 	{
+		layerID = 100;
 	};
 	void update()
 	{

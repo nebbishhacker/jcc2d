@@ -1,3 +1,4 @@
+music: "sound/8bit_dungeon_level.mp3"
 entities: [
 	{
 		type: player
@@ -10,13 +11,6 @@ entities: [
 		type: dragonboy
 		xpos: 3300
 		ypos: 450
-		cornerx: -858993460
-		cornery: -858993460
-	}
-	{
-		type: nanny
-		xpos: 2600
-		ypos: 578
 		cornerx: -858993460
 		cornery: -858993460
 	}

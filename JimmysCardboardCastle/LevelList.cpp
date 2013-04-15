@@ -4,6 +4,7 @@
 
 LevelList::LevelList()
 {
+	currentIndex = 0;
 	std::ifstream stream;
 	stream.open("levels/levellist.txt");
 	while (!stream.eof()) {
@@ -11,6 +12,9 @@ LevelList::LevelList()
 		std::getline(stream, str);
 		levels.push_back(str);
 	}
+
+	std::ifstream saveFile("save.txt");
+	if (!saveFile.eof()) saveFile >> currentIndex;
 }
 GameWorld * LevelList::constructLevel(unsigned int i)
 {
@@ -25,6 +29,15 @@ GameWorld * LevelList::constructFirstLevel()
 GameWorld * LevelList::constructNextLevel()
 {
 	if (currentIndex < levels.size() - 1) ++currentIndex;
+	std::ofstream saveFile("save.txt");
+	//if (saveFile) {
+		saveFile << currentIndex;
+		saveFile.close();
+	//}
+	return new GameWorld(std::string(levels[currentIndex]));
+}
+GameWorld * LevelList::constructCurrentLevel()
+{
 	return new GameWorld(std::string(levels[currentIndex]));
 }
 LevelList levelList;
