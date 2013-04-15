@@ -37,6 +37,8 @@ DragonBoy::DragonBoy(double x, double y) : PhysicsSprite("images/DBoy_spr.png")
 
 	setCurrentAnimation(0);
 
+	dragonBoyBattleMusic = soundEngine.loadStream("sound/video_dungeon_boss.mp3");
+
 	// PHYSICAL PROPERTIES //
 	mass = 50;
 	airDrag = 0.1;
@@ -162,6 +164,7 @@ void DragonBoy::update()
 		if (s != NULL && static_cast<Player*>(s)->marbles == 3)
 		{
 			willAttack = true;
+			soundEngine.playMusic(dragonBoyBattleMusic);
 		}
 	}
 

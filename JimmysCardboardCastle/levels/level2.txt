@@ -1,3 +1,4 @@
+music: "sound/8bit_dungeon_level.mp3"
 entities: [
 	{
 		type: player
