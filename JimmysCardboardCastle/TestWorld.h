@@ -26,7 +26,7 @@ class TestWorld : public World
 public:
 	virtual void initialize()
 	{
-		add(new Background(0, 0, 800, 600, "images/dev/CreditsScreen.png", -100, 0.5, 0.25));
+		//add(new Background(0, 0, 800, 600, "images/dev/CreditsScreen.png", -100, 0.5, 0.25));
 		//  Ben's Button, using the templated startWorld callback
 		add(new Button(304, 500, 64, 64, "images/dev/Ben_Button.png", startWorld<BensTestWorld>));
 
