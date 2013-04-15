@@ -1,0 +1,11 @@
+entities: [
+	{
+		type: nextlevelbutton
+		xpos: 0
+		ypos: 0
+		framesizex: 800
+		framesizey: 600
+		imagepath: "images/ComicStrip1.png"
+		layerid: 1001
+	}
+]
