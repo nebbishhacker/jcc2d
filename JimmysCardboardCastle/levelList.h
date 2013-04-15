@@ -12,6 +12,7 @@ public:
 	GameWorld * constructLevel(unsigned int i);
 	GameWorld * constructFirstLevel();
 	GameWorld * constructNextLevel();
+	GameWorld * constructCurrentLevel();
 
 private:
 	std::vector<std::string> levels;

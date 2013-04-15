@@ -122,6 +122,7 @@
     <ClInclude Include="ComicStrip1.h" />
     <ClInclude Include="convert.h" />
     <ClInclude Include="Cookie.h" />
+    <ClInclude Include="CreditsScreen.h" />
     <ClInclude Include="DBoyProjectile.h" />
     <ClInclude Include="DragonBoy.h" />
     <ClInclude Include="drawPrimitives.h" />
@@ -154,6 +155,7 @@
     <ClInclude Include="ScreenFillSprite.h" />
     <ClInclude Include="sharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />
+    <ClInclude Include="speechBubbles.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="CollTestBox.h">
       <FileType>CppCode</FileType>

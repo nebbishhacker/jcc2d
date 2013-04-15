@@ -18,6 +18,8 @@ TowerStart::TowerStart(double x, double y) : TextureSprite("images/TowerStart.pn
 
 	setCurrentAnimation(0); 
 
+	setLayerID(-3);
+
 }
 
 

@@ -78,6 +78,7 @@ struct EntityInfo
 	std::string target;
 	std::string trigger;
 	Sprite * entity;
+	int bubble;
 
 	EntityInfo()
 	{
@@ -95,6 +96,7 @@ struct EntityInfo
 		entity = NULL;
 		cornerX = INVALID_INT;
 		cornerY = INVALID_INT;
+		bubble = INVALID_INT;
 	}
 
 	bool read(std::istream &stream);

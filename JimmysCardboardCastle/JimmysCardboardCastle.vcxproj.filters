@@ -35,6 +35,7 @@
     <ClCompile Include="Chest.cpp" />
     <ClCompile Include="GameWorld.cpp" />
     <ClCompile Include="sharedButtonCallbacks.cpp" />
+    <ClCompile Include="Robert.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsianPaperBoy.h" />
@@ -99,5 +100,9 @@
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Key.h" />
     <ClInclude Include="Chest.h" />
+    <ClInclude Include="speechBubbles.h" />
+    <ClInclude Include="Robert.h" />
+    <ClInclude Include="RobertProjectile.h" />
+    <ClInclude Include="CreditsScreen.h" />
   </ItemGroup>
 </Project>
