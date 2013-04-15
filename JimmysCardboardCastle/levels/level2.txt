@@ -14,13 +14,6 @@ entities: [
 		cornery: -858993460
 	}
 	{
-		type: nanny
-		xpos: 2600
-		ypos: 578
-		cornerx: -858993460
-		cornery: -858993460
-	}
-	{
 		type: boxboy
 		xpos: 1650
 		ypos: 900
