@@ -101,9 +101,13 @@
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Key.h" />
     <ClInclude Include="Chest.h" />
+<<<<<<< HEAD
     <ClInclude Include="Robert.h" />
     <ClInclude Include="RobertProjectile.h" />
     <ClInclude Include="WaterGunItem.h" />
     <ClInclude Include="PaperGirl.h" />
+=======
+    <ClInclude Include="speechBubbles.h" />
+>>>>>>> 6a53950f86e0599c24420fbc6d2029eaf35a4e97
   </ItemGroup>
 </Project>

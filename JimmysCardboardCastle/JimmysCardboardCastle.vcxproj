@@ -156,6 +156,7 @@
     <ClInclude Include="ScreenFillSprite.h" />
     <ClInclude Include="sharedButtonCallbacks.h" />
     <ClInclude Include="SoundEngine.h" />
+    <ClInclude Include="speechBubbles.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="CollTestBox.h">
       <FileType>CppCode</FileType>

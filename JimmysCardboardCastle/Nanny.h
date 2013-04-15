@@ -1,9 +1,11 @@
 #pragma once
 #include "physicssprite.h"
+#include "speechBubbles.h"
+
 class Nanny : public PhysicsSprite
 {
 public:
-	Nanny(double x, double y) : PhysicsSprite("images/spr_nanny.png")
+	Nanny(double x, double y, int bubbleNum) : PhysicsSprite("images/spr_nanny.png")
 	{
 		setPosition(x, y);
 
@@ -34,14 +36,18 @@ public:
 		groundFriction = 0.75;
 		// (airGroundFriction and gravity are left to defaults)
 
-		hitbox = Hitbox(20, 0, 78, 200);
+		hitbox = Hitbox(20-128, 0, 78+128, 200);
 		setCenter(64, 58);
+
+		bubbleNumber = bubbleNum;
 
 		talking = false;
 	};
 	void initialize()
 	{
-		
+		speechBubble = new bubble(position.x-180, position.y+200, bubbleNumber);
+		speechBubble->visible = false;
+		world->add(speechBubble);
 	};
 	void update()
 	{
@@ -58,10 +64,12 @@ public:
 					setCurrentAnimation(2);
 			}
 
+			speechBubble->visible = true;
 			talking = true;
 		}
 		else
 		{
+			speechBubble->visible = false;
 			talking = false;
 			setCurrentAnimation(0);
 		}
@@ -95,5 +103,8 @@ public:
 	};
 
 private:
+
+	int bubbleNumber;
+	bubble * speechBubble;
 	bool talking;
 };

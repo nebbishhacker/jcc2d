@@ -18,6 +18,7 @@ TowerEnd::TowerEnd(double x, double y) : TextureSprite("images/TowerEnd.png")
 
 	setCurrentAnimation(0); 
 
+	setLayerID(-3);
 }
 
 

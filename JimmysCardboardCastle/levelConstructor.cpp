@@ -14,6 +14,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 			Player * p = new Player(info.xPos, info.yPos);
 			p->hasBoots = info.moonBoots != 0;
 			p->hasBat = info.bat != 0;
+			p->hasWaterGun = info.waterGun !=0; 
 			t = p;
 		}
 		else if (info.type == "boxboy") t = new BoxBoy(info.xPos, info.yPos);
@@ -38,7 +39,7 @@ void ConstructLevel(LevelData &levelData, World * world, bool storeReferences)
 		else if (info.type == "bigboxboy") t = new BigBoxBoy(info.xPos, info.yPos);
 		else if (info.type == "background") t = new Background(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath);
 		else if (info.type == "triggerarea") t = new TriggerArea(info.xPos, info.yPos, info.cornerX, info.cornerY, info.target, info.trigger);
-		else if (info.type == "nanny") t = new Nanny(info.xPos, info.yPos);
+		else if (info.type == "nanny") t = new Nanny(info.xPos, info.yPos, info.bubble);
 		else if (info.type == "key") t = new Key(info.xPos, info.yPos);
 		else if (info.type == "chest") t = new Chest(info.xPos, info.yPos);
 		else if (info.type == "nextlevelbutton") t = new Button(info.xPos, info.yPos, info.frameSizeX, info.frameSizeY, info.imagePath, switchNextLevel);
