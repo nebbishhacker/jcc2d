@@ -1,5 +1,6 @@
 #pragma once
 #include "physicssprite.h"
+#include "SoundEngine.h"
 class DragonBoy : public PhysicsSprite
 {
 public:
@@ -17,4 +18,6 @@ private:
 	bool willAttack;
 
 	double health;
+
+	Sound dragonBoyBattleMusic;
 };
