@@ -13,12 +13,15 @@ public:
 	virtual void initialize();
 	virtual void update();
 	virtual void draw();
+	virtual void centerCamera(double x = 0, double y = 0);
 
 	double score;
 	double cookies;
 	double health;
 
 private:
+	//int levelHeight;
+	//int levelWidth;
 	bool playerExists;
 	std::string levelFileName;
 };

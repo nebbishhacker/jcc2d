@@ -122,6 +122,7 @@
     <ClInclude Include="ComicStrip1.h" />
     <ClInclude Include="convert.h" />
     <ClInclude Include="Cookie.h" />
+    <ClInclude Include="CreditsScreen.h" />
     <ClInclude Include="DBoyProjectile.h" />
     <ClInclude Include="DragonBoy.h" />
     <ClInclude Include="drawPrimitives.h" />

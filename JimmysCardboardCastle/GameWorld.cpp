@@ -60,3 +60,10 @@ void GameWorld::draw()
 		//drawText("Health:" + stringify(health), 200, stateInfo->screenHeight - 30);
 	}
 }
+
+void GameWorld::centerCamera(double x, double y)
+{
+	World::centerCamera(x, y);
+	if (camera.x < 0) camera.x = 0;
+	if (camera.y < 0) camera.y = 0;
+}

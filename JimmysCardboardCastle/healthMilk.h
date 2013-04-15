@@ -12,6 +12,8 @@ public:
 		setAnimationSpeed(0, 0);
 
 		setCurrentAnimation(0);
+
+		setScrollFactor(0, 0);
 	};
 	void initialize()
 	{
