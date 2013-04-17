@@ -1,3 +1,4 @@
+music: ""
 entities: [
 	{
 		type: player
@@ -5,8 +6,6 @@ entities: [
 		ypos: 100
 		moonboots: 1
 		bat: 1
-		cornerx: 1798244681
-		cornery: 8220264
 	}
 	{
 		type: background
@@ -18,15 +17,11 @@ entities: [
 		layerid: -100
 		scrollfactorx: 0.5
 		scrollfactory: 0.25
-		cornerx: 1798244681
-		cornery: 8220264
 	}
 	{
 		type: cookie
 		xpos: 400
 		ypos: 100
-		cornerx: 1798244681
-		cornery: 8220264
 	}
 ]
 tilemap: {
