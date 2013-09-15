@@ -125,13 +125,13 @@ void Player::update()
 		useBat = true;
 		soundEngine.playSound(batSound); // swoosh
 	}
-	if ((input->specialsDown[GLUT_KEY_END] || (input->keysDown['c'] && hasWaterGun)) && grounded && !useWaterGun)
-	{
-		setCurrentAnimation(7);
-		setFrame(0);
-		useWaterGun = true;
-		//soundEngine.playSound(batSound); // swoosh
-	}
+	//if ((input->specialsDown[GLUT_KEY_END] || (input->keysDown['c'] && hasWaterGun)) && grounded && !useWaterGun)
+	//{
+	//	setCurrentAnimation(7);
+	//	setFrame(0);
+	//	useWaterGun = true;
+	//	//soundEngine.playSound(batSound); // swoosh
+	//}
 	// These events will not occur if the player is swinging his bat //
 	if (!useBat)
 	{
